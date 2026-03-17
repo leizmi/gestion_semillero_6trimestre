@@ -48,6 +48,7 @@
             this.lblproyectos_en_curso = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnMostrar_informacion = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.btnTotalsemillero.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +73,7 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menú";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnDashboard
             // 
@@ -251,6 +253,15 @@
             this.btnMostrar_informacion.Text = "Mostrar Informacion";
             this.btnMostrar_informacion.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(69, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,6 +269,7 @@
             this.BackgroundImage = global::gestión_semillero_6trimestre.Properties.Resources.fondo_loguin_semillero__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(973, 609);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnMostrar_informacion);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Total_proyectos_en_curso);
@@ -301,5 +313,6 @@
         private System.Windows.Forms.Label lblproyectos_en_curso;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnMostrar_informacion;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -51,5 +51,10 @@ namespace gestión_semillero_6trimestre
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
