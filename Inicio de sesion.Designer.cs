@@ -28,40 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSalirAPP = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_iniciar_sesion = new System.Windows.Forms.Button();
             this.txt_contraseña = new System.Windows.Forms.TextBox();
-            this.txt_correo_electronico = new System.Windows.Forms.TextBox();
+            this.txt_id = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnSalirAPP
             // 
-            this.button1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button1.Location = new System.Drawing.Point(116, 328);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 25);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Salir";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSalirAPP.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnSalirAPP.Location = new System.Drawing.Point(116, 328);
+            this.btnSalirAPP.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalirAPP.Name = "btnSalirAPP";
+            this.btnSalirAPP.Size = new System.Drawing.Size(62, 25);
+            this.btnSalirAPP.TabIndex = 9;
+            this.btnSalirAPP.Text = "Salir";
+            this.btnSalirAPP.UseVisualStyleBackColor = false;
+            this.btnSalirAPP.Click += new System.EventHandler(this.btnSalirAPP_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnSalirAPP);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btn_iniciar_sesion);
             this.groupBox1.Controls.Add(this.txt_contraseña);
-            this.groupBox1.Controls.Add(this.txt_correo_electronico);
+            this.groupBox1.Controls.Add(this.txt_id);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(202, 10);
@@ -76,23 +77,23 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label3.Location = new System.Drawing.Point(52, 213);
+            this.label3.Location = new System.Drawing.Point(85, 213);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 16);
+            this.label3.Size = new System.Drawing.Size(120, 16);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Contraceña";
+            this.label3.Text = "Escriba su contraseña";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(52, 163);
+            this.label2.Location = new System.Drawing.Point(110, 163);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 16);
+            this.label2.Size = new System.Drawing.Size(73, 16);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Correo electronico";
+            this.label2.Text = "Escriba su ID";
             // 
             // label1
             // 
@@ -129,15 +130,15 @@
             this.txt_contraseña.Size = new System.Drawing.Size(231, 23);
             this.txt_contraseña.TabIndex = 2;
             // 
-            // txt_correo_electronico
+            // txt_id
             // 
-            this.txt_correo_electronico.BackColor = System.Drawing.SystemColors.Menu;
-            this.txt_correo_electronico.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_correo_electronico.Location = new System.Drawing.Point(36, 181);
-            this.txt_correo_electronico.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_correo_electronico.Name = "txt_correo_electronico";
-            this.txt_correo_electronico.Size = new System.Drawing.Size(231, 23);
-            this.txt_correo_electronico.TabIndex = 1;
+            this.txt_id.BackColor = System.Drawing.SystemColors.Menu;
+            this.txt_id.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txt_id.Location = new System.Drawing.Point(36, 181);
+            this.txt_id.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(231, 23);
+            this.txt_id.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -170,14 +171,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSalirAPP;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_iniciar_sesion;
         private System.Windows.Forms.TextBox txt_contraseña;
-        private System.Windows.Forms.TextBox txt_correo_electronico;
+        private System.Windows.Forms.TextBox txt_id;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

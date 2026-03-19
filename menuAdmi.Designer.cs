@@ -378,6 +378,7 @@
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir de la app";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnReportes
             // 
@@ -387,6 +388,7 @@
             this.btnReportes.TabIndex = 3;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnGestion_de_Semilleros
             // 
@@ -396,6 +398,7 @@
             this.btnGestion_de_Semilleros.TabIndex = 2;
             this.btnGestion_de_Semilleros.Text = "Gestion de Semilleros";
             this.btnGestion_de_Semilleros.UseVisualStyleBackColor = true;
+            this.btnGestion_de_Semilleros.Click += new System.EventHandler(this.btnGestion_de_Semilleros_Click_1);
             // 
             // btnGestion_de_usuario
             // 
@@ -405,6 +408,7 @@
             this.btnGestion_de_usuario.TabIndex = 1;
             this.btnGestion_de_usuario.Text = "Gestion de Usuario";
             this.btnGestion_de_usuario.UseVisualStyleBackColor = true;
+            this.btnGestion_de_usuario.Click += new System.EventHandler(this.btnGestion_de_usuario_Click);
             // 
             // btnDashboard
             // 
@@ -413,8 +417,9 @@
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(144, 41);
             this.btnDashboard.TabIndex = 0;
-            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.Text = "Menú principal";
             this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // Form2
             // 

@@ -47,26 +47,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion.cs" />
     <Compile Include="Consultas.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Gestion semilleros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Gestion semilleros.Designer.cs">
+      <DependentUpon>Gestion semilleros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Inicio de sesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Inicio de sesion.Designer.cs">
+      <DependentUpon>Inicio de sesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menuAdmi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuAdmi.Designer.cs">
+      <DependentUpon>menuAdmi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion usuario.Designer.cs">
+      <DependentUpon>Gestion usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Gestion semilleros.resx">
+      <DependentUpon>Gestion semilleros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Inicio de sesion.resx">
+      <DependentUpon>Inicio de sesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuAdmi.resx">
+      <DependentUpon>menuAdmi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion usuario.resx">
+      <DependentUpon>Gestion usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,6 +103,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
