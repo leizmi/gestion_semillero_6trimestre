@@ -11,11 +11,12 @@ using System.Windows.Forms;
 
 namespace gestión_semillero_6trimestre
 {
-    //Conexion cn = new Conexion(); //Creacion de instancia(VARIABLE) de la clase Conexion
-
     public partial class Form1 : Form
     {
-    
+
+        Conexion conexion = new Conexion();// creamos una instancia de la clase Conexion para establecer la conexion a la base de datos
+        Consultas consultas = new Consultas(); // creamos una instancia de la clase Consultas para ejecutar las consultas a la base de datos
+
         public Form1()
         {
             InitializeComponent();
@@ -29,10 +30,8 @@ namespace gestión_semillero_6trimestre
             }
             else
             {
-                //cn.Iniciar_Sesion(txt_id.Text), txt_contraseña.Text);
-                Form2 formulario = new Form2();
-                formulario.Show();
-                this.Hide();
+                consultas.Iniciar_sesion(int.Parse(txt_id.Text), txt_contraseña.Text); // si los campos de usuario y contraseña no estan vacios, se ejecuta el metodo Iniciar_sesion para verificar si el usuario y la contraseña ingresados por el usuario coinciden con los resultados de la consulta a la base de datos)
+                this.Hide(); // ocultamos el formulario Form1 al usuario
             }
         }
 
