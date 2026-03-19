@@ -81,9 +81,11 @@ namespace gestión_semillero_6trimestre
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Form1 inicioSesion = new Form1();
-            inicioSesion.Show();
-            this.Hide();
+           DialogResult result = MessageBox.Show("¿Estás seguro de que deseas salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
