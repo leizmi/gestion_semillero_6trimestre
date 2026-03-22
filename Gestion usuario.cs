@@ -44,5 +44,7 @@ namespace gestión_semillero_6trimestre
             reportes.Show();
             this.Close();
         }
+
+        
     }
 }

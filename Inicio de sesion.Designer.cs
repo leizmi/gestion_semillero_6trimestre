@@ -43,13 +43,14 @@
             // 
             // btnSalirAPP
             // 
-            this.btnSalirAPP.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btnSalirAPP.Location = new System.Drawing.Point(116, 328);
+            this.btnSalirAPP.BackColor = System.Drawing.Color.LightCyan;
+            this.btnSalirAPP.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalirAPP.Location = new System.Drawing.Point(95, 354);
             this.btnSalirAPP.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalirAPP.Name = "btnSalirAPP";
-            this.btnSalirAPP.Size = new System.Drawing.Size(62, 25);
+            this.btnSalirAPP.Size = new System.Drawing.Size(124, 26);
             this.btnSalirAPP.TabIndex = 9;
-            this.btnSalirAPP.Text = "Salir";
+            this.btnSalirAPP.Text = "Salir de la app";
             this.btnSalirAPP.UseVisualStyleBackColor = false;
             this.btnSalirAPP.Click += new System.EventHandler(this.btnSalirAPP_Click);
             // 
@@ -65,33 +66,35 @@
             this.groupBox1.Controls.Add(this.txt_id);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(202, 10);
+            this.groupBox1.Location = new System.Drawing.Point(219, 43);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(301, 375);
+            this.groupBox1.Size = new System.Drawing.Size(311, 413);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label3.Location = new System.Drawing.Point(85, 213);
+            this.label3.Location = new System.Drawing.Point(78, 220);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 16);
+            this.label3.Size = new System.Drawing.Size(159, 21);
             this.label3.TabIndex = 6;
             this.label3.Text = "Escriba su contraseña";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(110, 163);
+            this.label2.Location = new System.Drawing.Point(107, 163);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 16);
+            this.label2.Size = new System.Drawing.Size(98, 21);
             this.label2.TabIndex = 5;
             this.label2.Text = "Escriba su ID";
             // 
@@ -109,11 +112,12 @@
             // 
             // btn_iniciar_sesion
             // 
-            this.btn_iniciar_sesion.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_iniciar_sesion.Location = new System.Drawing.Point(102, 271);
+            this.btn_iniciar_sesion.BackColor = System.Drawing.Color.LightCyan;
+            this.btn_iniciar_sesion.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_iniciar_sesion.Location = new System.Drawing.Point(95, 297);
             this.btn_iniciar_sesion.Margin = new System.Windows.Forms.Padding(2);
             this.btn_iniciar_sesion.Name = "btn_iniciar_sesion";
-            this.btn_iniciar_sesion.Size = new System.Drawing.Size(90, 28);
+            this.btn_iniciar_sesion.Size = new System.Drawing.Size(125, 28);
             this.btn_iniciar_sesion.TabIndex = 3;
             this.btn_iniciar_sesion.Text = "Iniciar Sesion";
             this.btn_iniciar_sesion.UseVisualStyleBackColor = false;
@@ -123,7 +127,7 @@
             // 
             this.txt_contraseña.BackColor = System.Drawing.SystemColors.Menu;
             this.txt_contraseña.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_contraseña.Location = new System.Drawing.Point(36, 231);
+            this.txt_contraseña.Location = new System.Drawing.Point(38, 243);
             this.txt_contraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txt_contraseña.Name = "txt_contraseña";
             this.txt_contraseña.PasswordChar = '*';
@@ -134,7 +138,7 @@
             // 
             this.txt_id.BackColor = System.Drawing.SystemColors.Menu;
             this.txt_id.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_id.Location = new System.Drawing.Point(36, 181);
+            this.txt_id.Location = new System.Drawing.Point(40, 183);
             this.txt_id.Margin = new System.Windows.Forms.Padding(2);
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(231, 23);
@@ -144,12 +148,13 @@
             // 
             this.pictureBox1.BackgroundImage = global::gestión_semillero_6trimestre.Properties.Resources.logo_proyecto_final_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(102, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(113, 45);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(90, 94);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 
@@ -158,6 +163,7 @@
             this.BackgroundImage = global::gestión_semillero_6trimestre.Properties.Resources.fondo_loguin_semillero__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(757, 479);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";

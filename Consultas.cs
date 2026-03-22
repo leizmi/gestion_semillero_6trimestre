@@ -25,7 +25,7 @@ namespace gestión_semillero_6trimestre
             consulta.CommandType = CommandType.Text;//establecemos el tipo de comando como texto
             consulta.Parameters.AddWithValue("@ID_usuario", ID_usuario);//agregamos el parametro idusuario a la consulta SQL
             consulta.Parameters.AddWithValue("@contraseña_usuario", contraseña_usuario);//agregamos el parametro passwordusuario a la consulta SQL
-
+            consulta.ExecuteNonQuery();//ejecutamos la consulta SQL para verificar el usuario y la contraseña
 
             try
             {
@@ -67,6 +67,124 @@ namespace gestión_semillero_6trimestre
             }
             return Estado_conexion; // retornamos el estado de la conexion a la base de datos (true si la consulta a la base de datos se ejecuto correctamente, false si no se ejecuto correctamente)
         }
-    }
+
+
+        public int ContarSemilleros()
+        {
+            int cantidad = 0;
+            SqlConnection con = conexion.Conectar();
+
+            try
+            {
+                string query = "SELECT COUNT(*) FROM semillero";
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                cantidad = (int)cmd.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conexion.cerrar();
+            }
+
+            return cantidad;
+        }
+
+
+        public DataTable MostrarSemilleros()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection con = conexion.Conectar();
+
+            try
+            {
+                string query = "SELECT nombre_semillero FROM semillero";
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conexion.cerrar();
+            }
+
+            return dt;
+        }
+
+
+        public int ContarInvestigadores()
+        {
+            SqlConnection con = conexion.Conectar();
+            int total = 0;
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM investigadores", con);
+                total = (int)cmd.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.cerrar();
+            }
+
+            return total;
+        }
+
+        public int ContarEventos()
+        {
+            SqlConnection con = conexion.Conectar();
+            int total = 0;
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM evento", con);
+                total = (int)cmd.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.cerrar();
+            }
+
+            return total;
+        }
+
+        public int ContarReuniones()
+        {
+            SqlConnection con = conexion.Conectar();
+            int total = 0;
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM reunion", con);
+                total = (int)cmd.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion.cerrar();
+            }
+
+            return total;
+        }
+
+       
+    }   
 
 }

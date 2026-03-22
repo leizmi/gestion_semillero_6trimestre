@@ -16,5 +16,7 @@ namespace gestión_semillero_6trimestre
         {
             InitializeComponent();
         }
+
+       
     }
 }

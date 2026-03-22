@@ -43,16 +43,16 @@
             this.btnActualizarSemi = new System.Windows.Forms.Button();
             this.btnEliminarSemi = new System.Windows.Forms.Button();
             this.groupBoxDetalleSemi = new System.Windows.Forms.GroupBox();
-            this.lblNombreSemillero = new System.Windows.Forms.Label();
-            this.lblLineInvesSemi = new System.Windows.Forms.Label();
-            this.lblLiderSemi = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblLiderSemi = new System.Windows.Forms.Label();
+            this.lblLineInvesSemi = new System.Windows.Forms.Label();
+            this.lblNombreSemillero = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxDetalleSemi.SuspendLayout();
@@ -82,6 +82,7 @@
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir de la app";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnReportes
             // 
@@ -159,7 +160,7 @@
             // 
             // btnAgregarSemi
             // 
-            this.btnAgregarSemi.Location = new System.Drawing.Point(13, 242);
+            this.btnAgregarSemi.Location = new System.Drawing.Point(30, 244);
             this.btnAgregarSemi.Name = "btnAgregarSemi";
             this.btnAgregarSemi.Size = new System.Drawing.Size(104, 29);
             this.btnAgregarSemi.TabIndex = 0;
@@ -168,7 +169,7 @@
             // 
             // btnActualizarSemi
             // 
-            this.btnActualizarSemi.Location = new System.Drawing.Point(159, 242);
+            this.btnActualizarSemi.Location = new System.Drawing.Point(177, 244);
             this.btnActualizarSemi.Name = "btnActualizarSemi";
             this.btnActualizarSemi.Size = new System.Drawing.Size(110, 29);
             this.btnActualizarSemi.TabIndex = 1;
@@ -177,9 +178,9 @@
             // 
             // btnEliminarSemi
             // 
-            this.btnEliminarSemi.Location = new System.Drawing.Point(83, 285);
+            this.btnEliminarSemi.Location = new System.Drawing.Point(92, 285);
             this.btnEliminarSemi.Name = "btnEliminarSemi";
-            this.btnEliminarSemi.Size = new System.Drawing.Size(114, 24);
+            this.btnEliminarSemi.Size = new System.Drawing.Size(123, 34);
             this.btnEliminarSemi.TabIndex = 2;
             this.btnEliminarSemi.Text = "Eliminar semillero";
             this.btnEliminarSemi.UseVisualStyleBackColor = true;
@@ -200,93 +201,94 @@
             this.groupBoxDetalleSemi.Controls.Add(this.lblLiderSemi);
             this.groupBoxDetalleSemi.Controls.Add(this.lblLineInvesSemi);
             this.groupBoxDetalleSemi.Controls.Add(this.lblNombreSemillero);
+            this.groupBoxDetalleSemi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxDetalleSemi.Location = new System.Drawing.Point(629, 74);
             this.groupBoxDetalleSemi.Name = "groupBoxDetalleSemi";
-            this.groupBoxDetalleSemi.Size = new System.Drawing.Size(291, 325);
+            this.groupBoxDetalleSemi.Size = new System.Drawing.Size(327, 325);
             this.groupBoxDetalleSemi.TabIndex = 24;
             this.groupBoxDetalleSemi.TabStop = false;
             this.groupBoxDetalleSemi.Text = "Detalles del semillero (Actualizar/Eliminar)";
             // 
-            // lblNombreSemillero
+            // textBox5
             // 
-            this.lblNombreSemillero.AutoSize = true;
-            this.lblNombreSemillero.Location = new System.Drawing.Point(10, 32);
-            this.lblNombreSemillero.Name = "lblNombreSemillero";
-            this.lblNombreSemillero.Size = new System.Drawing.Size(102, 13);
-            this.lblNombreSemillero.TabIndex = 0;
-            this.lblNombreSemillero.Text = "Nombre de semillero";
+            this.textBox5.Location = new System.Drawing.Point(173, 29);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(138, 26);
+            this.textBox5.TabIndex = 9;
             // 
-            // lblLineInvesSemi
+            // textBox4
             // 
-            this.lblLineInvesSemi.AutoSize = true;
-            this.lblLineInvesSemi.Location = new System.Drawing.Point(8, 60);
-            this.lblLineInvesSemi.Name = "lblLineInvesSemi";
-            this.lblLineInvesSemi.Size = new System.Drawing.Size(113, 13);
-            this.lblLineInvesSemi.TabIndex = 1;
-            this.lblLineInvesSemi.Text = "Linea de investigación";
+            this.textBox4.Location = new System.Drawing.Point(173, 57);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(138, 26);
+            this.textBox4.TabIndex = 8;
             // 
-            // lblLiderSemi
+            // textBox3
             // 
-            this.lblLiderSemi.AutoSize = true;
-            this.lblLiderSemi.Location = new System.Drawing.Point(16, 94);
-            this.lblLiderSemi.Name = "lblLiderSemi";
-            this.lblLiderSemi.Size = new System.Drawing.Size(90, 13);
-            this.lblLiderSemi.TabIndex = 2;
-            this.lblLiderSemi.Text = "Lider del semillero";
+            this.textBox3.Location = new System.Drawing.Point(173, 90);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(138, 26);
+            this.textBox3.TabIndex = 7;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(173, 128);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(138, 26);
+            this.textBox2.TabIndex = 6;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(17, 192);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(276, 44);
+            this.textBox1.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 170);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Descripcion general";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 131);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
+            this.label1.Size = new System.Drawing.Size(140, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Fecha de creación";
             // 
-            // label2
+            // lblLiderSemi
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 172);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Descripcion general";
+            this.lblLiderSemi.AutoSize = true;
+            this.lblLiderSemi.Location = new System.Drawing.Point(16, 94);
+            this.lblLiderSemi.Name = "lblLiderSemi";
+            this.lblLiderSemi.Size = new System.Drawing.Size(135, 20);
+            this.lblLiderSemi.TabIndex = 2;
+            this.lblLiderSemi.Text = "Lider del semillero";
             // 
-            // textBox1
+            // lblLineInvesSemi
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 192);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(276, 44);
-            this.textBox1.TabIndex = 5;
+            this.lblLineInvesSemi.AutoSize = true;
+            this.lblLineInvesSemi.Location = new System.Drawing.Point(8, 60);
+            this.lblLineInvesSemi.Name = "lblLineInvesSemi";
+            this.lblLineInvesSemi.Size = new System.Drawing.Size(165, 20);
+            this.lblLineInvesSemi.TabIndex = 1;
+            this.lblLineInvesSemi.Text = "Linea de investigación";
             // 
-            // textBox2
+            // lblNombreSemillero
             // 
-            this.textBox2.Location = new System.Drawing.Point(131, 128);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(138, 20);
-            this.textBox2.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(131, 90);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(138, 20);
-            this.textBox3.TabIndex = 7;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(131, 57);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(138, 20);
-            this.textBox4.TabIndex = 8;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(131, 29);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(138, 20);
-            this.textBox5.TabIndex = 9;
+            this.lblNombreSemillero.AutoSize = true;
+            this.lblNombreSemillero.Location = new System.Drawing.Point(10, 32);
+            this.lblNombreSemillero.Name = "lblNombreSemillero";
+            this.lblNombreSemillero.Size = new System.Drawing.Size(153, 20);
+            this.lblNombreSemillero.TabIndex = 0;
+            this.lblNombreSemillero.Text = "Nombre de semillero";
             // 
             // Gestion_semilleros
             // 
@@ -294,7 +296,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::gestión_semillero_6trimestre.Properties.Resources.fondo_loguin_semillero__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(944, 435);
+            this.ClientSize = new System.Drawing.Size(1004, 471);
             this.Controls.Add(this.groupBoxDetalleSemi);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
