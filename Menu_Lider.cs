@@ -13,6 +13,10 @@ namespace gestión_semillero_6trimestre
 {
     public partial class Menu_Lider : Form
     {
+        Conexion conexion = new Conexion();// creamos una instancia de la clase Conexion para establecer la conexion a la base de datos
+        Consultas consultas = new Consultas(); // creamos una instancia de la clase Consultas para ejecutar las consultas a la base de datos
+
+
         public Menu_Lider()
         {
             InitializeComponent();
@@ -31,23 +35,23 @@ namespace gestión_semillero_6trimestre
 
         private void Menu_Lider_Load(object sender, EventArgs e)
         {
-            CargarSemilleros();
+         //    CargarSemilleros();
         }
 
-        private void CargarSemilleros()
-        {
-            SqlConnection conexion = new SqlConnection("Data Source=DESKTOP-HPRJHVG;Initial Catalog =GestionSemillero;Integrated Security=True");
+       // private void CargarSemilleros()
+        //{
+            //SqlConnection conexion = new SqlConnection("Data Source=DESKTOP-HPRJHVG;Initial Catalog =GestionSemillero;Integrated Security=True");
 
-            SqlDataAdapter da = new SqlDataAdapter(
-                "SELECT ID_semillero, nombre_semillero FROM semillero", conexion);
+            //SqlDataAdapter da = new SqlDataAdapter(
+             //   "SELECT ID_semillero, nombre_semillero FROM semillero", conexion);
 
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+           // DataTable dt = new DataTable();
+           // da.Fill(dt);
 
-            comboBox1.DataSource = dt;
-            comboBox1.DisplayMember = "nombre_semillero";      // lo que ve el usuario
-            comboBox1.ValueMember = "ID_semillero";   // el ID real
-        }
+            //comboBox1.DataSource = dt;
+           // comboBox1.DisplayMember = "nombre_semillero";      // lo que ve el usuario
+         //   comboBox1.ValueMember = "ID_semillero";   // el ID real
+       // }
 
         private void button2_Click(object sender, EventArgs e)
         {
