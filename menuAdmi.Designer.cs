@@ -38,28 +38,25 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnMostrarSemi = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.IDSemillero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre_semilleros = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_creacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Linea_investigacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lider_semillero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionSemi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnGestionEventos = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnGestion_de_Semilleros = new System.Windows.Forms.Button();
             this.btnGestion_de_usuario = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCerrar_sesión = new System.Windows.Forms.Button();
             this.groupBoxAsignarUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxAsignarUsuario
             // 
+            this.groupBoxAsignarUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBoxAsignarUsuario.Controls.Add(this.btnAgregarInvestigador);
             this.groupBoxAsignarUsuario.Controls.Add(this.comboBox2);
             this.groupBoxAsignarUsuario.Controls.Add(this.label6);
@@ -69,25 +66,29 @@
             this.groupBoxAsignarUsuario.Controls.Add(this.label4);
             this.groupBoxAsignarUsuario.Controls.Add(this.label3);
             this.groupBoxAsignarUsuario.Controls.Add(this.textBox1);
-            this.groupBoxAsignarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxAsignarUsuario.Location = new System.Drawing.Point(866, 212);
+            this.groupBoxAsignarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxAsignarUsuario.Location = new System.Drawing.Point(828, 190);
+            this.groupBoxAsignarUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxAsignarUsuario.Name = "groupBoxAsignarUsuario";
-            this.groupBoxAsignarUsuario.Size = new System.Drawing.Size(309, 171);
+            this.groupBoxAsignarUsuario.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBoxAsignarUsuario.Size = new System.Drawing.Size(373, 262);
             this.groupBoxAsignarUsuario.TabIndex = 24;
             this.groupBoxAsignarUsuario.TabStop = false;
             this.groupBoxAsignarUsuario.Text = "Asignar usuario";
             // 
             // btnAgregarInvestigador
             // 
-            this.btnAgregarInvestigador.Location = new System.Drawing.Point(28, 208);
+            this.btnAgregarInvestigador.Location = new System.Drawing.Point(87, 205);
+            this.btnAgregarInvestigador.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarInvestigador.Name = "btnAgregarInvestigador";
-            this.btnAgregarInvestigador.Size = new System.Drawing.Size(183, 30);
+            this.btnAgregarInvestigador.Size = new System.Drawing.Size(244, 37);
             this.btnAgregarInvestigador.TabIndex = 8;
             this.btnAgregarInvestigador.Text = "Agregar investigador";
             this.btnAgregarInvestigador.UseVisualStyleBackColor = true;
             // 
             // comboBox2
             // 
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "1",
@@ -95,229 +96,234 @@
             "3",
             "4",
             "5"});
-            this.comboBox2.Location = new System.Drawing.Point(24, 171);
+            this.comboBox2.Location = new System.Drawing.Point(183, 153);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(203, 28);
+            this.comboBox2.Size = new System.Drawing.Size(178, 26);
             this.comboBox2.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 151);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(25, 161);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(158, 20);
+            this.label6.Size = new System.Drawing.Size(150, 18);
             this.label6.TabIndex = 6;
             this.label6.Text = "Seleccionar semillero";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 96);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(29, 123);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 20);
+            this.label5.Size = new System.Drawing.Size(107, 18);
             this.label5.TabIndex = 5;
             this.label5.Text = "Seleccionar rol";
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Lider",
             "Investigador"});
-            this.comboBox1.Location = new System.Drawing.Point(23, 119);
+            this.comboBox1.Location = new System.Drawing.Point(161, 115);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(206, 28);
+            this.comboBox1.Size = new System.Drawing.Size(200, 26);
             this.comboBox1.TabIndex = 4;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(161, 65);
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(161, 75);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(123, 26);
+            this.textBox2.Size = new System.Drawing.Size(200, 24);
             this.textBox2.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 66);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(27, 81);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 20);
+            this.label4.Size = new System.Drawing.Size(132, 18);
             this.label4.TabIndex = 2;
             this.label4.Text = "Correo electronico";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 35);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(25, 43);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 20);
+            this.label3.Size = new System.Drawing.Size(128, 18);
             this.label3.TabIndex = 1;
             this.label3.Text = "Nombre completo";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 33);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(161, 40);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 26);
+            this.textBox1.Size = new System.Drawing.Size(200, 24);
             this.textBox1.TabIndex = 0;
-            // 
-            // btnMostrarSemi
-            // 
-            this.btnMostrarSemi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarSemi.Location = new System.Drawing.Point(445, 38);
-            this.btnMostrarSemi.Name = "btnMostrarSemi";
-            this.btnMostrarSemi.Size = new System.Drawing.Size(145, 36);
-            this.btnMostrarSemi.TabIndex = 25;
-            this.btnMostrarSemi.Text = "Mostrar semilleros";
-            this.btnMostrarSemi.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDSemillero,
-            this.Nombre_semilleros,
-            this.Fecha_creacion,
-            this.Linea_investigacion,
-            this.Lider_semillero,
-            this.descripcionSemi});
-            this.dataGridView1.Location = new System.Drawing.Point(199, 80);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 49);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(641, 400);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(773, 367);
             this.dataGridView1.TabIndex = 23;
-            // 
-            // IDSemillero
-            // 
-            this.IDSemillero.HeaderText = "ID semillero";
-            this.IDSemillero.Name = "IDSemillero";
-            this.IDSemillero.ReadOnly = true;
-            // 
-            // Nombre_semilleros
-            // 
-            this.Nombre_semilleros.HeaderText = "Nombre semilleros";
-            this.Nombre_semilleros.Name = "Nombre_semilleros";
-            this.Nombre_semilleros.ReadOnly = true;
-            // 
-            // Fecha_creacion
-            // 
-            this.Fecha_creacion.HeaderText = "Fecha creacion";
-            this.Fecha_creacion.Name = "Fecha_creacion";
-            this.Fecha_creacion.ReadOnly = true;
-            // 
-            // Linea_investigacion
-            // 
-            this.Linea_investigacion.HeaderText = "Linea investigacion";
-            this.Linea_investigacion.Name = "Linea_investigacion";
-            this.Linea_investigacion.ReadOnly = true;
-            // 
-            // Lider_semillero
-            // 
-            this.Lider_semillero.HeaderText = "Lider semillero";
-            this.Lider_semillero.Name = "Lider_semillero";
-            this.Lider_semillero.ReadOnly = true;
-            // 
-            // descripcionSemi
-            // 
-            this.descripcionSemi.HeaderText = "Descrpción semillero";
-            this.descripcionSemi.Name = "descripcionSemi";
-            this.descripcionSemi.ReadOnly = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.btnCerrar_sesión);
             this.groupBox1.Controls.Add(this.btnGestionEventos);
-            this.groupBox1.Controls.Add(this.btnSalir);
             this.groupBox1.Controls.Add(this.btnReportes);
             this.groupBox1.Controls.Add(this.btnGestion_de_Semilleros);
             this.groupBox1.Controls.Add(this.btnGestion_de_usuario);
             this.groupBox1.Controls.Add(this.btnDashboard);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(13, 5);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(150, 590);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(1195, 100);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             // 
             // btnGestionEventos
             // 
-            this.btnGestionEventos.Location = new System.Drawing.Point(6, 351);
+            this.btnGestionEventos.Location = new System.Drawing.Point(374, 20);
+            this.btnGestionEventos.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestionEventos.Name = "btnGestionEventos";
-            this.btnGestionEventos.Size = new System.Drawing.Size(138, 52);
+            this.btnGestionEventos.Size = new System.Drawing.Size(174, 54);
             this.btnGestionEventos.TabIndex = 6;
-            this.btnGestionEventos.Text = "Gestion de eventos";
+            this.btnGestionEventos.Text = "Eventos";
+            this.btnGestionEventos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGestionEventos.UseVisualStyleBackColor = true;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(3, 422);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(142, 53);
-            this.btnSalir.TabIndex = 4;
-            this.btnSalir.Text = "Salir de la app";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnGestionEventos.Click += new System.EventHandler(this.btnGestionEventos_Click);
             // 
             // btnReportes
             // 
-            this.btnReportes.Location = new System.Drawing.Point(2, 281);
+            this.btnReportes.CausesValidation = false;
+            this.btnReportes.Location = new System.Drawing.Point(736, 20);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(4);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(144, 54);
+            this.btnReportes.Size = new System.Drawing.Size(174, 54);
             this.btnReportes.TabIndex = 3;
             this.btnReportes.Text = "Reportes";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReportes.UseVisualStyleBackColor = true;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnGestion_de_Semilleros
             // 
-            this.btnGestion_de_Semilleros.Location = new System.Drawing.Point(2, 207);
+            this.btnGestion_de_Semilleros.Location = new System.Drawing.Point(556, 20);
+            this.btnGestion_de_Semilleros.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestion_de_Semilleros.Name = "btnGestion_de_Semilleros";
-            this.btnGestion_de_Semilleros.Size = new System.Drawing.Size(144, 54);
+            this.btnGestion_de_Semilleros.Size = new System.Drawing.Size(172, 54);
             this.btnGestion_de_Semilleros.TabIndex = 2;
-            this.btnGestion_de_Semilleros.Text = "Gestion de Semilleros";
+            this.btnGestion_de_Semilleros.Text = "Semilleros";
+            this.btnGestion_de_Semilleros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGestion_de_Semilleros.UseVisualStyleBackColor = true;
             this.btnGestion_de_Semilleros.Click += new System.EventHandler(this.btnGestion_de_Semilleros_Click_1);
             // 
             // btnGestion_de_usuario
             // 
-            this.btnGestion_de_usuario.Location = new System.Drawing.Point(1, 136);
+            this.btnGestion_de_usuario.Location = new System.Drawing.Point(192, 20);
+            this.btnGestion_de_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestion_de_usuario.Name = "btnGestion_de_usuario";
-            this.btnGestion_de_usuario.Size = new System.Drawing.Size(144, 49);
+            this.btnGestion_de_usuario.Size = new System.Drawing.Size(174, 54);
             this.btnGestion_de_usuario.TabIndex = 1;
-            this.btnGestion_de_usuario.Text = "Gestion de Usuario";
+            this.btnGestion_de_usuario.Text = "Usuario";
+            this.btnGestion_de_usuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGestion_de_usuario.UseVisualStyleBackColor = true;
             this.btnGestion_de_usuario.Click += new System.EventHandler(this.btnGestion_de_usuario_Click);
             // 
             // btnDashboard
             // 
             this.btnDashboard.BackColor = System.Drawing.Color.Transparent;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 64);
+            this.btnDashboard.Location = new System.Drawing.Point(10, 20);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(144, 53);
+            this.btnDashboard.Size = new System.Drawing.Size(174, 54);
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Menú principal";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(23, 150);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(774, 416);
+            this.groupBox2.TabIndex = 26;
+            this.groupBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 29);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Semillero";
+            // 
+            // btnCerrar_sesión
+            // 
+            this.btnCerrar_sesión.Location = new System.Drawing.Point(1056, 20);
+            this.btnCerrar_sesión.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCerrar_sesión.Name = "btnCerrar_sesión";
+            this.btnCerrar_sesión.Size = new System.Drawing.Size(131, 53);
+            this.btnCerrar_sesión.TabIndex = 7;
+            this.btnCerrar_sesión.Text = "Cerrar sesión";
+            this.btnCerrar_sesión.UseVisualStyleBackColor = true;
+            this.btnCerrar_sesión.Click += new System.EventHandler(this.btnCerrar_sesión_Click);
+            // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::gestión_semillero_6trimestre.Properties.Resources.fondo_loguin_semillero__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1217, 527);
+            this.ClientSize = new System.Drawing.Size(1214, 678);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBoxAsignarUsuario);
-            this.Controls.Add(this.btnMostrarSemi);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBoxAsignarUsuario.ResumeLayout(false);
             this.groupBoxAsignarUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -333,20 +339,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnMostrarSemi;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnGestion_de_Semilleros;
         private System.Windows.Forms.Button btnGestion_de_usuario;
         private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDSemillero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_semilleros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_creacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Linea_investigacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lider_semillero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionSemi;
         private System.Windows.Forms.Button btnGestionEventos;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnCerrar_sesión;
     }
 }

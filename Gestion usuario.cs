@@ -12,6 +12,9 @@ namespace gestión_semillero_6trimestre
 {
     public partial class Form3 : Form
     {
+
+        Metodos metodo = new Metodos();
+
         public Form3()
         {
             InitializeComponent();
@@ -19,32 +22,40 @@ namespace gestión_semillero_6trimestre
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            Form2 menu = new Form2();
-            menu.Show();
+          metodo.menuAdmin();
             this.Close();
         }
 
         private void btnGestion_de_usuario_Click(object sender, EventArgs e)
         {
-            Form3 gestionUsuario = new Form3();
-            gestionUsuario.Show();
+            metodo.Admi_GestionUsuario();
             this.Hide();
         }
 
         private void btnGestion_de_Semilleros_Click(object sender, EventArgs e)
         {
-            Gestion_semilleros gestion = new Gestion_semilleros();
-            gestion.Show();
+          metodo.Admi_GestionSemillero();
             this.Close();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            Reportes reportes = new Reportes();
-            reportes.Show();
+            metodo.Admi_Reportes();
             this.Close();
         }
 
-        
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            metodo.sesiónCerrar();
+            this.Hide();
+        }
+
+        private void btnGestionEventos_Click(object sender, EventArgs e)
+        {
+            metodo.admi_GestionEventos();
+            this.Hide();
+        }
+
+       
     }
 }

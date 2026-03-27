@@ -63,6 +63,16 @@ namespace gestión_semillero_6trimestre.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blanco {
+            get {
+                object obj = ResourceManager.GetObject("blanco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondo_loguin_semillero__2_ {
             get {
                 object obj = ResourceManager.GetObject("fondo_loguin_semillero (2)", resourceCulture);

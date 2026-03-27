@@ -14,7 +14,6 @@ namespace gestión_semillero_6trimestre
     public partial class Form1 : Form
     {
 
-        Conexion conexion = new Conexion();// creamos una instancia de la clase Conexion para establecer la conexion a la base de datos
         Consultas consultas = new Consultas(); // creamos una instancia de la clase Consultas para ejecutar las consultas a la base de datos
 
 

@@ -14,7 +14,7 @@ namespace gestión_semillero_6trimestre
     public partial class Reportes : Form
     {
         Consultas consultas = new Consultas(); // creamos una instancia de la clase Consultas para ejecutar las consultas a la base de datos
-
+        Metodos metodos = new Metodos();    
         public Reportes()
         {
             InitializeComponent();
@@ -22,29 +22,25 @@ namespace gestión_semillero_6trimestre
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            Form2 menu = new Form2();
-            menu.Show();
+           metodos.menuAdmin();
             this.Hide();
         }
 
         private void btnGestion_de_usuario_Click(object sender, EventArgs e)
         {
-            Form3 gestionUsuario = new Form3();
-            gestionUsuario.Show();
+           metodos.Admi_GestionUsuario();
             this.Hide();
         }
 
         private void btnGestion_de_Semilleros_Click(object sender, EventArgs e)
         {
-            Gestion_semilleros gestion = new Gestion_semilleros();
-            gestion.Show();
+            metodos.Admi_GestionSemillero();
             this.Hide();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            Reportes reportes = new Reportes();
-            reportes.Show();
+           metodos.Admi_Reportes();
             this.Hide();
         }
 
@@ -86,16 +82,19 @@ namespace gestión_semillero_6trimestre
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("¿Estás seguro de que deseas salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+           metodos.sesiónCerrar();
+           this.Hide();
         }
 
         private void chart1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            metodos.admi_GestionEventos();
+            this.Hide();
         }
     }
 }

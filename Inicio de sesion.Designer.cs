@@ -45,10 +45,10 @@
             // 
             this.btnSalirAPP.BackColor = System.Drawing.Color.LightCyan;
             this.btnSalirAPP.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalirAPP.Location = new System.Drawing.Point(95, 354);
-            this.btnSalirAPP.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalirAPP.Location = new System.Drawing.Point(127, 436);
+            this.btnSalirAPP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalirAPP.Name = "btnSalirAPP";
-            this.btnSalirAPP.Size = new System.Drawing.Size(124, 26);
+            this.btnSalirAPP.Size = new System.Drawing.Size(165, 32);
             this.btnSalirAPP.TabIndex = 9;
             this.btnSalirAPP.Text = "Salir de la app";
             this.btnSalirAPP.UseVisualStyleBackColor = false;
@@ -66,11 +66,11 @@
             this.groupBox1.Controls.Add(this.txt_id);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(219, 43);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(389, 53);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(311, 413);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(415, 508);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
@@ -79,10 +79,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label3.Location = new System.Drawing.Point(78, 220);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(104, 271);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 21);
+            this.label3.Size = new System.Drawing.Size(197, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "Escriba su contraseña";
             // 
@@ -91,10 +90,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(107, 157);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(143, 193);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 21);
+            this.label2.Size = new System.Drawing.Size(121, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Escriba su ID";
             // 
@@ -103,10 +101,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label1.Location = new System.Drawing.Point(112, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(149, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 23);
+            this.label1.Size = new System.Drawing.Size(106, 29);
             this.label1.TabIndex = 4;
             this.label1.Text = "SEMITEC";
             // 
@@ -114,10 +111,10 @@
             // 
             this.btn_iniciar_sesion.BackColor = System.Drawing.Color.LightCyan;
             this.btn_iniciar_sesion.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_iniciar_sesion.Location = new System.Drawing.Point(95, 297);
-            this.btn_iniciar_sesion.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_iniciar_sesion.Location = new System.Drawing.Point(127, 366);
+            this.btn_iniciar_sesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_iniciar_sesion.Name = "btn_iniciar_sesion";
-            this.btn_iniciar_sesion.Size = new System.Drawing.Size(125, 28);
+            this.btn_iniciar_sesion.Size = new System.Drawing.Size(167, 45);
             this.btn_iniciar_sesion.TabIndex = 3;
             this.btn_iniciar_sesion.Text = "Iniciar Sesion";
             this.btn_iniciar_sesion.UseVisualStyleBackColor = false;
@@ -127,11 +124,11 @@
             // 
             this.txt_contraseña.BackColor = System.Drawing.SystemColors.Menu;
             this.txt_contraseña.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_contraseña.Location = new System.Drawing.Point(38, 243);
-            this.txt_contraseña.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_contraseña.Location = new System.Drawing.Point(51, 299);
+            this.txt_contraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_contraseña.Name = "txt_contraseña";
             this.txt_contraseña.PasswordChar = '*';
-            this.txt_contraseña.Size = new System.Drawing.Size(231, 23);
+            this.txt_contraseña.Size = new System.Drawing.Size(307, 27);
             this.txt_contraseña.TabIndex = 2;
             this.txt_contraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_contraseña_KeyPress);
             // 
@@ -139,10 +136,10 @@
             // 
             this.txt_id.BackColor = System.Drawing.SystemColors.Menu;
             this.txt_id.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_id.Location = new System.Drawing.Point(40, 183);
-            this.txt_id.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_id.Location = new System.Drawing.Point(53, 225);
+            this.txt_id.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(231, 23);
+            this.txt_id.Size = new System.Drawing.Size(307, 27);
             this.txt_id.TabIndex = 1;
             this.txt_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_id_KeyPress);
             // 
@@ -150,24 +147,24 @@
             // 
             this.pictureBox1.BackgroundImage = global::gestión_semillero_6trimestre.Properties.Resources.logo_proyecto_final_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(113, 45);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(151, 55);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 94);
+            this.pictureBox1.Size = new System.Drawing.Size(120, 116);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::gestión_semillero_6trimestre.Properties.Resources.fondo_loguin_semillero__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(757, 479);
+            this.ClientSize = new System.Drawing.Size(1183, 639);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
