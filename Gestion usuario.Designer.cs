@@ -49,6 +49,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBoxActualizarEliminar = new System.Windows.Forms.GroupBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -68,8 +70,6 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGestionUsuario)).BeginInit();
             this.groupBoxFiltroBusqueda.SuspendLayout();
             this.groupBoxActualizarEliminar.SuspendLayout();
@@ -319,6 +319,30 @@
             this.groupBoxActualizarEliminar.TabStop = false;
             this.groupBoxActualizarEliminar.Text = "Actualiza o eliminar";
             // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Administrador",
+            "Lider"});
+            this.comboBox4.Location = new System.Drawing.Point(377, 179);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(93, 28);
+            this.comboBox4.TabIndex = 21;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "activo",
+            "inactivo"});
+            this.comboBox3.Location = new System.Drawing.Point(361, 137);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(109, 28);
+            this.comboBox3.TabIndex = 20;
+            // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
@@ -506,30 +530,6 @@
             this.groupBox2.Size = new System.Drawing.Size(1190, 100);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "activo",
-            "inactivo"});
-            this.comboBox3.Location = new System.Drawing.Point(361, 137);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(109, 28);
-            this.comboBox3.TabIndex = 20;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Administrador",
-            "Lider"});
-            this.comboBox4.Location = new System.Drawing.Point(377, 179);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(93, 28);
-            this.comboBox4.TabIndex = 21;
             // 
             // Form3
             // 

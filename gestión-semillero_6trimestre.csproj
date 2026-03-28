@@ -49,11 +49,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
-    <Compile Include="Consultar eventos.cs">
+    <Compile Include="Consultar eventos lider.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultar eventos.Designer.cs">
-      <DependentUpon>Consultar eventos.cs</DependentUpon>
+    <Compile Include="Consultar eventos lider.Designer.cs">
+      <DependentUpon>Consultar eventos lider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion de eventoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion de eventoss.Designer.cs">
+      <DependentUpon>Gestion de eventoss.cs</DependentUpon>
     </Compile>
     <Compile Include="Consultas.cs" />
     <Compile Include="Gestion semilleros.cs">
@@ -101,8 +107,11 @@
     <Compile Include="Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Consultar eventos.resx">
-      <DependentUpon>Consultar eventos.cs</DependentUpon>
+    <EmbeddedResource Include="Consultar eventos lider.resx">
+      <DependentUpon>Consultar eventos lider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion de eventoss.resx">
+      <DependentUpon>Gestion de eventoss.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion semilleros.resx">
       <DependentUpon>Gestion semilleros.cs</DependentUpon>

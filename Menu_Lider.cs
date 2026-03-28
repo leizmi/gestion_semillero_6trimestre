@@ -70,7 +70,9 @@ namespace gestión_semillero_6trimestre
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-
+            Consultar_eventos_lider consuEventosLider = new Consultar_eventos_lider();
+            consuEventosLider.Show();
+            this.Hide();
         }
     } 
 }
