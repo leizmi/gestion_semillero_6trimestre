@@ -44,34 +44,18 @@ namespace gestión_semillero_6trimestre
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void txt_id_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            bool mostrarMensaje = true;
-
-            if (!char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar))
+        { 
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true;
-
-                if (mostrarMensaje)
-                {
-                    MessageBox.Show("Solo se aceptan numeros.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    mostrarMensaje = false;
-                }
+                e.Handled = true; 
+               
+                MessageBox.Show("Solo se aceptan números.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
+                
             }
-            else
-            {
-                mostrarMensaje = true; // se reinicia cuando escribe bien
-            }
-
-        }
-
-        private void txt_contraseña_KeyPress(object sender, KeyPressEventArgs e)
-        {
 
         }
     }

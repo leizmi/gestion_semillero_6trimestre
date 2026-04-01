@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnGestion_de_usuario = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnRegistrarProyecto = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnGestionarSemillero = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscarEvento = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -49,8 +49,8 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.btnGestion_de_usuario);
+            this.groupBox3.Controls.Add(this.btnCerrarSesion);
+            this.groupBox3.Controls.Add(this.btnRegistrarProyecto);
             this.groupBox3.Controls.Add(this.btnReportes);
             this.groupBox3.Controls.Add(this.btnGestionarSemillero);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -62,26 +62,27 @@
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             // 
-            // button1
+            // btnCerrarSesion
             // 
-            this.button1.Location = new System.Drawing.Point(719, 20);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 63);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Cerrar sesión";
-            this.button1.UseVisualStyleBackColor = true;
-
+            this.btnCerrarSesion.Location = new System.Drawing.Point(719, 20);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(187, 63);
+            this.btnCerrarSesion.TabIndex = 4;
+            this.btnCerrarSesion.Text = "Cerrar sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
-            // btnGestion_de_usuario
+            // btnRegistrarProyecto
             // 
-            this.btnGestion_de_usuario.Location = new System.Drawing.Point(279, 20);
-            this.btnGestion_de_usuario.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGestion_de_usuario.Name = "btnGestion_de_usuario";
-            this.btnGestion_de_usuario.Size = new System.Drawing.Size(187, 60);
-            this.btnGestion_de_usuario.TabIndex = 1;
-            this.btnGestion_de_usuario.Text = "Registrar proyecto";
-            this.btnGestion_de_usuario.UseVisualStyleBackColor = true;
+            this.btnRegistrarProyecto.Location = new System.Drawing.Point(279, 20);
+            this.btnRegistrarProyecto.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegistrarProyecto.Name = "btnRegistrarProyecto";
+            this.btnRegistrarProyecto.Size = new System.Drawing.Size(187, 60);
+            this.btnRegistrarProyecto.TabIndex = 1;
+            this.btnRegistrarProyecto.Text = "Registrar proyecto";
+            this.btnRegistrarProyecto.UseVisualStyleBackColor = true;
+            this.btnRegistrarProyecto.Click += new System.EventHandler(this.btnRegistrarProyecto_Click);
             // 
             // btnReportes
             // 
@@ -103,6 +104,7 @@
             this.btnGestionarSemillero.TabIndex = 8;
             this.btnGestionarSemillero.Text = "Gestionar semillero";
             this.btnGestionarSemillero.UseVisualStyleBackColor = true;
+            this.btnGestionarSemillero.Click += new System.EventHandler(this.btnGestionarSemillero_Click);
             // 
             // dataGridView1
             // 
@@ -124,31 +126,26 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(55, 181);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(756, 223);
+            this.groupBox1.Size = new System.Drawing.Size(779, 223);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             // 
-            // comboBox1
+            // btnBuscarEvento
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Nombre de proyecto",
-            "Nombre del semillero",
-            "Tipo de evento",
-            "Fecha evento"});
-            this.comboBox1.Location = new System.Drawing.Point(25, 52);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(214, 33);
-            this.comboBox1.TabIndex = 0;
+            this.btnBuscarEvento.Location = new System.Drawing.Point(20, 182);
+            this.btnBuscarEvento.Name = "btnBuscarEvento";
+            this.btnBuscarEvento.Size = new System.Drawing.Size(214, 35);
+            this.btnBuscarEvento.TabIndex = 4;
+            this.btnBuscarEvento.Text = "Buscar con flitro";
+            this.btnBuscarEvento.UseVisualStyleBackColor = true;
+            this.btnBuscarEvento.Click += new System.EventHandler(this.btnBuscarEvento_Click);
             // 
-            // label1
+            // txtBuscar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(486, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Por favor seleccione alguna de las siguientes opciones";
+            this.txtBuscar.Location = new System.Drawing.Point(24, 134);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(210, 30);
+            this.txtBuscar.TabIndex = 3;
             // 
             // label2
             // 
@@ -160,22 +157,26 @@
             this.label2.Text = "Ahora ingrese la informacion que quiere buscar relacionado con la opción escogida" +
     "";
             // 
-            // txtBuscar
+            // label1
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(24, 134);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(210, 30);
-            this.txtBuscar.TabIndex = 3;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(486, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Por favor seleccione alguna de las siguientes opciones";
             // 
-            // btnBuscarEvento
+            // comboBox1
             // 
-            this.btnBuscarEvento.Location = new System.Drawing.Point(20, 182);
-            this.btnBuscarEvento.Name = "btnBuscarEvento";
-            this.btnBuscarEvento.Size = new System.Drawing.Size(214, 35);
-            this.btnBuscarEvento.TabIndex = 4;
-            this.btnBuscarEvento.Text = "Buscar con flitro";
-            this.btnBuscarEvento.UseVisualStyleBackColor = true;
-            this.btnBuscarEvento.Click += new System.EventHandler(this.btnBuscarEvento_Click);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "ID del evento",
+            "Fecha evento",
+            "Nombre del evento"});
+            this.comboBox1.Location = new System.Drawing.Point(25, 52);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(214, 33);
+            this.comboBox1.TabIndex = 0;
             // 
             // label3
             // 
@@ -215,8 +216,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnGestion_de_usuario;
+        private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Button btnRegistrarProyecto;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnGestionarSemillero;
         private System.Windows.Forms.DataGridView dataGridView1;

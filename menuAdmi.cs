@@ -41,11 +41,7 @@ namespace gestión_semillero_6trimestre
             this.Hide();
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-          metodo.sesiónCerrar();
-            this.Hide();
-        }
+        
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
@@ -69,8 +65,7 @@ namespace gestión_semillero_6trimestre
 
         private void btnCerrar_sesión_Click(object sender, EventArgs e)
         {
-            metodo.sesiónCerrar();
-            this.Hide();
+            metodo.sesiónCerrar(this); // 🔥 le pasas el formulario actual
         }
     }
    

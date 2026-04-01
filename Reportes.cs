@@ -82,8 +82,7 @@ namespace gestión_semillero_6trimestre
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-           metodos.sesiónCerrar();
-           this.Hide();
+            metodos.sesiónCerrar(this); // 🔥 le pasas el formulario actual
         }
 
         private void chart1_Click(object sender, EventArgs e)

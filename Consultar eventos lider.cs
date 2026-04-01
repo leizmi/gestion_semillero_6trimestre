@@ -12,7 +12,8 @@ using System.Windows.Forms;
 namespace gestión_semillero_6trimestre
 {
     public partial class Consultar_eventos_lider : Form
-    {
+    {   
+        Metodos metodos = new Metodos();
         public Consultar_eventos_lider()
         {
             InitializeComponent();
@@ -22,26 +23,54 @@ namespace gestión_semillero_6trimestre
         {
             if (comboBox1.SelectedItem == null)
             {
-                MessageBox.Show("Seleccione un criterio de búsqueda");
+                MessageBox.Show("Seleccione un criterio de búsqueda.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtBuscar.Text))
+            {
+                MessageBox.Show("Ingrese un valor para buscar.");
                 return;
             }
 
             string columna = "";
             string valor = txtBuscar.Text.Trim();
 
-            switch (comboBox1.SelectedItem.ToString())
+            string opcion = comboBox1.SelectedItem.ToString();
+
+            // 🔥 CORREGIDO: texto correcto del ComboBox
+            if (opcion == "ID del evento")
             {
-                case "Nombre de proyecto":
-                    columna = "nombre_proyecto";
-                    break;
+                columna = "ID_evento";
 
-                case "Nombre del semillero":
-                    columna = "nombre_semillero";
-                    break;
+                if (!int.TryParse(valor, out _))
+                {
+                    MessageBox.Show("El ID debe ser numérico.");
+                    return;
+                }
+            }
+            else if (opcion == "Nombre del evento")
+            {
+                columna = "nombre_evento";
+            }
+            else if (opcion == "Fecha evento")
+            {
+                columna = "fecha_evento";
 
-                case "Fecha evento":
-                    columna = "fecha_evento";
-                    break;
+                if (!DateTime.TryParseExact(valor, "yyyy-MM-dd",
+                    System.Globalization.CultureInfo.InvariantCulture,
+                    System.Globalization.DateTimeStyles.None, out _))
+                {
+                    MessageBox.Show("La fecha debe tener formato: yyyy-MM-dd");
+                    return;
+                }
+            }
+
+            // 🔥 VALIDACIÓN ARREGLADA
+            if (columna == "")
+            {
+                MessageBox.Show("Opción no válida.");
+                return;
             }
 
             CargarDatos(columna, valor);
@@ -51,15 +80,15 @@ namespace gestión_semillero_6trimestre
         {
             string query = "";
 
-            if (string.IsNullOrEmpty(valor))
+            if (string.IsNullOrEmpty(columna) || string.IsNullOrEmpty(valor))
             {
                 query = "SELECT * FROM evento";
             }
             else
             {
-                if (columna == "fecha_evento")
+                if (columna == "ID_evento")
                 {
-                    query = $"SELECT * FROM evento WHERE CONVERT(VARCHAR, fecha_evento, 23) LIKE @valor";
+                    query = "SELECT * FROM evento WHERE ID_evento = @valor";
                 }
                 else
                 {
@@ -67,17 +96,35 @@ namespace gestión_semillero_6trimestre
                 }
             }
 
-            SqlConnection conn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog =GestionSemillero;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=GestionSemillero;Integrated Security=True");
             SqlCommand cmd = new SqlCommand(query, conn);
 
-            if (!string.IsNullOrEmpty(valor))
+            if (!string.IsNullOrEmpty(columna) && !string.IsNullOrEmpty(valor))
             {
-                cmd.Parameters.AddWithValue("@valor", "%" + valor + "%");
+                if (columna == "ID_evento")
+                    cmd.Parameters.Add("@valor", SqlDbType.Int).Value = Convert.ToInt32(valor); // 🔥 mejor tipo
+                else if (columna == "fecha_evento")
+                    cmd.Parameters.AddWithValue("@valor", valor);
+                else
+                    cmd.Parameters.AddWithValue("@valor", "%" + valor + "%");
             }
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
+
+            if (dt.Rows.Count == 0)
+            {
+                if (columna == "nombre_evento")
+                    MessageBox.Show("No existe ningún evento con ese nombre.");
+                else if (columna == "fecha_evento")
+                    MessageBox.Show("No hay eventos en esa fecha.");
+                else if (columna == "ID_evento")
+                    MessageBox.Show("No existe ningún evento con ese ID.");
+
+                dataGridView1.DataSource = null;
+                return;
+            }
 
             dataGridView1.DataSource = dt;
         }
@@ -94,6 +141,21 @@ namespace gestión_semillero_6trimestre
             this.Hide();
         }
 
-        
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            metodos.sesiónCerrar(this); // 🔥 le pasas el formulario actual
+        }
+
+        private void btnRegistrarProyecto_Click(object sender, EventArgs e)
+        {
+            metodos.registrarProyecto();
+            this.Hide();
+        }
+
+        private void btnGestionarSemillero_Click(object sender, EventArgs e)
+        {
+            metodos.menuLider();
+            this.Hide();
+        }
     }
 }

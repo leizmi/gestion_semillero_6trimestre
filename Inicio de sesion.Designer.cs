@@ -133,7 +133,7 @@
             this.txt_contraseña.PasswordChar = '*';
             this.txt_contraseña.Size = new System.Drawing.Size(231, 23);
             this.txt_contraseña.TabIndex = 2;
-            this.txt_contraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_contraseña_KeyPress);
+            
             // 
             // txt_id
             // 
@@ -156,7 +156,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(90, 94);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            
             // 
             // Form1
             // 

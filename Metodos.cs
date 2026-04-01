@@ -38,16 +38,48 @@ namespace gestión_semillero_6trimestre
         }
 
 
-        
+
         /// Método para cerrar sesión, muestra un mensaje de confirmación antes de cerrar la sesión y volver al formulario de inicio de sesión.
-        public void sesiónCerrar()
+        public void sesiónCerrar(Form formularioActual)
         {
-            DialogResult result = MessageBox.Show("¿Estás seguro de que deseas salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show(
+       "¿Estás seguro de que deseas salir?",
+       "Confirmar salida",
+       MessageBoxButtons.YesNo,
+       MessageBoxIcon.Question);
+
             if (result == DialogResult.Yes)
             {
-                Form1 menu = new Form1();
-                menu.Show();
+                Form1 login = new Form1();
+                login.Show();
+
+                formularioActual.Close(); // 🔥 AQUÍ se cierra correctamente
             }
+        }
+
+        /// lider y sus metodos para mostrar los formularios correspondientes a sus funciones
+        public void menuLider()
+        {
+            Menu_Lider menu = new Menu_Lider();
+            menu.Show();
+        }
+
+        public void consultarEventosLider()
+        {
+            Consultar_eventos_lider consuEventosLider = new Consultar_eventos_lider();
+            consuEventosLider.Show();
+        }
+
+        public void consultarEventos()
+        {
+            Consultar_eventos consulEventos = new Consultar_eventos();
+            consulEventos.Show();
+        }
+
+        public void registrarProyecto()
+        {
+            Registrar_proyecto regisProyecto = new Registrar_proyecto();
+            regisProyecto.Show();
         }
 
     }
