@@ -109,7 +109,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(55, 421);
+            this.dataGridView1.Location = new System.Drawing.Point(55, 450);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -118,6 +118,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnBuscarEvento);
             this.groupBox1.Controls.Add(this.txtBuscar);
             this.groupBox1.Controls.Add(this.label2);
@@ -126,13 +127,13 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(55, 181);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(779, 223);
+            this.groupBox1.Size = new System.Drawing.Size(969, 223);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             // 
             // btnBuscarEvento
             // 
-            this.btnBuscarEvento.Location = new System.Drawing.Point(20, 182);
+            this.btnBuscarEvento.Location = new System.Drawing.Point(21, 182);
             this.btnBuscarEvento.Name = "btnBuscarEvento";
             this.btnBuscarEvento.Size = new System.Drawing.Size(214, 35);
             this.btnBuscarEvento.TabIndex = 4;
@@ -184,7 +185,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(250, 624);
+            this.label3.Location = new System.Drawing.Point(250, 425);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(584, 22);
             this.label3.TabIndex = 33;

@@ -20,6 +20,7 @@ namespace gestión_semillero_6trimestre
             InitializeComponent();
         }
 
+        // Eventos para navegar entre los formularios del menú del administrador
         private void btnDashboard_Click(object sender, EventArgs e)
         {
            metodos.menuAdmin();
@@ -44,7 +45,7 @@ namespace gestión_semillero_6trimestre
             this.Hide();
         }
 
-        
+        // Eventos para mostrar los datos en los labels al hacer clic en los botones correspondientes
         private void btnMostrarCantidadInvestigadores_Click(object sender, EventArgs e)
         {
             lblCantidadInvestigadores.Text = consultas.ContarInvestigadores().ToString();
@@ -56,38 +57,30 @@ namespace gestión_semillero_6trimestre
             lblCantidadEventos.Text = consultas.ContarEventos().ToString();
         }
 
-        private void btnMostrarCantidadReuniones_Click(object sender, EventArgs e)
-        {
-            lblCantidadReuniones.Text = consultas.ContarReuniones().ToString();
-        }
 
+        // Evento para mostrar la cantidad de semilleros y una gráfica de torta con la distribución de semilleros al hacer clic en el botón correspondiente
         private void btnMostrarCantidadSemileros_Click(object sender, EventArgs e)
         {
             lblCantidadSemi.Text = consultas.ContarSemilleros().ToString();
 
-            // Gráfica
-            // Gráfica
+
+            // Gráfica de torta para mostrar la distribución de semilleros
             chart1.Series.Clear();
 
-            var s = chart1.Series.Add("Semilleros");
-            s.ChartType = SeriesChartType.Pie;
+            var s = chart1.Series.Add("Semilleros");// Agregamos una nueva serie a la gráfica con el nombre "Semilleros"
+            s.ChartType = SeriesChartType.Pie;// Establecemos el tipo de gráfico como torta (Pie)
 
-            foreach (DataRow r in consultas.MostrarSemilleros().Rows)
+            foreach (DataRow r in consultas.MostrarSemilleros().Rows)// Iteramos sobre cada fila del resultado de la consulta MostrarSemilleros() para agregar los datos a la gráfica
             {
-                s.Points.AddXY(r["nombre_semillero"].ToString(), 1);
+                s.Points.AddXY(r["nombre_semillero"].ToString(), 1);// Agregamos un punto a la serie con el nombre del semillero y un valor de 1 para cada semillero (esto hará que cada semillero tenga la misma proporción en la gráfica)
             }
 
-            s.Label = "#VALX (#PERCENT)";
+            s.Label = "#VALX (#PERCENT)";// Establecemos la etiqueta de cada porción de la gráfica para mostrar el nombre del semillero y el porcentaje correspondiente
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            metodos.sesiónCerrar(this); // 🔥 le pasas el formulario actual
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
+            metodos.sesiónCerrar(this); 
         }
 
         private void button1_Click(object sender, EventArgs e)

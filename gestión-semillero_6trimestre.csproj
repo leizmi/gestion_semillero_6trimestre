@@ -55,11 +55,11 @@
     <Compile Include="Consultar eventos lider.Designer.cs">
       <DependentUpon>Consultar eventos lider.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gestion de eventoss.cs">
+    <Compile Include="Gestion de eventos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gestion de eventoss.Designer.cs">
-      <DependentUpon>Gestion de eventoss.cs</DependentUpon>
+    <Compile Include="Gestion de eventos.Designer.cs">
+      <DependentUpon>Gestion de eventos.cs</DependentUpon>
     </Compile>
     <Compile Include="Consultas.cs" />
     <Compile Include="Gestion semilleros.cs">
@@ -110,8 +110,8 @@
     <EmbeddedResource Include="Consultar eventos lider.resx">
       <DependentUpon>Consultar eventos lider.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gestion de eventoss.resx">
-      <DependentUpon>Gestion de eventoss.cs</DependentUpon>
+    <EmbeddedResource Include="Gestion de eventos.resx">
+      <DependentUpon>Gestion de eventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion semilleros.resx">
       <DependentUpon>Gestion semilleros.cs</DependentUpon>

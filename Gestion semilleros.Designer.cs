@@ -38,12 +38,12 @@
             this.btnActualizarSemi = new System.Windows.Forms.Button();
             this.btnEliminarSemi = new System.Windows.Forms.Button();
             this.groupBoxDetalleSemi = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.lblIDSemillero = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtLider = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,6 +52,7 @@
             this.lblNombreSemillero = new System.Windows.Forms.Label();
             this.btnConsultarEvento = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnActivarSemillero = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxDetalleSemi.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -125,8 +126,9 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(715, 506);
+            this.dataGridView1.Size = new System.Drawing.Size(715, 431);
             this.dataGridView1.TabIndex = 22;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnAgregarSemi
             // 
@@ -141,28 +143,31 @@
             // 
             // btnActualizarSemi
             // 
-            this.btnActualizarSemi.Location = new System.Drawing.Point(225, 321);
+            this.btnActualizarSemi.Location = new System.Drawing.Point(252, 321);
             this.btnActualizarSemi.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizarSemi.Name = "btnActualizarSemi";
-            this.btnActualizarSemi.Size = new System.Drawing.Size(198, 43);
+            this.btnActualizarSemi.Size = new System.Drawing.Size(232, 43);
             this.btnActualizarSemi.TabIndex = 1;
             this.btnActualizarSemi.Text = "Actualizar semillero";
             this.btnActualizarSemi.UseVisualStyleBackColor = true;
+            this.btnActualizarSemi.Click += new System.EventHandler(this.btnActualizarSemi_Click);
             // 
             // btnEliminarSemi
             // 
-            this.btnEliminarSemi.Location = new System.Drawing.Point(113, 372);
+            this.btnEliminarSemi.Location = new System.Drawing.Point(252, 372);
             this.btnEliminarSemi.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarSemi.Name = "btnEliminarSemi";
             this.btnEliminarSemi.Size = new System.Drawing.Size(232, 43);
             this.btnEliminarSemi.TabIndex = 2;
-            this.btnEliminarSemi.Text = "Eliminar semillero";
+            this.btnEliminarSemi.Text = "Desactivar semillero";
             this.btnEliminarSemi.UseVisualStyleBackColor = true;
+            this.btnEliminarSemi.Click += new System.EventHandler(this.btnEliminarSemi_Click);
             // 
             // groupBoxDetalleSemi
             // 
             this.groupBoxDetalleSemi.BackColor = System.Drawing.Color.Transparent;
-            this.groupBoxDetalleSemi.Controls.Add(this.textBox5);
+            this.groupBoxDetalleSemi.Controls.Add(this.btnActivarSemillero);
+            this.groupBoxDetalleSemi.Controls.Add(this.txtID);
             this.groupBoxDetalleSemi.Controls.Add(this.lblIDSemillero);
             this.groupBoxDetalleSemi.Controls.Add(this.dateTimePicker1);
             this.groupBoxDetalleSemi.Controls.Add(this.btnEliminarSemi);
@@ -170,7 +175,7 @@
             this.groupBoxDetalleSemi.Controls.Add(this.btnActualizarSemi);
             this.groupBoxDetalleSemi.Controls.Add(this.textBox2);
             this.groupBoxDetalleSemi.Controls.Add(this.btnAgregarSemi);
-            this.groupBoxDetalleSemi.Controls.Add(this.textBox3);
+            this.groupBoxDetalleSemi.Controls.Add(this.txtLider);
             this.groupBoxDetalleSemi.Controls.Add(this.textBox4);
             this.groupBoxDetalleSemi.Controls.Add(this.label2);
             this.groupBoxDetalleSemi.Controls.Add(this.label1);
@@ -182,18 +187,18 @@
             this.groupBoxDetalleSemi.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxDetalleSemi.Name = "groupBoxDetalleSemi";
             this.groupBoxDetalleSemi.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxDetalleSemi.Size = new System.Drawing.Size(438, 450);
+            this.groupBoxDetalleSemi.Size = new System.Drawing.Size(508, 425);
             this.groupBoxDetalleSemi.TabIndex = 24;
             this.groupBoxDetalleSemi.TabStop = false;
             this.groupBoxDetalleSemi.Text = "Detalles del semillero (Actualizar/Eliminar)";
             // 
-            // textBox5
+            // txtID
             // 
-            this.textBox5.Location = new System.Drawing.Point(188, 141);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(193, 27);
-            this.textBox5.TabIndex = 12;
+            this.txtID.Location = new System.Drawing.Point(188, 141);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(193, 27);
+            this.txtID.TabIndex = 12;
             // 
             // lblIDSemillero
             // 
@@ -211,7 +216,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(175, 176);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(248, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(309, 27);
             this.dateTimePicker1.TabIndex = 10;
             // 
             // textBox1
@@ -230,13 +235,13 @@
             this.textBox2.Size = new System.Drawing.Size(193, 27);
             this.textBox2.TabIndex = 8;
             // 
-            // textBox3
+            // txtLider
             // 
-            this.textBox3.Location = new System.Drawing.Point(188, 106);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(193, 27);
-            this.textBox3.TabIndex = 7;
+            this.txtLider.Location = new System.Drawing.Point(188, 106);
+            this.txtLider.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLider.Name = "txtLider";
+            this.txtLider.Size = new System.Drawing.Size(193, 27);
+            this.txtLider.TabIndex = 7;
             // 
             // textBox4
             // 
@@ -319,7 +324,7 @@
             this.groupBox2.Controls.Add(this.btnGestion_de_usuario);
             this.groupBox2.Controls.Add(this.btnDashboard);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(16, 13);
+            this.groupBox2.Location = new System.Drawing.Point(55, 13);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -327,13 +332,23 @@
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             // 
+            // btnActivarSemillero
+            // 
+            this.btnActivarSemillero.Location = new System.Drawing.Point(19, 374);
+            this.btnActivarSemillero.Name = "btnActivarSemillero";
+            this.btnActivarSemillero.Size = new System.Drawing.Size(186, 40);
+            this.btnActivarSemillero.TabIndex = 13;
+            this.btnActivarSemillero.Text = "Activar semillero";
+            this.btnActivarSemillero.UseVisualStyleBackColor = true;
+            this.btnActivarSemillero.Click += new System.EventHandler(this.btnActivarSemillero_Click);
+            // 
             // Gestion_semilleros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::gestión_semillero_6trimestre.Properties.Resources.fondo_loguin_semillero__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1212, 673);
+            this.ClientSize = new System.Drawing.Size(1308, 603);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBoxDetalleSemi);
@@ -369,11 +384,12 @@
         private System.Windows.Forms.Label lblLiderSemi;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtLider;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblIDSemillero;
         private System.Windows.Forms.Button btnConsultarEvento;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnActivarSemillero;
     }
 }

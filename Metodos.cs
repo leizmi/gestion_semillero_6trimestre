@@ -10,11 +10,11 @@ namespace gestión_semillero_6trimestre
     internal class Metodos
     {
 
-        //metodos q usa repetitivamente el administrador para mostrar los formularios correspondientes 
-        public void menuAdmin()
+        //metodos que se usa repetitivamente el administrador para mostrar los formularios correspondientes 
+        public void menuAdmin() //Metodos publico para poder acceder a el desde cualquier formulario, sin retornar ninguno valor.
         {
-            Form2 menu = new Form2();
-            menu.Show();
+            Form2 menu = new Form2(); // Se instancia la clase Form2 y se guarda en la variable menu para poder acceder a sus propiedades y métodos
+            menu.Show(); // Muestra el formulario
         }
         public void Admi_Reportes()
         {
@@ -42,22 +42,19 @@ namespace gestión_semillero_6trimestre
         /// Método para cerrar sesión, muestra un mensaje de confirmación antes de cerrar la sesión y volver al formulario de inicio de sesión.
         public void sesiónCerrar(Form formularioActual)
         {
-            DialogResult result = MessageBox.Show(
-       "¿Estás seguro de que deseas salir?",
-       "Confirmar salida",
-       MessageBoxButtons.YesNo,
-       MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("¿Estás seguro de que deseas salir?","Confirmar salida",
+                                                  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
-                Form1 login = new Form1();
-                login.Show();
+                Form1 login = new Form1();// Se instancia el formulario de inicio de sesión y se guarda en la variable login para poder acceder a sus propiedades y métodos.
+                login.Show();// Se muestra el formulario de inicio de sesión
 
-                formularioActual.Close(); // 🔥 AQUÍ se cierra correctamente
+                formularioActual.Close(); // Variable de tipo Form que representa el formulario actual, se cierra para volver al inicio de sesión.
             }
         }
 
-        /// lider y sus metodos para mostrar los formularios correspondientes a sus funciones
+        /// Rol lider y sus metodos para mostrar los formularios correspondientes a sus funciones
         public void menuLider()
         {
             Menu_Lider menu = new Menu_Lider();

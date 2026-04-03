@@ -42,7 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRealizarBusquedaSemillero = new System.Windows.Forms.Button();
             this.groupBoxDetalleSemi = new System.Windows.Forms.GroupBox();
             this.btnAgregarSemi = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -143,7 +143,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.btnRealizarBusquedaSemillero);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(36, 144);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -233,16 +233,16 @@
             this.comboBox1.Size = new System.Drawing.Size(253, 33);
             this.comboBox1.TabIndex = 3;
             // 
-            // button2
+            // btnRealizarBusquedaSemillero
             // 
-            this.button2.Location = new System.Drawing.Point(42, 113);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(255, 38);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Realizar busqueda";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnRealizarBusquedaSemillero.Location = new System.Drawing.Point(42, 113);
+            this.btnRealizarBusquedaSemillero.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRealizarBusquedaSemillero.Name = "btnRealizarBusquedaSemillero";
+            this.btnRealizarBusquedaSemillero.Size = new System.Drawing.Size(255, 38);
+            this.btnRealizarBusquedaSemillero.TabIndex = 1;
+            this.btnRealizarBusquedaSemillero.Text = "Realizar busqueda";
+            this.btnRealizarBusquedaSemillero.UseVisualStyleBackColor = true;
+            this.btnRealizarBusquedaSemillero.Click += new System.EventHandler(this.btnRealizarBusquedaSemillero_Click_1);
             // 
             // groupBoxDetalleSemi
             // 
@@ -562,7 +562,7 @@
         private System.Windows.Forms.Button btnGestionarSemillero;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRealizarBusquedaSemillero;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBoxDetalleSemi;
