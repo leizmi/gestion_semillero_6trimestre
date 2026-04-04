@@ -16,34 +16,32 @@ namespace gestión_semillero_6trimestre
             Form2 menu = new Form2(); // Se instancia la clase Form2 y se guarda en la variable menu para poder acceder a sus propiedades y métodos
             menu.Show(); // Muestra el formulario
         }
-        public void Admi_Reportes()
+        public void Admi_Reportes() //Metodos publico para poder acceder a el desde cualquier formulario, sin retornar ninguno valor.
         {
-            Reportes reportes = new Reportes();
-            reportes.Show();
+            Reportes reportes = new Reportes();// Se instancia la clase Reportes y se guarda en la variable reportes para poder acceder a sus propiedades y métodos
+            reportes.Show();// Muestra el formulario
         }
-        public void Admi_GestionSemillero()
+        public void Admi_GestionSemillero()//Metodos publico para poder acceder a el desde cualquier formulario, sin retornar ninguno valor.
         {
-            Gestion_semilleros gestionSemillero = new Gestion_semilleros();
-            gestionSemillero.Show();
+            Gestion_semilleros gestionSemillero = new Gestion_semilleros();// Se instancia la clase Gestion_semilleros y se guarda en la variable gestionSemillero para poder acceder a sus propiedades y métodos
+            gestionSemillero.Show();// Muestra el formulario
         }
-        public void Admi_GestionUsuario()
+        public void Admi_GestionUsuario()//Metodos publico para poder acceder a el desde cualquier formulario, sin retornar ninguno valor.
         {
-            Form3 gestionUsuario = new Form3();
-            gestionUsuario.Show();
+            Form3 gestionUsuario = new Form3();// Se instancia la clase Form3 y se guarda en la variable gestionUsuario para poder acceder a sus propiedades y métodos
+            gestionUsuario.Show();// Muestra el formulario
         }
-        public void admi_GestionEventos()
+        public void admi_GestionEventos()//Metodos publico para poder acceder a el desde cualquier formulario, sin retornar ninguno valor.
         {
-            Consultar_eventos consulEventos = new Consultar_eventos();
-            consulEventos.Show();
+            Consultar_eventos consulEventos = new Consultar_eventos();// Se instancia la clase Consultar_eventos y se guarda en la variable consulEventos para poder acceder a sus propiedades y métodos
+            consulEventos.Show();// Muestra el formulario
         }
-
 
 
         /// Método para cerrar sesión, muestra un mensaje de confirmación antes de cerrar la sesión y volver al formulario de inicio de sesión.
         public void sesiónCerrar(Form formularioActual)
         {
-            DialogResult result = MessageBox.Show("¿Estás seguro de que deseas salir?","Confirmar salida",
-                                                  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("¿Estás seguro de que deseas salir?","Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);// se muestra un mensaje de confirmación al usuario antes de cerrar la sesión
 
             if (result == DialogResult.Yes)
             {
@@ -53,31 +51,30 @@ namespace gestión_semillero_6trimestre
                 formularioActual.Close(); // Variable de tipo Form que representa el formulario actual, se cierra para volver al inicio de sesión.
             }
         }
+        
 
         /// Rol lider y sus metodos para mostrar los formularios correspondientes a sus funciones
-        public void menuLider()
+        public void menuLider()//Metodos publico para poder acceder a el desde cualquier formulario, sin retornar ninguno valor.
         {
-            Menu_Lider menu = new Menu_Lider();
+            Menu_Lider menu = new Menu_Lider();// Se instancia la clase Menu_Lider y se guarda en la variable menu para poder acceder a sus propiedades y métodos
             menu.Show();
         }
 
-        public void consultarEventosLider()
+        public void consultarEventosLider()//Metodos publico para poder acceder a el desde cualquier formulario, sin retornar ninguno valor.
         {
-            Consultar_eventos_lider consuEventosLider = new Consultar_eventos_lider();
+            Consultar_eventos_lider consuEventosLider = new Consultar_eventos_lider();// Se instancia la clase Consultar_eventos_lider y se guarda en la variable consuEventosLider para poder acceder a sus propiedades y métodos
             consuEventosLider.Show();
         }
 
-        public void consultarEventos()
+        public void consultarEventos()//Metodos publico para poder acceder a el desde cualquier formulario, sin retornar ninguno valor.
         {
-            Consultar_eventos consulEventos = new Consultar_eventos();
+            Consultar_eventos consulEventos = new Consultar_eventos();// Se instancia la clase Consultar_eventos y se guarda en la variable consulEventos para poder acceder a sus propiedades y métodos
             consulEventos.Show();
         }
-
-        public void registrarProyecto()
+        public void registrarProyecto()//Metodos publico para poder acceder a el desde cualquier formulario, sin retornar ninguno valor.
         {
-            Registrar_proyecto regisProyecto = new Registrar_proyecto();
+            Registrar_proyecto regisProyecto = new Registrar_proyecto();// Se instancia la clase Registrar_proyecto y se guarda en la variable regisProyecto para poder acceder a sus propiedades y métodos
             regisProyecto.Show();
         }
-
     }
 }

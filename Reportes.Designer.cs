@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button1 = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
@@ -56,10 +56,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(374, 24);
+            this.button1.Location = new System.Drawing.Point(481, 24);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 50);
+            this.button1.Size = new System.Drawing.Size(225, 60);
             this.button1.TabIndex = 5;
             this.button1.Text = "Eventos";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -68,10 +68,10 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(994, 24);
+            this.btnSalir.Location = new System.Drawing.Point(1222, 24);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(174, 50);
+            this.btnSalir.Size = new System.Drawing.Size(225, 60);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Cerrar sesión";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -80,22 +80,22 @@
             // 
             // btnReportes
             // 
-            this.btnReportes.Location = new System.Drawing.Point(738, 24);
+            this.btnReportes.Location = new System.Drawing.Point(947, 24);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(4);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(174, 50);
+            this.btnReportes.Size = new System.Drawing.Size(225, 60);
             this.btnReportes.TabIndex = 3;
-            this.btnReportes.Text = "Generar reportes";
+            this.btnReportes.Text = "Reportes";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReportes.UseVisualStyleBackColor = true;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnGestion_de_Semilleros
             // 
-            this.btnGestion_de_Semilleros.Location = new System.Drawing.Point(556, 24);
+            this.btnGestion_de_Semilleros.Location = new System.Drawing.Point(714, 24);
             this.btnGestion_de_Semilleros.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestion_de_Semilleros.Name = "btnGestion_de_Semilleros";
-            this.btnGestion_de_Semilleros.Size = new System.Drawing.Size(174, 50);
+            this.btnGestion_de_Semilleros.Size = new System.Drawing.Size(225, 60);
             this.btnGestion_de_Semilleros.TabIndex = 2;
             this.btnGestion_de_Semilleros.Text = "Semilleros";
             this.btnGestion_de_Semilleros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -104,10 +104,10 @@
             // 
             // btnGestion_de_usuario
             // 
-            this.btnGestion_de_usuario.Location = new System.Drawing.Point(192, 24);
+            this.btnGestion_de_usuario.Location = new System.Drawing.Point(248, 24);
             this.btnGestion_de_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestion_de_usuario.Name = "btnGestion_de_usuario";
-            this.btnGestion_de_usuario.Size = new System.Drawing.Size(174, 50);
+            this.btnGestion_de_usuario.Size = new System.Drawing.Size(225, 60);
             this.btnGestion_de_usuario.TabIndex = 1;
             this.btnGestion_de_usuario.Text = "Usuario";
             this.btnGestion_de_usuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -117,10 +117,10 @@
             // btnDashboard
             // 
             this.btnDashboard.BackColor = System.Drawing.Color.Transparent;
-            this.btnDashboard.Location = new System.Drawing.Point(10, 24);
+            this.btnDashboard.Location = new System.Drawing.Point(15, 24);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(174, 50);
+            this.btnDashboard.Size = new System.Drawing.Size(225, 60);
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Menú principal";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -129,7 +129,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.lblCantidadEventos);
             this.groupBox2.Controls.Add(this.btnMostrarCantidadSemileros);
             this.groupBox2.Controls.Add(this.btnMostrarCantidadEventos);
@@ -144,7 +144,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(474, 362);
+            this.groupBox2.Size = new System.Drawing.Size(428, 362);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             // 
@@ -152,7 +152,7 @@
             // 
             this.lblCantidadEventos.AutoSize = true;
             this.lblCantidadEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadEventos.Location = new System.Drawing.Point(280, 114);
+            this.lblCantidadEventos.Location = new System.Drawing.Point(284, 231);
             this.lblCantidadEventos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidadEventos.Name = "lblCantidadEventos";
             this.lblCantidadEventos.Size = new System.Drawing.Size(18, 20);
@@ -162,10 +162,10 @@
             // btnMostrarCantidadSemileros
             // 
             this.btnMostrarCantidadSemileros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarCantidadSemileros.Location = new System.Drawing.Point(21, 194);
+            this.btnMostrarCantidadSemileros.Location = new System.Drawing.Point(21, 59);
             this.btnMostrarCantidadSemileros.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrarCantidadSemileros.Name = "btnMostrarCantidadSemileros";
-            this.btnMostrarCantidadSemileros.Size = new System.Drawing.Size(167, 69);
+            this.btnMostrarCantidadSemileros.Size = new System.Drawing.Size(219, 45);
             this.btnMostrarCantidadSemileros.TabIndex = 31;
             this.btnMostrarCantidadSemileros.Text = "Cantidad de semilleros";
             this.btnMostrarCantidadSemileros.UseVisualStyleBackColor = true;
@@ -174,10 +174,10 @@
             // btnMostrarCantidadEventos
             // 
             this.btnMostrarCantidadEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarCantidadEventos.Location = new System.Drawing.Point(119, 271);
+            this.btnMostrarCantidadEventos.Location = new System.Drawing.Point(21, 255);
             this.btnMostrarCantidadEventos.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrarCantidadEventos.Name = "btnMostrarCantidadEventos";
-            this.btnMostrarCantidadEventos.Size = new System.Drawing.Size(167, 63);
+            this.btnMostrarCantidadEventos.Size = new System.Drawing.Size(219, 45);
             this.btnMostrarCantidadEventos.TabIndex = 28;
             this.btnMostrarCantidadEventos.Text = "Cantidad de eventos";
             this.btnMostrarCantidadEventos.UseVisualStyleBackColor = true;
@@ -186,10 +186,10 @@
             // btnMostrarCantidadInvestigadores
             // 
             this.btnMostrarCantidadInvestigadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarCantidadInvestigadores.Location = new System.Drawing.Point(240, 194);
+            this.btnMostrarCantidadInvestigadores.Location = new System.Drawing.Point(21, 163);
             this.btnMostrarCantidadInvestigadores.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrarCantidadInvestigadores.Name = "btnMostrarCantidadInvestigadores";
-            this.btnMostrarCantidadInvestigadores.Size = new System.Drawing.Size(196, 69);
+            this.btnMostrarCantidadInvestigadores.Size = new System.Drawing.Size(219, 45);
             this.btnMostrarCantidadInvestigadores.TabIndex = 27;
             this.btnMostrarCantidadInvestigadores.Text = "Cantidad de investigadores";
             this.btnMostrarCantidadInvestigadores.UseVisualStyleBackColor = true;
@@ -199,7 +199,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(66, 114);
+            this.label5.Location = new System.Drawing.Point(17, 231);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(194, 20);
@@ -210,7 +210,7 @@
             // 
             this.lblCantidadInvestigadores.AutoSize = true;
             this.lblCantidadInvestigadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadInvestigadores.Location = new System.Drawing.Point(336, 76);
+            this.lblCantidadInvestigadores.Location = new System.Drawing.Point(287, 139);
             this.lblCantidadInvestigadores.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidadInvestigadores.Name = "lblCantidadInvestigadores";
             this.lblCantidadInvestigadores.Size = new System.Drawing.Size(18, 20);
@@ -221,7 +221,7 @@
             // 
             this.lblCantidadSemi.AutoSize = true;
             this.lblCantidadSemi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadSemi.Location = new System.Drawing.Point(333, 39);
+            this.lblCantidadSemi.Location = new System.Drawing.Point(284, 35);
             this.lblCantidadSemi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidadSemi.Name = "lblCantidadSemi";
             this.lblCantidadSemi.Size = new System.Drawing.Size(18, 20);
@@ -232,7 +232,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(66, 76);
+            this.label2.Location = new System.Drawing.Point(17, 139);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(253, 20);
@@ -243,7 +243,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(66, 39);
+            this.label1.Location = new System.Drawing.Point(17, 35);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(250, 20);
@@ -252,19 +252,20 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            this.chart1.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(509, 157);
             this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Semilleros por nombre";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(672, 362);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Semilleros por nombre";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(931, 500);
             this.chart1.TabIndex = 32;
             this.chart1.Text = "chart1";
             // 
@@ -282,7 +283,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(1176, 100);
+            this.groupBox3.Size = new System.Drawing.Size(1460, 100);
             this.groupBox3.TabIndex = 33;
             this.groupBox3.TabStop = false;
             // 
@@ -292,7 +293,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::gestión_semillero_6trimestre.Properties.Resources.fondo_loguin_semillero__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1213, 558);
+            this.ClientSize = new System.Drawing.Size(1482, 793);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.groupBox2);

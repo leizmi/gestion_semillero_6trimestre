@@ -24,9 +24,9 @@ namespace gestión_semillero_6trimestre
 
         private void btn_iniciar_sesion_Click(object sender, EventArgs e)
         {
-            if (txt_id.Text == "" || txt_contraseña.Text == "")
+            if (txt_id.Text == "" || txt_contraseña.Text == "") // si los campos de usuario y contraseña estan vacios, se muestra un mensaje de error al usuario
             {
-                MessageBox.Show("Por favor ingrese la informacion pedida.", "Informacion incompleta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor ingrese la informacion pedida.", "Informacion incompleta", MessageBoxButtons.OK, MessageBoxIcon.Error);// mostramos un mensaje de error al usuario indicando que debe ingresar la informacion pedida
             }
             else
             {
@@ -37,26 +37,21 @@ namespace gestión_semillero_6trimestre
 
         private void btnSalirAPP_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("¿Estás seguro de que deseas salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            DialogResult result = MessageBox.Show("¿Estás seguro de que deseas salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);// se muestra un mensaje de confirmación al usuario antes de cerrar la aplicación
+            if (result == DialogResult.Yes)// si el usuario confirma que desea salir, se cierra la aplicación
             {
-                Application.Exit();
+                Application.Exit();// se cierra la aplicación
             }
         }
 
-        
-
-        private void txt_id_KeyPress(object sender, KeyPressEventArgs e)
+        private void txt_id_KeyPress(object sender, KeyPressEventArgs e)// este evento se ejecuta cada vez que el usuario presiona una tecla en el campo de texto txt_id, se utiliza para validar que solo se ingresen números en el campo de texto
         { 
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))// si la tecla presionada no es un dígito ni una tecla de control (como backspace), se marca el evento como manejado para evitar que se ingrese el carácter no permitido
             {
-                e.Handled = true; 
-               
-                MessageBox.Show("Solo se aceptan números.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                
-                
-            }
+                e.Handled = true; // se marca el evento como manejado para evitar que se ingrese el carácter no permitido
 
+                MessageBox.Show("Solo se aceptan números.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);// se muestra un mensaje de advertencia al usuario indicando que solo se aceptan números en el campo de texto
+            }
         }
     }
 }

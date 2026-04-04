@@ -19,7 +19,7 @@ namespace gestión_semillero_6trimestre
         {
             try // utilizamos un bloque try-catch para manejar cualquier error que pueda ocurrir al establecer la conexion
             {
-                con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog =GestionSemillero;Integrated Security=True"); // establecemos la conexion a la base de datos utilizando la cadena de conexion; // establecemos la conexion a la base de datos utilizando la cadena de conexion
+                con = new SqlConnection("Data Source=CHATGPTTUPAPÁ\\SQLEXPRESS;Initial Catalog =GestionSemillero;Integrated Security=True"); // establecemos la conexion a la base de datos utilizando la cadena de conexion; // establecemos la conexion a la base de datos utilizando la cadena de conexion
                 con.Open(); // abrimos la conexion a la base de datos
             }
             catch (Exception e) // si ocurre un error al establecer la conexion, se muestra un mensaje de error

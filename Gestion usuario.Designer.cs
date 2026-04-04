@@ -74,10 +74,10 @@
             // 
             // btnGestionEventos
             // 
-            this.btnGestionEventos.Location = new System.Drawing.Point(374, 20);
+            this.btnGestionEventos.Location = new System.Drawing.Point(481, 24);
             this.btnGestionEventos.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestionEventos.Name = "btnGestionEventos";
-            this.btnGestionEventos.Size = new System.Drawing.Size(174, 53);
+            this.btnGestionEventos.Size = new System.Drawing.Size(225, 60);
             this.btnGestionEventos.TabIndex = 7;
             this.btnGestionEventos.Text = "Eventos";
             this.btnGestionEventos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -86,10 +86,10 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(1009, 20);
+            this.btnSalir.Location = new System.Drawing.Point(1222, 24);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(174, 53);
+            this.btnSalir.Size = new System.Drawing.Size(225, 60);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Cerrar sesión";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -98,10 +98,10 @@
             // 
             // btnReportes
             // 
-            this.btnReportes.Location = new System.Drawing.Point(736, 20);
+            this.btnReportes.Location = new System.Drawing.Point(947, 24);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(4);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(174, 54);
+            this.btnReportes.Size = new System.Drawing.Size(225, 60);
             this.btnReportes.TabIndex = 3;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -110,10 +110,10 @@
             // 
             // btnGestion_de_Semilleros
             // 
-            this.btnGestion_de_Semilleros.Location = new System.Drawing.Point(556, 20);
+            this.btnGestion_de_Semilleros.Location = new System.Drawing.Point(714, 24);
             this.btnGestion_de_Semilleros.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestion_de_Semilleros.Name = "btnGestion_de_Semilleros";
-            this.btnGestion_de_Semilleros.Size = new System.Drawing.Size(172, 54);
+            this.btnGestion_de_Semilleros.Size = new System.Drawing.Size(225, 60);
             this.btnGestion_de_Semilleros.TabIndex = 2;
             this.btnGestion_de_Semilleros.Text = "Semilleros";
             this.btnGestion_de_Semilleros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -122,10 +122,10 @@
             // 
             // btnGestion_de_usuario
             // 
-            this.btnGestion_de_usuario.Location = new System.Drawing.Point(192, 20);
+            this.btnGestion_de_usuario.Location = new System.Drawing.Point(248, 24);
             this.btnGestion_de_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestion_de_usuario.Name = "btnGestion_de_usuario";
-            this.btnGestion_de_usuario.Size = new System.Drawing.Size(174, 53);
+            this.btnGestion_de_usuario.Size = new System.Drawing.Size(225, 60);
             this.btnGestion_de_usuario.TabIndex = 1;
             this.btnGestion_de_usuario.Text = "Usuario";
             this.btnGestion_de_usuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -135,10 +135,10 @@
             // btnDashboard
             // 
             this.btnDashboard.BackColor = System.Drawing.Color.Transparent;
-            this.btnDashboard.Location = new System.Drawing.Point(10, 20);
+            this.btnDashboard.Location = new System.Drawing.Point(15, 24);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(174, 50);
+            this.btnDashboard.Size = new System.Drawing.Size(225, 60);
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Menú principal";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -147,12 +147,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 299);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 246);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(638, 418);
+            this.dataGridView1.Size = new System.Drawing.Size(809, 514);
             this.dataGridView1.TabIndex = 21;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -163,21 +164,21 @@
             this.groupBoxFiltroBusqueda.Controls.Add(this.textBoxFiltro);
             this.groupBoxFiltroBusqueda.Controls.Add(this.comboBox1);
             this.groupBoxFiltroBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxFiltroBusqueda.Location = new System.Drawing.Point(101, 140);
+            this.groupBoxFiltroBusqueda.Location = new System.Drawing.Point(28, 140);
             this.groupBoxFiltroBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxFiltroBusqueda.Name = "groupBoxFiltroBusqueda";
             this.groupBoxFiltroBusqueda.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxFiltroBusqueda.Size = new System.Drawing.Size(498, 151);
+            this.groupBoxFiltroBusqueda.Size = new System.Drawing.Size(647, 98);
             this.groupBoxFiltroBusqueda.TabIndex = 22;
             this.groupBoxFiltroBusqueda.TabStop = false;
             this.groupBoxFiltroBusqueda.Text = "Filtro de busqueda";
             // 
             // btnBuscarFiltro
             // 
-            this.btnBuscarFiltro.Location = new System.Drawing.Point(145, 96);
+            this.btnBuscarFiltro.Location = new System.Drawing.Point(422, 38);
             this.btnBuscarFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarFiltro.Name = "btnBuscarFiltro";
-            this.btnBuscarFiltro.Size = new System.Drawing.Size(239, 33);
+            this.btnBuscarFiltro.Size = new System.Drawing.Size(199, 43);
             this.btnBuscarFiltro.TabIndex = 2;
             this.btnBuscarFiltro.Text = "Buscar por filtro";
             this.btnBuscarFiltro.UseVisualStyleBackColor = true;
@@ -185,11 +186,11 @@
             // 
             // textBoxFiltro
             // 
-            this.textBoxFiltro.Location = new System.Drawing.Point(269, 53);
+            this.textBoxFiltro.Location = new System.Drawing.Point(215, 38);
             this.textBoxFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxFiltro.Multiline = true;
             this.textBoxFiltro.Name = "textBoxFiltro";
-            this.textBoxFiltro.Size = new System.Drawing.Size(176, 25);
+            this.textBoxFiltro.Size = new System.Drawing.Size(199, 43);
             this.textBoxFiltro.TabIndex = 1;
             // 
             // comboBox1
@@ -201,10 +202,10 @@
             "Apellido investigador",
             "Tipo de documento",
             "Tipo de usuario"});
-            this.comboBox1.Location = new System.Drawing.Point(51, 50);
+            this.comboBox1.Location = new System.Drawing.Point(8, 46);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(189, 28);
+            this.comboBox1.Size = new System.Drawing.Size(199, 28);
             this.comboBox1.TabIndex = 0;
             // 
             // groupBoxActualizarEliminar
@@ -236,11 +237,11 @@
             this.groupBoxActualizarEliminar.Controls.Add(this.lblApellido);
             this.groupBoxActualizarEliminar.Controls.Add(this.lblNombre);
             this.groupBoxActualizarEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxActualizarEliminar.Location = new System.Drawing.Point(728, 299);
+            this.groupBoxActualizarEliminar.Location = new System.Drawing.Point(862, 200);
             this.groupBoxActualizarEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxActualizarEliminar.Name = "groupBoxActualizarEliminar";
             this.groupBoxActualizarEliminar.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxActualizarEliminar.Size = new System.Drawing.Size(598, 418);
+            this.groupBoxActualizarEliminar.Size = new System.Drawing.Size(598, 560);
             this.groupBoxActualizarEliminar.TabIndex = 23;
             this.groupBoxActualizarEliminar.TabStop = false;
             this.groupBoxActualizarEliminar.Text = "Gestionar cuentas de usuarios";
@@ -264,9 +265,9 @@
             // 
             // btnAgregarCuenta
             // 
-            this.btnAgregarCuenta.Location = new System.Drawing.Point(194, 276);
+            this.btnAgregarCuenta.Location = new System.Drawing.Point(180, 276);
             this.btnAgregarCuenta.Name = "btnAgregarCuenta";
-            this.btnAgregarCuenta.Size = new System.Drawing.Size(175, 34);
+            this.btnAgregarCuenta.Size = new System.Drawing.Size(199, 43);
             this.btnAgregarCuenta.TabIndex = 25;
             this.btnAgregarCuenta.Text = "Agregar cuenta";
             this.btnAgregarCuenta.UseVisualStyleBackColor = true;
@@ -281,18 +282,18 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(295, 320);
+            this.button2.Location = new System.Drawing.Point(288, 335);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(252, 37);
+            this.button2.Size = new System.Drawing.Size(233, 43);
             this.button2.TabIndex = 23;
             this.button2.Text = "Ver cuentas deshabilitadas";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(73, 370);
+            this.button1.Location = new System.Drawing.Point(39, 385);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 38);
+            this.button1.Size = new System.Drawing.Size(199, 43);
             this.button1.TabIndex = 22;
             this.button1.Text = "Habilitar cuenta";
             this.button1.UseVisualStyleBackColor = true;
@@ -303,10 +304,10 @@
             this.comboBox4.Items.AddRange(new object[] {
             "Administrador",
             "Lider"});
-            this.comboBox4.Location = new System.Drawing.Point(90, 177);
+            this.comboBox4.Location = new System.Drawing.Point(105, 174);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(93, 28);
+            this.comboBox4.Size = new System.Drawing.Size(133, 28);
             this.comboBox4.TabIndex = 21;
             // 
             // comboBox3
@@ -318,25 +319,25 @@
             this.comboBox3.Location = new System.Drawing.Point(372, 125);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(109, 28);
+            this.comboBox3.Size = new System.Drawing.Size(145, 28);
             this.comboBox3.TabIndex = 20;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(294, 370);
+            this.btnEliminar.Location = new System.Drawing.Point(288, 385);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(252, 37);
+            this.btnEliminar.Size = new System.Drawing.Size(229, 43);
             this.btnEliminar.TabIndex = 19;
             this.btnEliminar.Text = " Deshabilitar cuenta";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(74, 320);
+            this.btnActualizar.Location = new System.Drawing.Point(39, 335);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(184, 37);
+            this.btnActualizar.Size = new System.Drawing.Size(199, 43);
             this.btnActualizar.TabIndex = 18;
             this.btnActualizar.Text = "Actualizar informacion";
             this.btnActualizar.UseVisualStyleBackColor = true;
@@ -355,7 +356,7 @@
             this.txtcorreo.Location = new System.Drawing.Point(370, 174);
             this.txtcorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtcorreo.Name = "txtcorreo";
-            this.txtcorreo.Size = new System.Drawing.Size(224, 27);
+            this.txtcorreo.Size = new System.Drawing.Size(204, 27);
             this.txtcorreo.TabIndex = 14;
             // 
             // txttelefono
@@ -490,11 +491,11 @@
             this.groupBox2.Controls.Add(this.btnGestion_de_usuario);
             this.groupBox2.Controls.Add(this.btnDashboard);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(114, 13);
+            this.groupBox2.Location = new System.Drawing.Point(13, 13);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(1190, 100);
+            this.groupBox2.Size = new System.Drawing.Size(1460, 100);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             // 
@@ -504,7 +505,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::gestión_semillero_6trimestre.Properties.Resources.fondo_loguin_semillero__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1368, 735);
+            this.ClientSize = new System.Drawing.Size(1482, 793);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBoxActualizarEliminar);

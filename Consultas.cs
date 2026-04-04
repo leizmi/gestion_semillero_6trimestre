@@ -12,10 +12,8 @@ using System.Drawing;
 
 namespace gestión_semillero_6trimestre
 {
-
     internal class Consultas
     {
-
         Conexion conexion = new Conexion();// creamos una instancia de la clase Conexion para establecer la conexion a la base de datos
         DataSet ds = new DataSet(); // (conjunto de datos) creamos la variable dt con tipo DataTable para almacenar los resultados de las consultas a la base de datos
         Boolean Estado_conexion = false; // creamos la variable Estado_conexion para verificar si la conexion a la base de datos se establecio correctamentes
@@ -47,16 +45,16 @@ namespace gestión_semillero_6trimestre
                     Estado_conexion = true; // si la consulta a la base de datos se ejecuto correctamente, se establece el estado de la conexion a true
                 }
 
-                else if (Convert.ToString(ID_usuario) == dr["ID_usuario"].ToString() && contraseña_usuario == dr["contraseña_usuario"].ToString() && "Administrador" == dr["tipo_usuario"].ToString() && "inactivo"  == dr["estado_usuario"].ToString())
+                else if (Convert.ToString(ID_usuario) == dr["ID_usuario"].ToString() && contraseña_usuario == dr["contraseña_usuario"].ToString() && "Administrador" == dr["tipo_usuario"].ToString() && "inactivo"  == dr["estado_usuario"].ToString()) // verificamos si el ID_usuario y el contraseña_usuario ingresados por el usuario coinciden con los resultados de la consulta a la base de datos
                 { 
-                    MessageBox.Show("El administrador que quieres ingresar esta inactivo");
-                    Form1 form1 = new Form1();
+                    MessageBox.Show("El administrador que quieres ingresar esta inactivo"); // si el id_usuario y contraseña ingresados por el usuario coinciden con los resultados de la consulta a la base de datos, se muestra un mensaje de bienvenida al usuario
+                    Form1 form1 = new Form1(); // creamos una instancia del formulario FormAdmin para mostrarlo al usuario
                     form1.Show();
                 }
-                else if (Convert.ToString(ID_usuario) == dr["ID_usuario"].ToString() && contraseña_usuario == dr["contraseña_usuario"].ToString() && "Lider" == dr["tipo_usuario"].ToString() && "inactivo" == dr["estado_usuario"].ToString())
+                else if (Convert.ToString(ID_usuario) == dr["ID_usuario"].ToString() && contraseña_usuario == dr["contraseña_usuario"].ToString() && "Lider" == dr["tipo_usuario"].ToString() && "inactivo" == dr["estado_usuario"].ToString()) // verificamos si el ID_usuario y el contraseña_usuario ingresados por el usuario coinciden con los resultados de la consulta a la base de datos
                 { 
-                    MessageBox.Show("El lider que quieres ingresar esta inactivo");
-                    Form1 form1 = new Form1();
+                    MessageBox.Show("El lider que quieres ingresar esta inactivo"); // si el id_usuario y contraseña ingresados por el usuario coinciden con los resultados de la consulta a la base de datos, se muestra un mensaje de bienvenida al usuario
+                    Form1 form1 = new Form1();// creamos una instancia del formulario FormAdmin para mostrarlo al usuario
                     form1.Show();
                 }
                 else 
@@ -67,18 +65,18 @@ namespace gestión_semillero_6trimestre
                         Menu_Lider menu_Lider = new Menu_Lider(); // creamos una instancia del formulario FormLider para mostrarlo al usuari
                         menu_Lider.Show(); // mostramos el formulario FormLider al usuario
 
-                        Estado_conexion = true;
+                        Estado_conexion = true; // si la consulta a la base de datos se ejecuto correctamente, se establece el estado de la conexion a true
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception) // si la consulta a la base de datos no se ejecuto correctamente, se establece el estado de la conexion a false
             {
                 MessageBox.Show("Usuario o contraseña incorrectos."); // usuario o contraseña incorrectos, se muestra un mensaje de error al usuario
-                Form1 form1 = new Form1();
+                Form1 form1 = new Form1(); 
                 form1.Show();
               
             }
-            finally
+            finally // finalmente, se cierra la conexion a la base de datos
             {
                 conexion.cerrar(); // cerramos la conexion a la base de datos
             }
@@ -86,122 +84,117 @@ namespace gestión_semillero_6trimestre
         }
 
 
-        public int ContarSemilleros()
+        public int ContarSemilleros() // Método para contar la cantidad de semilleros registrados en la base de datos, retorna un entero con la cantidad de semilleros.
         {
-            int cantidad = 0;
-            SqlConnection con = conexion.Conectar();
+            int cantidad = 0;// creamos una variable cantidad con tipo entero para almacenar la cantidad de semilleros registrados en la base de datos
+            SqlConnection con = conexion.Conectar();// establecemos la conexion a la base de datos utilizando el método Conectar de la clase Conexion
 
-            try
+            try// utilizamos un bloque try-catch para manejar cualquier error que pueda ocurrir al ejecutar la consulta SQL
             {
-                string query = "SELECT COUNT(*) FROM semillero";
-                SqlCommand cmd = new SqlCommand(query, con);
+                string query = "SELECT COUNT(*) FROM semillero";// establecemos la consulta SQL para contar la cantidad de semilleros registrados en la base de datos
+                SqlCommand cmd = new SqlCommand(query, con);// creamos un objeto de tipo SqlCommand para ejecutar la consulta SQL
 
-                cantidad = (int)cmd.ExecuteScalar();
+                cantidad = (int)cmd.ExecuteScalar();// ejecutamos la consulta SQL y almacenamos el resultado en la variable cantidad
             }
-            catch (Exception ex)
+            catch (Exception ex)// si ocurre un error al ejecutar la consulta SQL, se muestra un mensaje de error al usuario
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);// mostramos el mensaje de error al usuario
             }
             finally
             {
-                conexion.cerrar();
+                conexion.cerrar();// finalmente, se cierra la conexion a la base de datos
             }
 
-            return cantidad;
+            return cantidad;// retornamos la cantidad de semilleros registrados en la base de datos
         }
 
 
-        public DataTable MostrarSemilleros()
+        public DataTable MostrarSemilleros() // Método para mostrar los nombres de los semilleros registrados en la base de datos, retorna un DataTable con los nombres de los semilleros.
         {
-            DataTable dt = new DataTable();
-            SqlConnection con = conexion.Conectar();
+            DataTable dt = new DataTable();// creamos una variable dt con tipo DataTable para almacenar los nombres de los semilleros registrados en la base de datos
+            SqlConnection con = conexion.Conectar();// establecemos la conexion a la base de datos utilizando el método Conectar de la clase Conexion
 
             try
             {
-                string query = "SELECT nombre_semillero FROM semillero";
-                SqlDataAdapter da = new SqlDataAdapter(query, con);
-                da.Fill(dt);
+                string query = "SELECT nombre_semillero FROM semillero";// establecemos la consulta SQL para obtener los nombres de los semilleros registrados en la base de datos
+                SqlDataAdapter da = new SqlDataAdapter(query, con);// creamos un objeto de tipo SqlDataAdapter para ejecutar la consulta SQL y almacenar los datos obtenidos en el DataTable
+                da.Fill(dt); // llenamos el DataTable con los datos obtenidos de la consulta SQL
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);// si ocurre un error al ejecutar la consulta SQL, se muestra un mensaje de error al usuario
             }
             finally
             {
-                conexion.cerrar();
+                conexion.cerrar();// finalmente, se cierra la conexion a la base de datos
             }
 
-            return dt;
+            return dt;// retornamos el DataTable con los nombres de los semilleros registrados en la base de datos
         }
 
 
-        public int ContarInvestigadores()
+        public int ContarInvestigadores()// Método para contar la cantidad de investigadores registrados en la base de datos, retorna un entero con la cantidad de investigadores.
         {
-            SqlConnection con = conexion.Conectar();
-            int total = 0;
+            SqlConnection con = conexion.Conectar();// establecemos la conexion a la base de datos utilizando el método Conectar de la clase Conexion
+            int total = 0;// creamos una variable total con tipo entero para almacenar la cantidad de investigadores registrados en la base de datos
 
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM investigadores", con);
-                total = (int)cmd.ExecuteScalar();
+                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM investigadores", con);// creamos un objeto de tipo SqlCommand para ejecutar la consulta SQL para contar la cantidad de investigadores registrados en la base de datos
+                total = (int)cmd.ExecuteScalar();// ejecutamos la consulta SQL y almacenamos el resultado en la variable total
             }
-            catch (Exception ex)
+            catch (Exception ex)// si ocurre un error al ejecutar la consulta SQL, se muestra un mensaje de error al usuario
             {
                 MessageBox.Show(ex.Message);
             }
             finally
             {
-                conexion.cerrar();
+                conexion.cerrar();// finalmente, se cierra la conexion a la base de datos
             }
 
-            return total;
+            return total;// retornamos la cantidad de investigadores registrados en la base de datos
         }
-
-        public int ContarEventos()
+        public int ContarEventos()// Método para contar la cantidad de eventos registrados en la base de datos, retorna un entero con la cantidad de eventos.
         {
-            SqlConnection con = conexion.Conectar();
-            int total = 0;
+            SqlConnection con = conexion.Conectar();// establecemos la conexion a la base de datos utilizando el método Conectar de la clase Conexion
+            int total = 0;// creamos una variable total con tipo entero para almacenar la cantidad de eventos registrados en la base de datos
 
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM evento", con);
-                total = (int)cmd.ExecuteScalar();
+                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM evento", con);// creamos un objeto de tipo SqlCommand para ejecutar la consulta SQL para contar la cantidad de eventos registrados en la base de datos
+                total = (int)cmd.ExecuteScalar();// ejecutamos la consulta SQL y almacenamos el resultado en la variable total
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);// si ocurre un error al ejecutar la consulta SQL, se muestra un mensaje de error al usuario
+            }
+            finally
+            {
+                conexion.cerrar();// finalmente, se cierra la conexion a la base de datos
+            }
+
+            return total;// retornamos la cantidad de eventos registrados en la base de datos
+        }
+
+        public int ContarReuniones()// Método para contar la cantidad de reuniones registradas en la base de datos, retorna un entero con la cantidad de reuniones.
+        {
+            SqlConnection con = conexion.Conectar();// establecemos la conexion a la base de datos utilizando el método Conectar de la clase Conexion
+            int total = 0;// creamos una variable total con tipo entero para almacenar la cantidad de reuniones registrados en la base de datos
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM reunion", con);// creamos un objeto de tipo SqlCommand para ejecutar la consulta SQL para contar la cantidad de reuniones registrados en la base de datos
+                total = (int)cmd.ExecuteScalar();// ejecutamos la consulta SQL y almacenamos el resultado en la variable total
+            }
+            catch (Exception ex) // si ocurre un error al ejecutar la consulta SQL, se muestra un mensaje de error al usuario
+            { 
                 MessageBox.Show(ex.Message);
             }
             finally
             {
-                conexion.cerrar();
+                conexion.cerrar();// finalmente, se cierra la conexion a la base de datos
             }
-
-            return total;
+            return total;// retornamos la cantidad de reuniones registrados en la base de datos
         }
-
-        public int ContarReuniones()
-        {
-            SqlConnection con = conexion.Conectar();
-            int total = 0;
-
-            try
-            {
-                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM reunion", con);
-                total = (int)cmd.ExecuteScalar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexion.cerrar();
-            }
-
-            return total;
-        }
-
-       
-    }   
-
+    }  
 }
