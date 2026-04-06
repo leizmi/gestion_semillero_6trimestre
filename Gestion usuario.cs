@@ -175,41 +175,93 @@ namespace gestión_semillero_6trimestre
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            SqlConnection con = Conexion.Conectar();// Se establece la conexión a la base de datos utilizando el método Conectar() de la clase Conexion.
-            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID_investigador"].Value);// Se obtiene el ID del investigador seleccionado en el DataGridView para identificar qué registro se va a actualizar en la base de datos. Se convierte el valor del ID a un entero para usarlo en las consultas SQL posteriores.
+            // 🔴 VALIDAR SELECCIÓN
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un usuario del listado", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
-            // actualizar los investigadores
-            string query1 = @"UPDATE investigadores SET 
+            // 🔴 VALIDAR CAMPOS
+            if (string.IsNullOrWhiteSpace(txtnombre.Text) ||
+                string.IsNullOrWhiteSpace(txtapellido.Text) ||
+                string.IsNullOrWhiteSpace(txtdocumento.Text) ||
+                string.IsNullOrWhiteSpace(txtedad.Text) ||
+                string.IsNullOrWhiteSpace(txttelefono.Text) ||
+                string.IsNullOrWhiteSpace(txtcorreo.Text) ||
+                string.IsNullOrWhiteSpace(txtcontraseña.Text) ||
+                comboBox4.SelectedIndex == -1 || // rol
+                comboBox3.SelectedIndex == -1 || // estado
+                comboBoxSemillero.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe completar todos los campos", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 🔴 VALIDAR NUMÉRICOS
+            if (!int.TryParse(txtedad.Text, out int edad))
+            {
+                MessageBox.Show("La edad debe ser un número válido");
+                return;
+            }
+
+            try
+            {
+                SqlConnection con = Conexion.Conectar();
+                int idInv = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID_investigador"].Value);
+
+                // 🔍 Obtener ID_usuario
+                SqlCommand getIdUser = new SqlCommand("SELECT ID_usuario FROM investigadores WHERE ID_investigador = @id", con);
+                getIdUser.Parameters.AddWithValue("@id", idInv);
+                int idUsuario = Convert.ToInt32(getIdUser.ExecuteScalar());
+
+                // 🔄 ACTUALIZAR INVESTIGADOR
+                string updateInv = @"UPDATE investigadores SET
                             nombre_investigador = @nombre,
                             apellido_investigador = @apellido,
-                            tipo_documento = @doc
+                            tipo_documento = @doc,
+                            edad_investigador = @edad,
+                            telefono_investigador = @telefono,
+                            ID_semillero = @semillero
                             WHERE ID_investigador = @id";
 
-            SqlCommand cmd1 = new SqlCommand(query1, con);// Se crea un SqlCommand para ejecutar la consulta SQL de actualización de los investigadores. Se pasa la consulta SQL y la conexión a la base de datos como argumentos al constructor del SqlCommand.
-            cmd1.Parameters.AddWithValue("@nombre", txtnombre.Text);// Se agregan los parámetros a la consulta SQL para actualizar los campos nombre_investigador, apellido_investigador y tipo_documento con los valores ingresados en los campos de texto correspondientes en el formulario. Se utiliza el ID del investigador como parámetro para identificar qué registro se va a actualizar.
-            cmd1.Parameters.AddWithValue("@apellido", txtapellido.Text);// Se agrega el parámetro para actualizar el campo apellido_investigador con el valor ingresado en el campo de texto correspondiente en el formulario.
-            cmd1.Parameters.AddWithValue("@doc", txtdocumento.Text);// Se agrega el parámetro para actualizar el campo tipo_documento con el valor ingresado en el campo de texto correspondiente en el formulario.
-            cmd1.Parameters.AddWithValue("@id", id);// Se agrega el parámetro para identificar qué registro se va a actualizar utilizando el ID del investigador obtenido del DataGridView.
-            cmd1.ExecuteNonQuery();// Se ejecuta la consulta SQL de actualización de los investigadores utilizando el método ExecuteNonQuery() del SqlCommand, que se utiliza para ejecutar consultas SQL que no devuelven resultados, como las consultas de actualización.
+                SqlCommand cmdInv = new SqlCommand(updateInv, con);
+                cmdInv.Parameters.AddWithValue("@nombre", txtnombre.Text);
+                cmdInv.Parameters.AddWithValue("@apellido", txtapellido.Text);
+                cmdInv.Parameters.AddWithValue("@doc", txtdocumento.Text);
+                cmdInv.Parameters.AddWithValue("@edad", edad);
+                cmdInv.Parameters.AddWithValue("@telefono", txttelefono.Text);
+                cmdInv.Parameters.AddWithValue("@semillero", comboBoxSemillero.SelectedValue);
+                cmdInv.Parameters.AddWithValue("@id", idInv);
+                cmdInv.ExecuteNonQuery();
 
-            // actualizar usuario (subconsulta)
-            string query2 = @"UPDATE usuario SET 
-                            tipo_usuario = @tipo,
+                // 🔄 ACTUALIZAR USUARIO
+                string updateUser = @"UPDATE usuario SET
+                            correo_usuario = @correo,
+                            contraseña_usuario = @contra,
+                            tipo_usuario = @rol,
                             estado_usuario = @estado
-                            WHERE ID_usuario = 
-                           (SELECT ID_usuario FROM investigadores WHERE ID_investigador = @id)";
+                            WHERE ID_usuario = @idUser";
 
-            SqlCommand cmd2 = new SqlCommand(query2, con);// Se crea un SqlCommand para ejecutar la consulta SQL de actualización del usuario asociado al investigador. Se pasa la consulta SQL y la conexión a la base de datos como argumentos al constructor del SqlCommand.
-            cmd2.Parameters.AddWithValue("@tipo", comboBox4.Text);// Se agregan los parámetros a la consulta SQL para actualizar los campos tipo_usuario y estado_usuario del usuario asociado al investigador con los valores seleccionados en los ComboBox correspondientes en el formulario. Se utiliza una subconsulta para identificar el ID del usuario asociado al investigador utilizando el ID del investigador como parámetro.
-            cmd2.Parameters.AddWithValue("@estado", comboBox3.Text);// Se agrega el parámetro para actualizar el campo estado_usuario del usuario asociado al investigador con el valor seleccionado en el ComboBox correspondiente en el formulario.
-            cmd2.Parameters.AddWithValue("@id", id);// Se agrega el parámetro para identificar qué registro se va a actualizar utilizando el ID del investigador obtenido del DataGridView.
-            cmd2.ExecuteNonQuery();// Se ejecuta la consulta SQL de actualización del usuario utilizando el método ExecuteNonQuery() del SqlCommand, que se utiliza para ejecutar consultas SQL que no devuelven resultados, como las consultas de actualización.
+                SqlCommand cmdUser = new SqlCommand(updateUser, con);
+                cmdUser.Parameters.AddWithValue("@correo", txtcorreo.Text);
+                cmdUser.Parameters.AddWithValue("@contra", txtcontraseña.Text);
+                cmdUser.Parameters.AddWithValue("@rol", comboBox4.Text);
+                cmdUser.Parameters.AddWithValue("@estado", comboBox3.Text);
+                cmdUser.Parameters.AddWithValue("@idUser", idUsuario);
+                cmdUser.ExecuteNonQuery();
 
-            con.Close();// Se cierra la conexión a la base de datos después de ejecutar las consultas de actualización.
+                con.Close();
 
-            MessageBox.Show("Usuario actualizado correctamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            CargarUsuarios();// Recargar el DataGridView para mostrar los cambios realizados
-            LimpiarCampos();// Limpiar los campos de texto y restablecer los ComboBox después de la actualización
+                MessageBox.Show("Usuario actualizado correctamente", "ÉXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                CargarUsuarios();
+                LimpiarCampos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar: " + ex.Message);
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -330,6 +382,122 @@ namespace gestión_semillero_6trimestre
             comboBoxSemillero.DataSource = dt;// Se asigna el DataTable como fuente de datos del ComboBox para mostrar los semilleros disponibles en el formulario. El ComboBox se llenará con los nombres de los semilleros obtenidos de la consulta SQL, y cada elemento del ComboBox tendrá un valor asociado que corresponde al ID del semillero.
             comboBoxSemillero.DisplayMember = "nombre_semillero"; // lo que ve el usuario
             comboBoxSemillero.ValueMember = "ID_semillero"; // lo que se guarda
+        }
+
+        private void btn_ver_Inactivos_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = Conexion.Conectar();// Se establece la conexión a la base de datos utilizando el método Conectar() de la clase Conexion para realizar la consulta SQL necesaria para obtener los investigadores y sus usuarios relacionados que tienen cuentas inactivas, y luego llenar un DataTable con esos datos para mostrarlo en el DataGridView.
+
+            string query = @"SELECT 
+                    i.ID_investigador,
+                    i.nombre_investigador,
+                    i.apellido_investigador,
+                    i.tipo_documento,
+                    i.edad_investigador,
+                    i.telefono_investigador,
+
+                    u.correo_usuario,
+                    u.contraseña_usuario,
+                    u.tipo_usuario,
+                    u.estado_usuario
+
+                    FROM investigadores i
+                    INNER JOIN usuario u ON i.ID_usuario = u.ID_usuario
+                    WHERE u.estado_usuario = 'Inactivo'";
+
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay cuentas deshabilitadas", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView1.DataSource = null;
+                return;
+            }
+
+            dataGridView1.DataSource = dt;
+        }
+
+        private void Btn_habilitar_cuenta_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un usuario", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            string estadoActual = dataGridView1.CurrentRow.Cells["estado_usuario"].Value.ToString();
+
+            if (estadoActual == "Activo")
+            {
+                MessageBox.Show("La cuenta ya está habilitada", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID_investigador"].Value);
+
+            SqlConnection con = Conexion.Conectar();// Se establece la conexión a la base de datos utilizando el método Conectar() de la clase Conex
+
+            string query = @"UPDATE usuario 
+                     SET estado_usuario = 'Activo'
+                     WHERE ID_usuario = 
+                     (SELECT ID_usuario FROM investigadores WHERE ID_investigador = @id)";
+
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+
+            MessageBox.Show("Cuenta habilitada correctamente");
+            CargarUsuarios();
+        }
+
+        private void btnDeshabilitar_Cuenta_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un usuario", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            string estadoActual = dataGridView1.CurrentRow.Cells["estado_usuario"].Value.ToString();
+
+            if (estadoActual == "Inactivo")
+            {
+                MessageBox.Show("La cuenta ya está deshabilitada", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DialogResult confirmacion = MessageBox.Show(
+                "¿Seguro que desea deshabilitar esta cuenta?",
+                "CONFIRMAR",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (confirmacion == DialogResult.No)
+                return;
+
+            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID_investigador"].Value);
+
+            SqlConnection con = Conexion.Conectar();// Se establece la conexión a la base de datos utilizando el método Conectar() de la clase Conexion.
+            
+
+            string query = @"UPDATE usuario 
+                     SET estado_usuario = 'Inactivo'
+                     WHERE ID_usuario = 
+                     (SELECT ID_usuario FROM investigadores WHERE ID_investigador = @id)";
+
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+
+            MessageBox.Show("Cuenta deshabilitada correctamente");
+            CargarUsuarios();
         }
     }
 }

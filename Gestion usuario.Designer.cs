@@ -44,11 +44,11 @@
             this.comboBoxSemillero = new System.Windows.Forms.ComboBox();
             this.btnAgregarCuenta = new System.Windows.Forms.Button();
             this.txtdocumento = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_ver_Inactivos = new System.Windows.Forms.Button();
+            this.Btn_habilitar_cuenta = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnDeshabilitar_Cuenta = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.txtcontraseña = new System.Windows.Forms.TextBox();
             this.txtcorreo = new System.Windows.Forms.TextBox();
@@ -215,11 +215,11 @@
             this.groupBoxActualizarEliminar.Controls.Add(this.comboBoxSemillero);
             this.groupBoxActualizarEliminar.Controls.Add(this.btnAgregarCuenta);
             this.groupBoxActualizarEliminar.Controls.Add(this.txtdocumento);
-            this.groupBoxActualizarEliminar.Controls.Add(this.button2);
-            this.groupBoxActualizarEliminar.Controls.Add(this.button1);
+            this.groupBoxActualizarEliminar.Controls.Add(this.btn_ver_Inactivos);
+            this.groupBoxActualizarEliminar.Controls.Add(this.Btn_habilitar_cuenta);
             this.groupBoxActualizarEliminar.Controls.Add(this.comboBox4);
             this.groupBoxActualizarEliminar.Controls.Add(this.comboBox3);
-            this.groupBoxActualizarEliminar.Controls.Add(this.btnEliminar);
+            this.groupBoxActualizarEliminar.Controls.Add(this.btnDeshabilitar_Cuenta);
             this.groupBoxActualizarEliminar.Controls.Add(this.btnActualizar);
             this.groupBoxActualizarEliminar.Controls.Add(this.txtcontraseña);
             this.groupBoxActualizarEliminar.Controls.Add(this.txtcorreo);
@@ -265,9 +265,9 @@
             // 
             // btnAgregarCuenta
             // 
-            this.btnAgregarCuenta.Location = new System.Drawing.Point(180, 276);
+            this.btnAgregarCuenta.Location = new System.Drawing.Point(167, 258);
             this.btnAgregarCuenta.Name = "btnAgregarCuenta";
-            this.btnAgregarCuenta.Size = new System.Drawing.Size(199, 43);
+            this.btnAgregarCuenta.Size = new System.Drawing.Size(229, 61);
             this.btnAgregarCuenta.TabIndex = 25;
             this.btnAgregarCuenta.Text = "Agregar cuenta";
             this.btnAgregarCuenta.UseVisualStyleBackColor = true;
@@ -280,23 +280,25 @@
             this.txtdocumento.Size = new System.Drawing.Size(96, 27);
             this.txtdocumento.TabIndex = 24;
             // 
-            // button2
+            // btn_ver_Inactivos
             // 
-            this.button2.Location = new System.Drawing.Point(288, 335);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(233, 43);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Ver cuentas deshabilitadas";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_ver_Inactivos.Location = new System.Drawing.Point(288, 335);
+            this.btn_ver_Inactivos.Name = "btn_ver_Inactivos";
+            this.btn_ver_Inactivos.Size = new System.Drawing.Size(229, 61);
+            this.btn_ver_Inactivos.TabIndex = 23;
+            this.btn_ver_Inactivos.Text = "Ver cuentas deshabilitadas";
+            this.btn_ver_Inactivos.UseVisualStyleBackColor = true;
+            this.btn_ver_Inactivos.Click += new System.EventHandler(this.btn_ver_Inactivos_Click);
             // 
-            // button1
+            // Btn_habilitar_cuenta
             // 
-            this.button1.Location = new System.Drawing.Point(39, 385);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 43);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Habilitar cuenta";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Btn_habilitar_cuenta.Location = new System.Drawing.Point(39, 415);
+            this.Btn_habilitar_cuenta.Name = "Btn_habilitar_cuenta";
+            this.Btn_habilitar_cuenta.Size = new System.Drawing.Size(229, 61);
+            this.Btn_habilitar_cuenta.TabIndex = 22;
+            this.Btn_habilitar_cuenta.Text = "Habilitar cuenta";
+            this.Btn_habilitar_cuenta.UseVisualStyleBackColor = true;
+            this.Btn_habilitar_cuenta.Click += new System.EventHandler(this.Btn_habilitar_cuenta_Click);
             // 
             // comboBox4
             // 
@@ -322,22 +324,23 @@
             this.comboBox3.Size = new System.Drawing.Size(145, 28);
             this.comboBox3.TabIndex = 20;
             // 
-            // btnEliminar
+            // btnDeshabilitar_Cuenta
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(288, 385);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(229, 43);
-            this.btnEliminar.TabIndex = 19;
-            this.btnEliminar.Text = " Deshabilitar cuenta";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnDeshabilitar_Cuenta.Location = new System.Drawing.Point(288, 415);
+            this.btnDeshabilitar_Cuenta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeshabilitar_Cuenta.Name = "btnDeshabilitar_Cuenta";
+            this.btnDeshabilitar_Cuenta.Size = new System.Drawing.Size(229, 61);
+            this.btnDeshabilitar_Cuenta.TabIndex = 19;
+            this.btnDeshabilitar_Cuenta.Text = " Deshabilitar cuenta";
+            this.btnDeshabilitar_Cuenta.UseVisualStyleBackColor = true;
+            this.btnDeshabilitar_Cuenta.Click += new System.EventHandler(this.btnDeshabilitar_Cuenta_Click);
             // 
             // btnActualizar
             // 
             this.btnActualizar.Location = new System.Drawing.Point(39, 335);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(199, 43);
+            this.btnActualizar.Size = new System.Drawing.Size(229, 61);
             this.btnActualizar.TabIndex = 18;
             this.btnActualizar.Text = "Actualizar informacion";
             this.btnActualizar.UseVisualStyleBackColor = true;
@@ -552,14 +555,14 @@
         private System.Windows.Forms.TextBox txtapellido;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnDeshabilitar_Cuenta;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnGestionEventos;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_ver_Inactivos;
+        private System.Windows.Forms.Button Btn_habilitar_cuenta;
         private System.Windows.Forms.TextBox txtdocumento;
         private System.Windows.Forms.Button btnAgregarCuenta;
         private System.Windows.Forms.ComboBox comboBoxSemillero;
