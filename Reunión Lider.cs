@@ -5,57 +5,48 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace gestión_semillero_6trimestre
 {
-    public partial class Reuniones : Form
+    public partial class Reunión_Lider : Form
     {
+        Conexion conexion = new Conexion(); // creamos una instancia de la clase Conexion para establecer la conexión a la base de datos
         Metodos metodos = new Metodos(); // creamos una instancia de la clase Metodos para utilizar los métodos que se usan repetitivamente en el menú del administrador
-        Conexion conexion = new Conexion();
-        public Reuniones()
+        public Reunión_Lider()
         {
             InitializeComponent();
         }
 
-        private void btn_Reunion_Click(object sender, EventArgs e)
+        private void Reunión_Lider_Load(object sender, EventArgs e)
         {
-            metodos.reunionesAdmin(); // se llama al método reunionesAdmin() para mostrar el formulario de reuniones
+            CargarReuniones(); // se llama al método CargarReuniones() para cargar las reuniones desde la base de datos y mostrarlas en el DataGridView
         }
 
-        private void btnMenuadmi_Click(object sender, EventArgs e)
+        private void btnGestionReuniones_Click(object sender, EventArgs e)
         {
-           metodos.menuAdmin(); // se llama al método menuAdmin() para mostrar el formulario del menú del administrador
-            this.Hide();
+            metodos.ReunionLider();// se llama al método ReunionLider() para mostrar el formulario de gestión de reuniones del líder
+             this.Hide();
         }
 
-        private void btnGestion_de_usuario_Click(object sender, EventArgs e)
+        private void btnConsultarEventos_Click(object sender, EventArgs e)
         {
-            metodos.Admi_GestionUsuario(); // se llama al método Admi_GestionUsuario() para mostrar el formulario de gestión de usuarios
-            this.Hide();
+            metodos.consultarEventosLider();// se llama al método consultarEventosLider() para mostrar el formulario de consulta de eventos del líder
+             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnRegistrarProyecto_Click(object sender, EventArgs e)
         {
-            metodos.admi_GestionEventos(); // se llama al método Admi_GestionEventos() para mostrar el formulario de gestión de eventos
-            this.Hide();
+            metodos.registrarProyecto();// se llama al método registrarProyecto() para mostrar el formulario de registro de proyectos del líder
+             this.Hide();
         }
 
-        private void btnGestion_de_Semilleros_Click(object sender, EventArgs e)
+        private void btnGestionarSemillero_Click(object sender, EventArgs e)
         {
-            metodos.Admi_GestionSemillero(); // se llama al método Admi_GestionSemillero() para mostrar el formulario de gestión de semilleros
-            this.Hide();
-        }
-
-        private void btnReportes_Click(object sender, EventArgs e)
-        {
-            metodos.Admi_Reportes(); // se llama al método Admi_Reportes() para mostrar el formulario de reportes
-            this.Hide();
+            metodos.menuLider();// se llama al método menuLider() para mostrar el formulario del menú del líder
+             this.Hide();
         }
 
         public void CargarReuniones() // metodo para cargar las reuniones desde la base de dato 
@@ -70,6 +61,7 @@ namespace gestión_semillero_6trimestre
 
             dataGridView1.DataSource = dt;
         }
+
         private void btnAgregar_reunion_Click(object sender, EventArgs e)
         {
 
@@ -105,6 +97,7 @@ namespace gestión_semillero_6trimestre
 
         private void btnActualizar_reunion_Click(object sender, EventArgs e)
         {
+
             if (dataGridView1.CurrentRow == null)
             {
                 MessageBox.Show("Seleccione una reunión");
@@ -112,7 +105,7 @@ namespace gestión_semillero_6trimestre
             }
 
             SqlConnection con = conexion.Conectar();
-           
+
 
             int idOriginal = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID_reunion"].Value);
             int nuevoId = Convert.ToInt32(txt_IDreunion.Text);
@@ -172,36 +165,13 @@ namespace gestión_semillero_6trimestre
             CargarReuniones();
         }
 
-        
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            metodos.sesiónCerrar(this); // se llama al método sesiónCerrar de la clase Metodos para cerrar la sesión 
-        }
-
-        private void Reuniones_Load(object sender, EventArgs e)
-        {
-            CargarReuniones();
-        }
-
-        private void txt_IDreunion_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Metodos.SoloNumeros(e); // se llama al método SoloNumeros de la clase Metodos para permitir solo números en el campo ID de reunión
-        }
-
-        private void txtIDsemillero_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Metodos.SoloNumeros(e); // se llama al método SoloNumeros de la clase Metodos para permitir solo números en el campo ID de semillero
-        }
-
-        private void txtHora_reunion_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Metodos.SoloLetrasNumeros(e);// se llama al método SoloLetrasNumeros de la clase Metodos para permitir solo letras y números en el campo de hora de reunión
+            metodos.sesiónCerrar(this); // se llama al método sesiónCerrar de la clase Metodos para cerrar la sesión
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow fila = dataGridView1.Rows[e.RowIndex];
@@ -211,7 +181,7 @@ namespace gestión_semillero_6trimestre
                 txtHora_reunion.Text = fila.Cells["hora_reunion"].Value.ToString();
                 fecha_reunion.Value = Convert.ToDateTime(fila.Cells["fecha_reunion"].Value);
                 txtIDsemillero.Text = fila.Cells["ID_semillero"].Value.ToString();
-            }   
+            }
         }
 
         

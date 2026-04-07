@@ -162,10 +162,11 @@
             // 
             // txt_IDreunion
             // 
-            this.txt_IDreunion.Location = new System.Drawing.Point(291, 62);
+            this.txt_IDreunion.Location = new System.Drawing.Point(291, 67);
             this.txt_IDreunion.Name = "txt_IDreunion";
             this.txt_IDreunion.Size = new System.Drawing.Size(100, 27);
             this.txt_IDreunion.TabIndex = 35;
+            this.txt_IDreunion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_IDreunion_KeyPress);
             // 
             // txtHora_reunion
             // 
@@ -173,6 +174,7 @@
             this.txtHora_reunion.Name = "txtHora_reunion";
             this.txtHora_reunion.Size = new System.Drawing.Size(100, 27);
             this.txtHora_reunion.TabIndex = 36;
+            this.txtHora_reunion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHora_reunion_KeyPress);
             // 
             // txtIDsemillero
             // 
@@ -180,6 +182,7 @@
             this.txtIDsemillero.Name = "txtIDsemillero";
             this.txtIDsemillero.Size = new System.Drawing.Size(100, 27);
             this.txtIDsemillero.TabIndex = 37;
+            this.txtIDsemillero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIDsemillero_KeyPress);
             // 
             // txtDescripcion_reunion
             // 
@@ -199,7 +202,7 @@
             // lbl_IdReunion
             // 
             this.lbl_IdReunion.AutoSize = true;
-            this.lbl_IdReunion.Location = new System.Drawing.Point(41, 69);
+            this.lbl_IdReunion.Location = new System.Drawing.Point(28, 67);
             this.lbl_IdReunion.Name = "lbl_IdReunion";
             this.lbl_IdReunion.Size = new System.Drawing.Size(210, 20);
             this.lbl_IdReunion.TabIndex = 40;
@@ -217,7 +220,7 @@
             // lbl_idSemillero
             // 
             this.lbl_idSemillero.AutoSize = true;
-            this.lbl_idSemillero.Location = new System.Drawing.Point(41, 110);
+            this.lbl_idSemillero.Location = new System.Drawing.Point(28, 108);
             this.lbl_idSemillero.Name = "lbl_idSemillero";
             this.lbl_idSemillero.Size = new System.Drawing.Size(95, 20);
             this.lbl_idSemillero.TabIndex = 42;
@@ -226,7 +229,7 @@
             // lbl_hora_reunion
             // 
             this.lbl_hora_reunion.AutoSize = true;
-            this.lbl_hora_reunion.Location = new System.Drawing.Point(41, 143);
+            this.lbl_hora_reunion.Location = new System.Drawing.Point(28, 141);
             this.lbl_hora_reunion.Name = "lbl_hora_reunion";
             this.lbl_hora_reunion.Size = new System.Drawing.Size(203, 20);
             this.lbl_hora_reunion.TabIndex = 43;
@@ -289,7 +292,7 @@
             // lblfecha_reunion
             // 
             this.lblfecha_reunion.AutoSize = true;
-            this.lblfecha_reunion.Location = new System.Drawing.Point(41, 186);
+            this.lblfecha_reunion.Location = new System.Drawing.Point(28, 184);
             this.lblfecha_reunion.Name = "lblfecha_reunion";
             this.lblfecha_reunion.Size = new System.Drawing.Size(229, 20);
             this.lblfecha_reunion.TabIndex = 44;
@@ -306,7 +309,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(739, 584);
             this.dataGridView1.TabIndex = 45;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Reuniones
             // 

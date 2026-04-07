@@ -272,6 +272,7 @@ namespace gestión_semillero_6trimestre
         private void btn_Reunion_Click(object sender, EventArgs e)
         {
             metodo.reunionesAdmin(); // Llamamos al método reunionesAdmin de la clase Metodos para mostrar el formulario de reuniones, que permite gestionar las reuniones relacionadas con los semilleros, para facilitar la organización y seguimiento de las actividades de los semilleros
+            this.Hide();
         }
     } 
 }

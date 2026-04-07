@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.btnRegistrarProyecto = new System.Windows.Forms.Button();
-            this.btnConsultar_EventoLider = new System.Windows.Forms.Button();
-            this.btnGestionarSemillero = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBuscarEvento = new System.Windows.Forms.Button();
@@ -41,74 +36,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.groupBox3.SuspendLayout();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnGestionReuniones = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnRegistrarProyecto = new System.Windows.Forms.Button();
+            this.btnConsultarEventos = new System.Windows.Forms.Button();
+            this.btnGestionarSemillero = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.btnCerrarSesion);
-            this.groupBox3.Controls.Add(this.btnRegistrarProyecto);
-            this.groupBox3.Controls.Add(this.btnConsultar_EventoLider);
-            this.groupBox3.Controls.Add(this.btnGestionarSemillero);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(13, 13);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(1460, 100);
-            this.groupBox3.TabIndex = 30;
-            this.groupBox3.TabStop = false;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Location = new System.Drawing.Point(1222, 24);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(225, 60);
-            this.btnCerrarSesion.TabIndex = 4;
-            this.btnCerrarSesion.Text = "Cerrar sesión";
-            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // btnRegistrarProyecto
-            // 
-            this.btnRegistrarProyecto.Location = new System.Drawing.Point(248, 24);
-            this.btnRegistrarProyecto.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRegistrarProyecto.Name = "btnRegistrarProyecto";
-            this.btnRegistrarProyecto.Size = new System.Drawing.Size(225, 60);
-            this.btnRegistrarProyecto.TabIndex = 1;
-            this.btnRegistrarProyecto.Text = "Registrar proyecto";
-            this.btnRegistrarProyecto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRegistrarProyecto.UseVisualStyleBackColor = true;
-            this.btnRegistrarProyecto.Click += new System.EventHandler(this.btnRegistrarProyecto_Click);
-            // 
-            // btnConsultar_EventoLider
-            // 
-            this.btnConsultar_EventoLider.Location = new System.Drawing.Point(481, 24);
-            this.btnConsultar_EventoLider.Margin = new System.Windows.Forms.Padding(4);
-            this.btnConsultar_EventoLider.Name = "btnConsultar_EventoLider";
-            this.btnConsultar_EventoLider.Size = new System.Drawing.Size(225, 60);
-            this.btnConsultar_EventoLider.TabIndex = 3;
-            this.btnConsultar_EventoLider.Text = "Consultar eventos";
-            this.btnConsultar_EventoLider.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConsultar_EventoLider.UseVisualStyleBackColor = true;
-            this.btnConsultar_EventoLider.Click += new System.EventHandler(this.btnConsultar_EventoLider_Click);
-            // 
-            // btnGestionarSemillero
-            // 
-            this.btnGestionarSemillero.Location = new System.Drawing.Point(15, 24);
-            this.btnGestionarSemillero.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGestionarSemillero.Name = "btnGestionarSemillero";
-            this.btnGestionarSemillero.Size = new System.Drawing.Size(225, 60);
-            this.btnGestionarSemillero.TabIndex = 8;
-            this.btnGestionarSemillero.Text = "Gestionar semillero";
-            this.btnGestionarSemillero.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGestionarSemillero.UseVisualStyleBackColor = true;
-            this.btnGestionarSemillero.Click += new System.EventHandler(this.btnGestionarSemillero_Click);
             // 
             // dataGridView1
             // 
@@ -199,6 +136,83 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "Recomendación si es por fecha siga la siguiente estructura año-mes-dia";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.btnGestionReuniones);
+            this.groupBox3.Controls.Add(this.btnSalir);
+            this.groupBox3.Controls.Add(this.btnRegistrarProyecto);
+            this.groupBox3.Controls.Add(this.btnConsultarEventos);
+            this.groupBox3.Controls.Add(this.btnGestionarSemillero);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(13, 22);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(1460, 100);
+            this.groupBox3.TabIndex = 50;
+            this.groupBox3.TabStop = false;
+            // 
+            // btnGestionReuniones
+            // 
+            this.btnGestionReuniones.Location = new System.Drawing.Point(714, 24);
+            this.btnGestionReuniones.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGestionReuniones.Name = "btnGestionReuniones";
+            this.btnGestionReuniones.Size = new System.Drawing.Size(225, 60);
+            this.btnGestionReuniones.TabIndex = 9;
+            this.btnGestionReuniones.Text = "Gestionar reuniones";
+            this.btnGestionReuniones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGestionReuniones.UseVisualStyleBackColor = true;
+            this.btnGestionReuniones.Click += new System.EventHandler(this.btnGestionReuniones_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(1222, 24);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(225, 60);
+            this.btnSalir.TabIndex = 4;
+            this.btnSalir.Text = "Cerrar sesión";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnRegistrarProyecto
+            // 
+            this.btnRegistrarProyecto.Location = new System.Drawing.Point(248, 24);
+            this.btnRegistrarProyecto.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegistrarProyecto.Name = "btnRegistrarProyecto";
+            this.btnRegistrarProyecto.Size = new System.Drawing.Size(225, 60);
+            this.btnRegistrarProyecto.TabIndex = 1;
+            this.btnRegistrarProyecto.Text = "Registrar proyecto";
+            this.btnRegistrarProyecto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRegistrarProyecto.UseVisualStyleBackColor = true;
+            this.btnRegistrarProyecto.Click += new System.EventHandler(this.btnRegistrarProyecto_Click_1);
+            // 
+            // btnConsultarEventos
+            // 
+            this.btnConsultarEventos.Location = new System.Drawing.Point(481, 24);
+            this.btnConsultarEventos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultarEventos.Name = "btnConsultarEventos";
+            this.btnConsultarEventos.Size = new System.Drawing.Size(225, 60);
+            this.btnConsultarEventos.TabIndex = 3;
+            this.btnConsultarEventos.Text = "Consultar eventos";
+            this.btnConsultarEventos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConsultarEventos.UseVisualStyleBackColor = true;
+            this.btnConsultarEventos.Click += new System.EventHandler(this.btnConsultarEventos_Click);
+            // 
+            // btnGestionarSemillero
+            // 
+            this.btnGestionarSemillero.Location = new System.Drawing.Point(15, 24);
+            this.btnGestionarSemillero.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGestionarSemillero.Name = "btnGestionarSemillero";
+            this.btnGestionarSemillero.Size = new System.Drawing.Size(225, 60);
+            this.btnGestionarSemillero.TabIndex = 8;
+            this.btnGestionarSemillero.Text = "Gestionar semillero";
+            this.btnGestionarSemillero.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGestionarSemillero.UseVisualStyleBackColor = true;
+            this.btnGestionarSemillero.Click += new System.EventHandler(this.btnGestionarSemillero_Click_1);
+            // 
             // Consultar_eventos_lider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -207,29 +221,23 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1482, 793);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBox3);
             this.Name = "Consultar_eventos_lider";
             this.Text = "Consultar_eventos_lider";
             this.Load += new System.EventHandler(this.Consultar_eventos_lider_Load);
-            this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnCerrarSesion;
-        private System.Windows.Forms.Button btnRegistrarProyecto;
-        private System.Windows.Forms.Button btnConsultar_EventoLider;
-        private System.Windows.Forms.Button btnGestionarSemillero;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -238,5 +246,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscarEvento;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnGestionReuniones;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnRegistrarProyecto;
+        private System.Windows.Forms.Button btnConsultarEventos;
+        private System.Windows.Forms.Button btnGestionarSemillero;
     }
 }

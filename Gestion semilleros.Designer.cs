@@ -206,7 +206,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(188, 141);
+            this.txtID.Location = new System.Drawing.Point(212, 141);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(193, 27);
@@ -234,7 +234,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(188, 32);
+            this.textBox1.Location = new System.Drawing.Point(212, 32);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(193, 27);
@@ -243,7 +243,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(188, 71);
+            this.textBox2.Location = new System.Drawing.Point(212, 71);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(193, 27);
@@ -252,7 +252,7 @@
             // 
             // txtLider
             // 
-            this.txtLider.Location = new System.Drawing.Point(188, 106);
+            this.txtLider.Location = new System.Drawing.Point(212, 106);
             this.txtLider.Margin = new System.Windows.Forms.Padding(4);
             this.txtLider.Name = "txtLider";
             this.txtLider.Size = new System.Drawing.Size(193, 27);

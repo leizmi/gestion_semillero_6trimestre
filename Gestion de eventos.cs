@@ -33,7 +33,9 @@ namespace gestión_semillero_6trimestre
         }
 
         private void btnGestionEventos_Click(object sender, EventArgs e)
-        { }
+        { 
+          metodo.admi_GestionEventos();
+        }
 
         private void btnGestion_de_Semilleros_Click(object sender, EventArgs e)
         {

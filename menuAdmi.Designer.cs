@@ -65,7 +65,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(737, 533);
+            this.dataGridView1.Size = new System.Drawing.Size(737, 342);
             this.dataGridView1.TabIndex = 23;
             // 
             // groupBox1
@@ -179,11 +179,11 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(696, 147);
+            this.groupBox2.Location = new System.Drawing.Point(701, 212);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(764, 608);
+            this.groupBox2.Size = new System.Drawing.Size(764, 415);
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
             // 
@@ -210,11 +210,11 @@
             this.groupBox3.Controls.Add(this.comboSemillero);
             this.groupBox3.Controls.Add(this.btnbuscarSemillero);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(13, 147);
+            this.groupBox3.Location = new System.Drawing.Point(18, 212);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(676, 448);
+            this.groupBox3.Size = new System.Drawing.Size(676, 334);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Busqueda por filtro";

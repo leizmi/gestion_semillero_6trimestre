@@ -56,11 +56,7 @@ namespace gestión_semillero_6trimestre
             }
         }     
 
-        private void btnGestionarSemillero_Click(object sender, EventArgs e)// Método para navegar al formulario de gestión de semilleros, mostrando el formulario correspondiente y ocultando el formulario actual.
-        {
-            metodo.menuLider(); // se llama al método menuLider de la clase Metodos para mostrar el formulario de gestión de semilleros para líderes, permitiendo al líder gestionar los semilleros relacionados con su rol.
-            this.Hide();
-        }
+       
        
         private void btnMostraSemiDataGridView_Click(object sender, EventArgs e) //Se llama al método para cargar los datos de los semilleros en el dataGridView.
         {
@@ -182,16 +178,12 @@ namespace gestión_semillero_6trimestre
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar))// si la tecla presionada es un dígito, se marca el evento como manejado para evitar que se ingrese el carácter no permitido
-            {
-                e.Handled = true;// se marca el evento como manejado para evitar que se ingrese el carácter no permitido
-                MessageBox.Show("Solo se aceptan letras.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);// se muestra un mensaje de advertencia al usuario indicando que solo se aceptan letras en el campo de texto
-            }
+            Metodos.SoloNumeros(e); // se llama al método SoloNumeros de la clase Metodos para validar que solo se ingresen números en el campo de texto textBox2, que corresponde a la descripción del semillero, mostrando un mensaje de advertencia si se intenta ingresar un carácter no permitido.
         }
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
            Metodos.SoloNumeros(e); // se llama al método SoloNumeros de la clase Metodos para validar que solo se ingresen números en el campo de texto textBox5, que corresponde a la línea de investigación, mostrando un mensaje de advertencia si se intenta ingresar un carácter no permitido.
-            MessageBox.Show("Solo se aceptan números.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+           
         }
         private void limpiarCampos() //Metodo para limpiar las cajas de texto y el dateTimePicker.
         {
@@ -443,11 +435,7 @@ namespace gestión_semillero_6trimestre
             }
         }
 
-        private void btnConsultarEventos_Click(object sender, EventArgs e) // Métodos para navegar entre formularios relacionados con la gestión de eventos y proyectos.
-        {
-          metodo.consultarEventosLider(); // se llama al método consultarEventosLider de la clase Metodos para mostrar el formulario de consulta de eventos para líderes, permitiendo al líder consultar los eventos relacionados con su semillero.
-            this.Hide();
-        }
+        
 
         private void btnRealizarBusquedaSemillero_Click_1(object sender, EventArgs e) // Método para realizar una búsqueda de semilleros por ID utilizando el valor seleccionado en el comboBox1, mostrando los resultados en el dataGridView1.
         {
@@ -470,12 +458,34 @@ namespace gestión_semillero_6trimestre
             }
         }
 
-        private void btnRegistrarProyecto_Click(object sender, EventArgs e)
+
+        private void btnGestionReuniones_Click(object sender, EventArgs e)
+        {
+            metodo.ReunionLider(); // se llama al método ReunionLider de la clase Metodos para mostrar el formulario de gestión de reuniones para líderes, permitiendo al líder gestionar las reuniones relacionadas con su semillero.
+            this.Hide(); // se oculta el formulario actual para mostrar solo el formulario de gestión de reuniones.
+        }
+
+        private void btnGestionarSemillero_Click_1(object sender, EventArgs e)
+        {
+            metodo.menuLider(); // se llama al método menuLider de la clase Metodos para mostrar el formulario de gestión de semilleros para líderes, permitiendo al líder gestionar los semilleros relacionados con su rol.
+            this.Hide();
+        }
+
+        private void btnRegistrarProyecto_Click_1(object sender, EventArgs e)
         {
             metodo.registrarProyecto(); // se llama al método registrarProyecto de la clase Metodos para mostrar el formulario de registro de proyectos, permitiendo al líder registrar un nuevo proyecto asociado a un semillero.
             this.Hide(); // se oculta el formulario actual para mostrar solo el formulario de registro de proyectos.
         }
 
-        
+        private void btnConsultarEventos_Click_1(object sender, EventArgs e)
+        {
+            metodo.consultarEventosLider(); // se llama al método consultarEventosLider de la clase Metodos para mostrar el formulario de consulta de eventos para líderes, permitiendo al líder consultar los eventos relacionados con su semillero.
+            this.Hide();
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            metodo.sesiónCerrar(this); // se llama al método sesiónCerrar de la clase Metodos para cerrar la sesión
+        }
     } 
 }

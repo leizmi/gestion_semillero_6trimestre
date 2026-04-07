@@ -131,29 +131,35 @@ namespace gestión_semillero_6trimestre
             CargarDatos("", "");    // se llama al método CargarDatos con parámetros vacíos para cargar todos los eventos sin filtrar al cargar el formulario, lo que permite mostrar inicialmente todos los eventos disponibles en la base de datos en el DataGridView
         }
 
-        
 
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        private void btnGestionReuniones_Click(object sender, EventArgs e)
         {
-            metodos.sesiónCerrar(this); // se llama al método sesiónCerrar de la clase Metodos, pasando como parámetro el formulario actual (this) para cerrar la sesión del usuario y volver a la pantalla de inicio de sesión
+            metodos.ReunionLider(); // se llama al método ReunionLider de la clase Metodos para mostrar el formulario de gestión de reuniones para el rol de líder, lo que permite al usuario acceder a las funciones de gestión de reuniones específicas para su rol
+            this.Hide();
         }
 
-        private void btnRegistrarProyecto_Click(object sender, EventArgs e)
+        private void btnGestionarSemillero_Click_1(object sender, EventArgs e)
+        {
+            metodos.menuLider();
+            this.Hide();
+        }
+
+        private void btnRegistrarProyecto_Click_1(object sender, EventArgs e)
         {
             metodos.registrarProyecto();// se llama al método registrarProyecto de la clase Metodos para mostrar el formulario de registro de proyectos, lo que permite al usuario acceder a las funciones de registro de proyectos específicas para su rol
             this.Hide();
         }
 
-        private void btnGestionarSemillero_Click(object sender, EventArgs e)
-        {
-            metodos.menuLider();// se llama al método menuLider de la clase Metodos para mostrar el formulario de gestión de semilleros para el rol de líder, lo que permite al usuario acceder a las funciones de gestión de semilleros específicas para su rol
-            this.Hide();
-        }
-
-        private void btnConsultar_EventoLider_Click(object sender, EventArgs e)
+        private void btnConsultarEventos_Click(object sender, EventArgs e)
         {
             metodos.consultarEventosLider(); // se llama al método consultarEventosLider de la clase Metodos para mostrar el formulario de consulta de eventos para el rol de líder, lo que permite al usuario acceder a las funciones de consulta de eventos específicas para su rol
             this.Hide();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            metodos.sesiónCerrar(this); // se llama al método sesiónCerrar de la clase Metodos, pasando como parámetro el formulario actual (this) para cerrar la sesión del usuario y volver a la pantalla de inicio de sesión
+
         }
     }
 }

@@ -24,29 +24,6 @@ namespace gestión_semillero_6trimestre
             InitializeComponent();
         }
 
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
-        {
-            metodo.sesiónCerrar(this); // se llama al método sesiónCerrar de la clase Metodos para cerrar la sesión del usuario y volver al formulario de inicio de sesión, pasando el formulario actual como parámetro para cerrarlo después de mostrar el formulario de inicio de sesión
-        }
-
-        private void btnConsularEvento_Click(object sender, EventArgs e)
-        {
-            metodo.consultarEventosLider();// se llama al método consultarEventosLider de la clase Metodos para mostrar el formulario de consulta de eventos para el rol de líder
-            this.Hide();
-        }
-
-        private void btnGestionarSemillero_Click(object sender, EventArgs e)
-        {
-            metodo.menuLider(); // se llama al método menuLider de la clase Metodos para mostrar el formulario de gestión de semilleros para el rol de líder
-            this.Hide();
-        }
-
-        private void btnRegistrarProyecto_Click(object sender, EventArgs e)
-        {
-            metodo.registrarProyecto();// se llama al método registrarProyecto de la clase Metodos para mostrar el formulario de registro de proyectos para el rol de líder
-            this.Hide();
-        }
-
         private void CargarProyectos() // este método se encarga de cargar los proyectos registrados en la base de datos y mostrarlos en el DataGridView del formulario
         {
             using (SqlConnection con = conexion.Conectar())// se establece la conexión a la base de datos utilizando el método Conectar de la clase Conexion, y se utiliza un bloque using para asegurar que la conexión se cierre correctamente después de su uso
@@ -125,16 +102,47 @@ namespace gestión_semillero_6trimestre
         private void txtIdProyecto_KeyPress(object sender, KeyPressEventArgs e)
         {
             Metodos.SoloNumeros(e);// se llama al método SoloNumeros de la clase Metodos para validar que solo se ingresen números en el campo de texto para el ID del proyecto, pasando el evento KeyPress como parámetro para validar cada tecla presionada por el usuario
+            
         }
 
         private void txtNombreProyecto_KeyPress(object sender, KeyPressEventArgs e)
         {
             Metodos.SoloLetras(e);// se llama al método SoloLetras de la clase Metodos para validar que solo se ingresen letras en el campo de texto para el nombre del proyecto, pasando el evento KeyPress como parámetro para validar cada tecla presionada por el usuario
+            
         }
 
         private void txtIdSemillero_KeyPress(object sender, KeyPressEventArgs e)
         {
             Metodos.SoloNumeros(e);// se llama al método SoloNumeros de la clase Metodos para validar que solo se ingresen números en el campo de texto para el ID del semillero, pasando el evento KeyPress como parámetro para validar cada tecla presionada por el usuario
+        }
+
+        private void btnGestionReuniones_Click(object sender, EventArgs e)
+        {
+            metodo.ReunionLider();// se llama al método ReunionLider de la clase Metodos para mostrar el formulario de gestión de reuniones para el rol de líder
+            this.Hide();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            metodo.sesiónCerrar(this); // se llama al método sesiónCerrar de la clase Metodos para cerrar la sesión
+        }
+
+        private void btnRegistrarProyecto_Click_1(object sender, EventArgs e)
+        {
+            metodo.registrarProyecto();// se llama al método registrarProyecto de la clase Metodos para mostrar el formulario de registro de proyectos para el rol de líder
+            this.Hide();
+        }
+
+        private void btnGestionarSemillero_Click_1(object sender, EventArgs e)
+        {
+            metodo.menuLider(); // se llama al método menuLider de la clase Metodos para mostrar el formulario de gestión de semilleros para el rol de líder
+            this.Hide();
+        }
+
+        private void btnConsultarEventos_Click(object sender, EventArgs e)
+        {
+            metodo.consultarEventosLider(); // se llama al método consultarEventosLider de la clase Metodos para mostrar el formulario de consulta de eventos para el rol de líder
+            this.Hide();// se oculta el formulario actual para mostrar el formulario de consulta de eventos para el rol de líder
         }
     }
 }

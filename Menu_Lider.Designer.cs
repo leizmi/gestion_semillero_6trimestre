@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnGestionarSemillero = new System.Windows.Forms.Button();
-            this.btnRegistrarProyecto = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnConsultarEventos = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -59,7 +55,6 @@
             this.lblLineInvesSemi = new System.Windows.Forms.Label();
             this.lblNombreSemillero = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnInactivos = new System.Windows.Forms.Button();
             this.btnHabilitar = new System.Windows.Forms.Button();
@@ -67,62 +62,20 @@
             this.comboBoxSemillero = new System.Windows.Forms.ComboBox();
             this.btnConsultarInv = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnGestionReuniones = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnRegistrarProyecto = new System.Windows.Forms.Button();
+            this.btnConsultarEventos = new System.Windows.Forms.Button();
+            this.btnGestionarSemillero = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBoxDetalleSemi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnGestionarSemillero
-            // 
-            this.btnGestionarSemillero.Location = new System.Drawing.Point(15, 24);
-            this.btnGestionarSemillero.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGestionarSemillero.Name = "btnGestionarSemillero";
-            this.btnGestionarSemillero.Size = new System.Drawing.Size(225, 60);
-            this.btnGestionarSemillero.TabIndex = 8;
-            this.btnGestionarSemillero.Text = "Gestionar semillero";
-            this.btnGestionarSemillero.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGestionarSemillero.UseVisualStyleBackColor = true;
-            this.btnGestionarSemillero.Click += new System.EventHandler(this.btnGestionarSemillero_Click);
-            // 
-            // btnRegistrarProyecto
-            // 
-            this.btnRegistrarProyecto.Location = new System.Drawing.Point(248, 24);
-            this.btnRegistrarProyecto.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRegistrarProyecto.Name = "btnRegistrarProyecto";
-            this.btnRegistrarProyecto.Size = new System.Drawing.Size(225, 60);
-            this.btnRegistrarProyecto.TabIndex = 1;
-            this.btnRegistrarProyecto.Text = "Registrar proyecto";
-            this.btnRegistrarProyecto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRegistrarProyecto.UseVisualStyleBackColor = true;
-            this.btnRegistrarProyecto.Click += new System.EventHandler(this.btnRegistrarProyecto_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(1222, 24);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(225, 60);
-            this.btnSalir.TabIndex = 4;
-            this.btnSalir.Text = "Cerrar sesión";
-            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnConsultarEventos
-            // 
-            this.btnConsultarEventos.Location = new System.Drawing.Point(481, 24);
-            this.btnConsultarEventos.Margin = new System.Windows.Forms.Padding(4);
-            this.btnConsultarEventos.Name = "btnConsultarEventos";
-            this.btnConsultarEventos.Size = new System.Drawing.Size(225, 60);
-            this.btnConsultarEventos.TabIndex = 3;
-            this.btnConsultarEventos.Text = "Consultar eventos";
-            this.btnConsultarEventos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConsultarEventos.UseVisualStyleBackColor = true;
-            this.btnConsultarEventos.Click += new System.EventHandler(this.btnConsultarEventos_Click);
             // 
             // dataGridView1
             // 
@@ -428,22 +381,6 @@
             this.dataGridView2.TabIndex = 26;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.btnSalir);
-            this.groupBox3.Controls.Add(this.btnRegistrarProyecto);
-            this.groupBox3.Controls.Add(this.btnConsultarEventos);
-            this.groupBox3.Controls.Add(this.btnGestionarSemillero);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(13, 13);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(1460, 100);
-            this.groupBox3.TabIndex = 27;
-            this.groupBox3.TabStop = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
@@ -521,6 +458,83 @@
             this.dataGridView3.Size = new System.Drawing.Size(592, 197);
             this.dataGridView3.TabIndex = 29;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.btnGestionReuniones);
+            this.groupBox3.Controls.Add(this.btnSalir);
+            this.groupBox3.Controls.Add(this.btnRegistrarProyecto);
+            this.groupBox3.Controls.Add(this.btnConsultarEventos);
+            this.groupBox3.Controls.Add(this.btnGestionarSemillero);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(13, 13);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(1460, 100);
+            this.groupBox3.TabIndex = 50;
+            this.groupBox3.TabStop = false;
+            // 
+            // btnGestionReuniones
+            // 
+            this.btnGestionReuniones.Location = new System.Drawing.Point(714, 24);
+            this.btnGestionReuniones.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGestionReuniones.Name = "btnGestionReuniones";
+            this.btnGestionReuniones.Size = new System.Drawing.Size(225, 60);
+            this.btnGestionReuniones.TabIndex = 9;
+            this.btnGestionReuniones.Text = "Gestionar reuniones";
+            this.btnGestionReuniones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGestionReuniones.UseVisualStyleBackColor = true;
+            this.btnGestionReuniones.Click += new System.EventHandler(this.btnGestionReuniones_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(1222, 24);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(225, 60);
+            this.btnSalir.TabIndex = 4;
+            this.btnSalir.Text = "Cerrar sesión";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
+            // 
+            // btnRegistrarProyecto
+            // 
+            this.btnRegistrarProyecto.Location = new System.Drawing.Point(248, 24);
+            this.btnRegistrarProyecto.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegistrarProyecto.Name = "btnRegistrarProyecto";
+            this.btnRegistrarProyecto.Size = new System.Drawing.Size(225, 60);
+            this.btnRegistrarProyecto.TabIndex = 1;
+            this.btnRegistrarProyecto.Text = "Registrar proyecto";
+            this.btnRegistrarProyecto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRegistrarProyecto.UseVisualStyleBackColor = true;
+            this.btnRegistrarProyecto.Click += new System.EventHandler(this.btnRegistrarProyecto_Click_1);
+            // 
+            // btnConsultarEventos
+            // 
+            this.btnConsultarEventos.Location = new System.Drawing.Point(481, 24);
+            this.btnConsultarEventos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultarEventos.Name = "btnConsultarEventos";
+            this.btnConsultarEventos.Size = new System.Drawing.Size(225, 60);
+            this.btnConsultarEventos.TabIndex = 3;
+            this.btnConsultarEventos.Text = "Consultar eventos";
+            this.btnConsultarEventos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConsultarEventos.UseVisualStyleBackColor = true;
+            this.btnConsultarEventos.Click += new System.EventHandler(this.btnConsultarEventos_Click_1);
+            // 
+            // btnGestionarSemillero
+            // 
+            this.btnGestionarSemillero.Location = new System.Drawing.Point(15, 24);
+            this.btnGestionarSemillero.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGestionarSemillero.Name = "btnGestionarSemillero";
+            this.btnGestionarSemillero.Size = new System.Drawing.Size(225, 60);
+            this.btnGestionarSemillero.TabIndex = 8;
+            this.btnGestionarSemillero.Text = "Gestionar semillero";
+            this.btnGestionarSemillero.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGestionarSemillero.UseVisualStyleBackColor = true;
+            this.btnGestionarSemillero.Click += new System.EventHandler(this.btnGestionarSemillero_Click_1);
+            // 
             // Menu_Lider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -529,9 +543,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1482, 793);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.groupBoxDetalleSemi);
             this.Controls.Add(this.groupBox2);
@@ -546,18 +560,14 @@
             this.groupBoxDetalleSemi.ResumeLayout(false);
             this.groupBoxDetalleSemi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnConsultarEventos;
-        private System.Windows.Forms.Button btnRegistrarProyecto;
-        private System.Windows.Forms.Button btnGestionarSemillero;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnRealizarBusquedaSemillero;
@@ -579,7 +589,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button btnAgregarSemi;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnBusquedaLineaInv;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label4;
@@ -593,5 +602,11 @@
         private System.Windows.Forms.Button btnEliminarInv;
         private System.Windows.Forms.Button btnHabilitar;
         private System.Windows.Forms.Button btnInactivos;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnGestionReuniones;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnRegistrarProyecto;
+        private System.Windows.Forms.Button btnConsultarEventos;
+        private System.Windows.Forms.Button btnGestionarSemillero;
     }
 }

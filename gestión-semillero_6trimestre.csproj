@@ -113,6 +113,12 @@
     <Compile Include="Reuniones.Designer.cs">
       <DependentUpon>Reuniones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reunión Lider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reunión Lider.Designer.cs">
+      <DependentUpon>Reunión Lider.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Consultar eventos lider.resx">
       <DependentUpon>Consultar eventos lider.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reuniones.resx">
       <DependentUpon>Reuniones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reunión Lider.resx">
+      <DependentUpon>Reunión Lider.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

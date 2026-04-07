@@ -46,7 +46,7 @@ namespace gestión_semillero_6trimestre
         /// Método para cerrar sesión, muestra un mensaje de confirmación antes de cerrar la sesión y volver al formulario de inicio de sesión.
         public void sesiónCerrar(Form formularioActual)
         {
-            DialogResult result = MessageBox.Show("¿Estás seguro de que deseas salir?","Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);// se muestra un mensaje de confirmación al usuario antes de cerrar la sesión
+            DialogResult result = MessageBox.Show("¿Estás seguro de que deseas salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);// se muestra un mensaje de confirmación al usuario antes de cerrar la sesión
 
             if (result == DialogResult.Yes)
             {
@@ -56,7 +56,7 @@ namespace gestión_semillero_6trimestre
                 formularioActual.Close(); // Variable de tipo Form que representa el formulario actual, se cierra para volver al inicio de sesión.
             }
         }
-        
+
 
         /// Rol lider y sus metodos para mostrar los formularios correspondientes a sus funciones
         public void menuLider()//Metodos publico para poder acceder a el desde cualquier formulario, sin retornar ninguno valor.
@@ -71,15 +71,16 @@ namespace gestión_semillero_6trimestre
             consuEventosLider.Show();
         }
 
-        public void consultarEventos()//Metodos publico para poder acceder a el desde cualquier formulario, sin retornar ninguno valor.
-        {
-            Consultar_eventos consulEventos = new Consultar_eventos();// Se instancia la clase Consultar_eventos y se guarda en la variable consulEventos para poder acceder a sus propiedades y métodos
-            consulEventos.Show();
-        }
         public void registrarProyecto()//Metodos publico para poder acceder a el desde cualquier formulario, sin retornar ninguno valor.
         {
             Registrar_proyecto regisProyecto = new Registrar_proyecto();// Se instancia la clase Registrar_proyecto y se guarda en la variable regisProyecto para poder acceder a sus propiedades y métodos
             regisProyecto.Show();
+        }
+
+        public void ReunionLider()//Metodos publico para poder acceder a el desde cualquier formulario, sin retornar ninguno valor.
+        {
+           Reunión_Lider ReunionLider = new Reunión_Lider();// Se instancia la clase Gestionar_proyectos y se guarda en la variable gestiProyecto para poder acceder a sus propiedades y métodos
+            ReunionLider.Show();
         }
 
         /////validaciones para los campos de texto, se pueden usar en cualquier formulario para validar los campos de texto antes de realizar alguna acción, como guardar o actualizar datos.
@@ -89,6 +90,7 @@ namespace gestión_semillero_6trimestre
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
+                MessageBox.Show("Solo se aceptan numeros.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);// se muestra un mensaje de advertencia al usuario indicando que solo se aceptan letras en el campo de texto
             }
         }
 
@@ -99,14 +101,22 @@ namespace gestión_semillero_6trimestre
                 !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
+                MessageBox.Show("Solo se aceptan letras.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);// se muestra un mensaje de advertencia al usuario indicando que solo se aceptan letras en el campo de texto
             }
         }
 
-
-
+        public static void SoloLetrasNumeros(KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && 
+                !char.IsWhiteSpace(e.KeyChar) &&
+                e.KeyChar !='-' &&
+                !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se aceptan números, letras y - para separar los números.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
 
     }
-
-
 
 }
