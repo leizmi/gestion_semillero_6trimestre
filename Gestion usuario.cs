@@ -107,8 +107,8 @@ namespace gestión_semillero_6trimestre
                 return;
             }
 
-            string filtro = comboBox1.SelectedItem.ToString();// Se obtiene el tipo de filtro seleccionado en el ComboBox y se guarda en la variable filtro para usarlo en la construcción de la consulta SQL.
-            string valor = textBoxFiltro.Text.Trim();// Se obtiene el valor ingresado en el campo de texto para el filtro, se elimina cualquier espacio en blanco al inicio o al final del texto y se guarda en la variable valor para usarlo en la construcción de la consulta SQL.
+                string filtro = comboBox1.SelectedItem.ToString();// Se obtiene el tipo de filtro seleccionado en el ComboBox y se guarda en la variable filtro para usarlo en la construcción de la consulta SQL.
+                string valor = textBoxFiltro.Text.Trim();// Se obtiene el valor ingresado en el campo de texto para el filtro, se elimina cualquier espacio en blanco al inicio o al final del texto y se guarda en la variable valor para usarlo en la construcción de la consulta SQL.
 
             SqlConnection con = Conexion.Conectar();// Se establece la conexión a la base de datos utilizando el método Conectar() de la clase Conexion.
 
@@ -172,14 +172,14 @@ namespace gestión_semillero_6trimestre
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            // 🔴 VALIDAR SELECCIÓN
+            //  VALIDAR SELECCIÓN
             if (dataGridView1.CurrentRow == null)
             {
                 MessageBox.Show("Debe seleccionar un usuario del listado", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            // 🔴 VALIDAR CAMPOS
+            //  VALIDAR CAMPOS
             if (string.IsNullOrWhiteSpace(txtnombre.Text) ||
                 string.IsNullOrWhiteSpace(txtapellido.Text) ||
                 string.IsNullOrWhiteSpace(txtedad.Text) ||
@@ -195,7 +195,7 @@ namespace gestión_semillero_6trimestre
                 return;
             }
 
-            // 🔴 VALIDAR NUMÉRICOS
+            //  VALIDAR NUMÉRICOS
             if (!int.TryParse(txtedad.Text, out int edad))
             {
                 MessageBox.Show("La edad debe ser un número válido");
@@ -207,12 +207,12 @@ namespace gestión_semillero_6trimestre
                 SqlConnection con = Conexion.Conectar();
                 int idInv = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID_investigador"].Value);
 
-                // 🔍 Obtener ID_usuario
+                //  Obtener ID_usuario
                 SqlCommand getIdUser = new SqlCommand("SELECT ID_usuario FROM investigadores WHERE ID_investigador = @id", con);
                 getIdUser.Parameters.AddWithValue("@id", idInv);
                 int idUsuario = Convert.ToInt32(getIdUser.ExecuteScalar());
 
-                // 🔄 ACTUALIZAR INVESTIGADOR
+                //  ACTUALIZAR INVESTIGADOR
                 string updateInv = @"UPDATE investigadores SET
                             nombre_investigador = @nombre,
                             apellido_investigador = @apellido,
@@ -232,7 +232,7 @@ namespace gestión_semillero_6trimestre
                 cmdInv.Parameters.AddWithValue("@doc", comboBox_TipoDocumento.Text);
                 cmdInv.ExecuteNonQuery();
 
-                // 🔄 ACTUALIZAR USUARIO
+                //  ACTUALIZAR USUARIO
                 string updateUser = @"UPDATE usuario SET
                             correo_usuario = @correo,
                             contraseña_usuario = @contra,
@@ -271,15 +271,15 @@ namespace gestión_semillero_6trimestre
                 txtnombre.Text = fila.Cells["nombre_investigador"].Value.ToString();// Se asigna el valor del campo nombre_investigador de la fila seleccionada en el DataGridView al campo de texto txtnombre para mostrarlo en el formulario y permitir su edición.
                 txtapellido.Text = fila.Cells["apellido_investigador"].Value.ToString();
 
-                txtedad.Text = fila.Cells["edad_investigador"].Value.ToString();
-                txttelefono.Text = fila.Cells["telefono_investigador"].Value.ToString();
-                txtcorreo.Text = fila.Cells["correo_usuario"].Value.ToString();
-                txtcontraseña.Text = fila.Cells["contraseña_usuario"].Value.ToString();
+                    txtedad.Text = fila.Cells["edad_investigador"].Value.ToString();
+                    txttelefono.Text = fila.Cells["telefono_investigador"].Value.ToString();
+                    txtcorreo.Text = fila.Cells["correo_usuario"].Value.ToString();
+                    txtcontraseña.Text = fila.Cells["contraseña_usuario"].Value.ToString();
 
-                             comboBox4.Text = fila.Cells["tipo_usuario"].Value.ToString();
-                             comboBox3.Text = fila.Cells["estado_usuario"].Value.ToString();
-                comboBox_TipoDocumento.Text = fila.Cells["tipo_documento"].Value.ToString();
-            }
+                                 comboBox4.Text = fila.Cells["tipo_usuario"].Value.ToString();
+                                 comboBox3.Text = fila.Cells["estado_usuario"].Value.ToString();
+                    comboBox_TipoDocumento.Text = fila.Cells["tipo_documento"].Value.ToString();
+                }
         }
 
         void LimpiarCampos()// Método para limpiar los campos de texto y restablecer los ComboBox después de realizar una acción como agregar o actualizar un usuario, se borra el contenido de los campos de texto y se restablecen los ComboBox a su estado inicial, además de quitar la selección del DataGridView para mostrar que no hay ningún registro seleccionado.
@@ -386,21 +386,21 @@ namespace gestión_semillero_6trimestre
             SqlConnection con = Conexion.Conectar();// Se establece la conexión a la base de datos utilizando el método Conectar() de la clase Conexion para realizar la consulta SQL necesaria para obtener los investigadores y sus usuarios relacionados que tienen cuentas inactivas, y luego llenar un DataTable con esos datos para mostrarlo en el DataGridView.
 
             string query = @"SELECT 
-                    i.ID_investigador,
-                    i.nombre_investigador,
-                    i.apellido_investigador,
-                    i.tipo_documento,
-                    i.edad_investigador,
-                    i.telefono_investigador,
+                           i.ID_investigador,
+                           i.nombre_investigador,
+                           i.apellido_investigador,
+                           i.tipo_documento,
+                           i.edad_investigador,
+                           i.telefono_investigador,
+                           u.correo_usuario,
+                           u.contraseña_usuario,
+                           u.tipo_usuario,
+                           u.estado_usuario
+                          FROM investigadores i, usuario u
+                          WHERE i.ID_usuario = u.ID_usuario
+                          AND u.estado_usuario = 'Inactivo'";
 
-                    u.correo_usuario,
-                    u.contraseña_usuario,
-                    u.tipo_usuario,
-                    u.estado_usuario
 
-                    FROM investigadores i
-                    INNER JOIN usuario u ON i.ID_usuario = u.ID_usuario
-                    WHERE u.estado_usuario = 'Inactivo'";
 
             SqlDataAdapter da = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
@@ -522,5 +522,7 @@ namespace gestión_semillero_6trimestre
             metodo.reunionesAdmin(); // se llama al método Reuniones() para mostrar el formulario de reuniones
             this.Hide();
         }
+
+
     }
 }

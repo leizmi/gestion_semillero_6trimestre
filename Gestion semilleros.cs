@@ -70,7 +70,6 @@ namespace gestión_semillero_6trimestre
             cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value); // Agregamos el parámetro @fecha al comando SQL con el valor del DateTimePicker para la fecha de creación del semillero
             cmd.Parameters.AddWithValue("@descripcion", textBox4.Text); // Agregamos el parámetro @descripcion al comando SQL con el valor del campo de texto para la descripción del semillero
 
-            con.Open();// Abrimos la conexión a la base de datos
             cmd.ExecuteNonQuery();// Ejecutamos el comando SQL para insertar el nuevo semillero en la base de datos
             con.Close();
 
@@ -201,8 +200,6 @@ namespace gestión_semillero_6trimestre
                 "UPDATE semillero SET estado = 'inactivo' WHERE ID_semillero = @id", con); // Comando SQL para actualizar el estado del semillero a "inactivo" en la base de datos, utilizando un parámetro para evitar inyecciones SQL y asegurar que el ID del semillero se pase correctamente a la consulta, y especificando la condición WHERE para actualizar solo el semillero con el ID correspondiente al seleccionado
 
             cmd.Parameters.AddWithValue("@id", Convert.ToInt32(txtID.Text));// Agregamos el parámetro @id al comando SQL para evitar inyecciones SQL y asegurarnos de que el ID del semillero se pase correctamente a la consulta
-
-            con.Open();// Abrimos la conexión a la base de datos
             cmd.ExecuteNonQuery();// Ejecutamos el comando SQL para actualizar el estado del semillero a "inactivo" en la base de datos
             con.Close();// Cerramos la conexión a la base de datos
 
@@ -240,7 +237,6 @@ namespace gestión_semillero_6trimestre
             "UPDATE semillero SET estado = 'activo' WHERE ID_semillero = @id", con);// Comando SQL para actualizar el estado del semillero a "activo" en la base de datos, utilizando un parámetro para evitar inyecciones SQL y asegurar que el ID del semillero se pase correctamente a la consulta, y especificando la condición WHERE para actualizar solo el semillero con el ID correspondiente al seleccionado
 
             cmd.Parameters.AddWithValue("@id", Convert.ToInt32(txtID.Text));// Agregamos el parámetro @id al comando SQL para evitar inyecciones SQL y asegurarnos de que el ID del semillero se pase correctamente a la consulta
-            con.Open();// Abrimos la conexión a la base de datos
             cmd.ExecuteNonQuery();// Ejecutamos el comando SQL para actualizar el estado del semillero a "activo" en la base de datos
             con.Close();// Cerramos la conexión a la base de datos
 

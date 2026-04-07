@@ -71,6 +71,7 @@ namespace gestión_semillero_6trimestre
                 return;
             }
             CargarDatos(columna, valor);// se llama al método CargarDatos, pasando como parámetros el nombre de la columna y el valor ingresado por el usuario para realizar la consulta en la base de datos y mostrar los resultados en el DataGridView
+            LimpiarCampos();        
         }
 
         public void CargarDatos(string columna, string valor) // método para cargar los datos en el DataGridView según el criterio de búsqueda seleccionado por el usuario
@@ -160,6 +161,12 @@ namespace gestión_semillero_6trimestre
         {
             metodos.sesiónCerrar(this); // se llama al método sesiónCerrar de la clase Metodos, pasando como parámetro el formulario actual (this) para cerrar la sesión del usuario y volver a la pantalla de inicio de sesión
 
+        }
+        public void LimpiarCampos()
+        {
+            txtBuscar.Clear();            // Limpia el TextBox de búsqueda
+            comboBox1.SelectedIndex = -1; // Deselecciona cualquier opción del ComboBox
+            //dataGridView1.DataSource = null; // Limpia el DataGridView
         }
     }
 }

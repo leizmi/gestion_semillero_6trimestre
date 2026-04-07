@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace gestión_semillero_6trimestre
-{   
+{
     public partial class Form2 : Form
     {
         Conexion Conexion = new Conexion(); // creamos una instancia de la clase Conexion para establecer la conexion a la base de datos
@@ -38,7 +38,7 @@ namespace gestión_semillero_6trimestre
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-          metodo.Admi_Reportes();// se llama al método Admi_Reportes de la clase Metodos para mostrar el formulario de reportes
+            metodo.Admi_Reportes();// se llama al método Admi_Reportes de la clase Metodos para mostrar el formulario de reportes
             this.Hide();
         }
 
@@ -65,10 +65,10 @@ namespace gestión_semillero_6trimestre
 
             comboLinea.DataSource = dtLinea;// se asigna el DataTable como origen de datos del comboBox
             comboLinea.DisplayMember = "linea_investigacion";// se especifica el campo a mostrar en el comboBox
-
+            LimpiarCampos();
             Conexion.cerrar();// se cierra la conexion a la base de datos
         }
-        
+
         private void btnGestionEventos_Click(object sender, EventArgs e)
         {
             metodo.admi_GestionEventos();// se llama al método admi_GestionEventos de la clase Metodos para mostrar el formulario de gestión de eventos
@@ -80,43 +80,41 @@ namespace gestión_semillero_6trimestre
             metodo.sesiónCerrar(this); // se llama al método sesiónCerrar de la clase Metodos para cerrar la sesión y volver al formulario de inicio de sesión, pasando el formulario actual como argumento para cerrarlo después de mostrar el formulario de inicio de sesión
         }
 
-        private void btnbuscarSemillero_Click(object sender, EventArgs e) // Evento que se ejecuta al hacer clic en el botón de búsqueda por semillero, se encarga de realizar una consulta a la base de datos para obtener los datos del semillero seleccionado y mostrar los resultados en un DataGridView.
-        {
-            SqlConnection con = Conexion.Conectar();// establecemos la conexion a la base de datos utilizando el método Conectar de la clase Conexion
-
-            string query = "SELECT * FROM semillero WHERE ID_semillero = @id";// se define la consulta SQL para obtener los datos del semillero seleccionado, utilizando un parámetro para evitar inyecciones SQL
-
-            SqlCommand cmd = new SqlCommand(query, con);// se crea un SqlCommand para ejecutar la consulta SQL, pasando la consulta y la conexión como argumentos
-            cmd.Parameters.AddWithValue("@id", comboSemillero.SelectedValue);// se agrega el valor del parámetro @id utilizando el valor seleccionado en el comboBox de semilleros
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);// se crea un SqlDataAdapter para ejecutar la consulta SQL y llenar un DataTable con los resultados, pasando el SqlCommand como argumento
-            DataTable dt = new DataTable();// se crea un DataTable para almacenar los resultados de la consulta
-            da.Fill(dt);// se llena el DataTable con los resultados de la consulta
-            dataGridView1.DataSource = dt;// se asigna el DataTable como origen de datos del DataGridView para mostrar los resultados de la consulta
-
-            Conexion.cerrar();// se cierra la conexion a la base de datos
-        }
+            
 
         private void btnBusquedaLineaInv_Click(object sender, EventArgs e) // Evento que se ejecuta al hacer clic en el botón de búsqueda por línea de investigación, se encarga de realizar una consulta a la base de datos para obtener los datos de los semilleros relacionados con la línea de investigación seleccionada y mostrar los resultados en un DataGridView.
         {
-            if (comboSemillero.SelectedIndex == -1)// se valida que el usuario haya seleccionado un semillero en el comboBox antes de ejecutar la consulta, si no se ha seleccionado ningún semillero, se muestra un mensaje de error y se detiene la ejecución del método
+            if (comboSemillero.SelectedIndex == -1)
             {
-                MessageBox.Show("Debe seleccionar un semillero");// se muestra un mensaje de error al usuario indicando que debe seleccionar un semillero
+                MessageBox.Show("Seleccione un semillero");
                 return;
             }
 
-            SqlConnection con = Conexion.Conectar();// establecemos la conexion a la base de datos utilizando el método Conectar de la clase Conexion
+            SqlConnection con = Conexion.Conectar();
 
-            string query = "SELECT * FROM semillero WHERE linea_investigacion = @linea";// se define la consulta SQL para obtener los datos de los semilleros relacionados con la línea de investigación seleccionada, utilizando un parámetro para evitar inyecciones SQL
-            SqlCommand cmd = new SqlCommand(query, con);// se crea un SqlCommand para ejecutar la consulta SQL, pasando la consulta y la conexión como argumentos
-            cmd.Parameters.AddWithValue("@linea", comboLinea.Text);// se agrega el valor del parámetro @linea utilizando el texto seleccionado en el comboBox de líneas de investigación
+            try
+            {
+                con.Open(); // Abrir la conexión
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);// se crea un SqlDataAdapter para ejecutar la consulta SQL y llenar un DataTable con los resultados, pasando el SqlCommand como argumento
-            DataTable dt = new DataTable();// se crea un DataTable para almacenar los resultados de la consulta
-            da.Fill(dt);// se llena el DataTable con los resultados de la consulta
-                       
-            dataGridView1.DataSource = dt;// se asigna el DataTable como origen de datos del DataGridView para mostrar los resultados de la consulta
-            Conexion.cerrar();// se cierra la conexion a la base de datos
+                string query = "SELECT * FROM semillero WHERE ID_semillero = @id";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@id", comboSemillero.SelectedValue);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt); // ✅ Ahora debería funcionar
+                dataGridView1.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar semillero: " + ex.Message);
+            }
+            finally
+            {
+                con.Close(); // Cerrar la conexión siempre
+            }
+            LimpiarCampos();
         }
 
         private void btnConsuPorFecha_Click(object sender, EventArgs e) // Evento que se ejecuta al hacer clic en el botón de búsqueda por fecha, se encarga de realizar una consulta a la base de datos para obtener los datos de los eventos relacionados con la fecha seleccionada y mostrar los resultados en un DataGridView.
@@ -136,7 +134,7 @@ namespace gestión_semillero_6trimestre
             SqlDataAdapter da = new SqlDataAdapter(cmd);// se crea un SqlDataAdapter para ejecutar la consulta SQL y llenar un DataTable con los resultados, pasando el SqlCommand como argumento
             DataTable dt = new DataTable();// se crea un DataTable para almacenar los resultados de la consulta
             da.Fill(dt);// se llena el DataTable con los resultados de la consulta
-                        
+
             if (dt.Rows.Count == 0)// se valida si el DataTable está vacío, lo que indica que no se encontraron eventos relacionados con la fecha seleccionada, si el DataTable está vacío, se muestra un mensaje de información al usuario y se limpia el DataGridView
             {
                 MessageBox.Show("No hay semilleros relacionados con esa fecha.", "Sin resultados", MessageBoxButtons.OK, MessageBoxIcon.Information); // se muestra un mensaje de información al usuario indicando que no se encontraron semilleros relacionados con la fecha seleccionada
@@ -146,6 +144,7 @@ namespace gestión_semillero_6trimestre
             }
 
             dataGridView1.DataSource = dt; // se asigna el DataTable como origen de datos del DataGridView para mostrar los resultados de la consulta
+            LimpiarCampos();
             Conexion.cerrar();// se cierra la conexion a la base de datos
         }
 
@@ -154,6 +153,51 @@ namespace gestión_semillero_6trimestre
             metodo.reunionesAdmin(); // se llama al método reunionesAdmin de la clase Metodos para mostrar el formulario de reuniones del administrador
             this.Hide();
         }
+
+
+        private void LimpiarCampos()
+        {
+            // Limpiar ComboBox específicos
+            comboSemillero.SelectedIndex = -1;
+            comboLinea.SelectedIndex = -1;
+
+            // Resetear DateTimePicker
+            dateTimePicker1.Value = DateTime.Today;
+        }
+
+        private void btnbuscarSemillero_Click(object sender, EventArgs e)
+        {
+            if (comboSemillero.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un semillero");
+                return;
+            }
+
+            SqlConnection con = Conexion.Conectar();
+
+            try
+            {
+               
+
+                string query = "SELECT * FROM semillero WHERE ID_semillero = @id";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@id", comboSemillero.SelectedValue);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt); // ✅ Ahora debería funcionar
+                dataGridView1.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar semillero: " + ex.Message);
+            }
+            finally
+            {
+                con.Close(); // Cerrar la conexión siempre
+            }
+            LimpiarCampos();
+        }
     }
-   
 }

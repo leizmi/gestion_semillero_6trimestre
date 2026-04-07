@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button1 = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
@@ -153,7 +153,7 @@
             // 
             this.lblCantidadEventos.AutoSize = true;
             this.lblCantidadEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadEventos.Location = new System.Drawing.Point(284, 231);
+            this.lblCantidadEventos.Location = new System.Drawing.Point(296, 231);
             this.lblCantidadEventos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidadEventos.Name = "lblCantidadEventos";
             this.lblCantidadEventos.Size = new System.Drawing.Size(18, 20);
@@ -211,7 +211,7 @@
             // 
             this.lblCantidadInvestigadores.AutoSize = true;
             this.lblCantidadInvestigadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadInvestigadores.Location = new System.Drawing.Point(287, 139);
+            this.lblCantidadInvestigadores.Location = new System.Drawing.Point(296, 139);
             this.lblCantidadInvestigadores.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidadInvestigadores.Name = "lblCantidadInvestigadores";
             this.lblCantidadInvestigadores.Size = new System.Drawing.Size(18, 20);
@@ -222,7 +222,7 @@
             // 
             this.lblCantidadSemi.AutoSize = true;
             this.lblCantidadSemi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadSemi.Location = new System.Drawing.Point(284, 35);
+            this.lblCantidadSemi.Location = new System.Drawing.Point(296, 35);
             this.lblCantidadSemi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidadSemi.Name = "lblCantidadSemi";
             this.lblCantidadSemi.Size = new System.Drawing.Size(18, 20);
@@ -254,18 +254,18 @@
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(509, 157);
             this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Semilleros por nombre";
-            this.chart1.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Semilleros por nombre";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(931, 500);
             this.chart1.TabIndex = 32;
             this.chart1.Text = "chart1";

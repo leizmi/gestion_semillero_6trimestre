@@ -99,7 +99,7 @@ namespace gestión_semillero_6trimestre
             con.Close();
 
             MessageBox.Show("Reunión agregada correctamente");
-
+            LimpiarCampos();
             CargarReuniones();
         }
 
@@ -139,7 +139,7 @@ namespace gestión_semillero_6trimestre
             con.Close();
 
             MessageBox.Show("Filas afectadas: " + filas);
-
+            LimpiarCampos();
             CargarReuniones();
         }
 
@@ -170,6 +170,7 @@ namespace gestión_semillero_6trimestre
             MessageBox.Show("Reunión eliminada");
 
             CargarReuniones();
+            LimpiarCampos();
         }
 
         
@@ -213,7 +214,14 @@ namespace gestión_semillero_6trimestre
                 txtIDsemillero.Text = fila.Cells["ID_semillero"].Value.ToString();
             }   
         }
+        void LimpiarCampos()
+        {
+            txt_IDreunion.Clear();
+            txtDescripcion_reunion.Clear();
+            txtHora_reunion.Clear();
+            txtIDsemillero.Clear();
+            fecha_reunion.Value = DateTime.Now;
+        }
 
-        
     }
 }

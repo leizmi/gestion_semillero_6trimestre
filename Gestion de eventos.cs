@@ -33,9 +33,7 @@ namespace gestión_semillero_6trimestre
         }
 
         private void btnGestionEventos_Click(object sender, EventArgs e)
-        { 
-          metodo.admi_GestionEventos();
-        }
+        {  }
 
         private void btnGestion_de_Semilleros_Click(object sender, EventArgs e)
         {
@@ -127,10 +125,12 @@ namespace gestión_semillero_6trimestre
 
                 MessageBox.Show("Evento agregado correctamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);// Si el evento se agrega correctamente, se muestra un mensaje de información al usuario indicando que el evento fue agregado correctamente
 
+                
                 conexion.cerrar();// Cerrar la conexión a la base de datos utilizando el método cerrar de la clase Conexion
-                CargarEventos();// Llamar al método CargarEventos para actualizar el DataGridView con el nuevo evento agregado
                 LimpiarCampos();// Llamar al método LimpiarCampos para limpiar los campos de texto y restablecer el DateTimePicker después de agregar un nuevo evento
-            }
+
+                CargarEventos();// Llamar al método CargarEventos para actualizar el DataGridView con el nuevo evento agregado
+                  }
             catch (Exception ex) // si ocurre un error al agregar el nuevo evento, se muestra un mensaje de error
             {
                 MessageBox.Show("Error: " + ex.Message);
@@ -159,7 +159,10 @@ namespace gestión_semillero_6trimestre
                     cmd.ExecuteNonQuery();// Ejecutar la consulta de eliminación para eliminar el evento de la base de datos
 
                     MessageBox.Show("Evento eliminado correctamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);// Si el evento se elimina correctamente, se muestra un mensaje de información al usuario indicando que el evento fue eliminado correctamente
+                  
                     conexion.cerrar();// Cerrar la conexión a la base de datos utilizando el método cerrar de la clase Conexion
+                    LimpiarCampos();// Llamar al método LimpiarCampos para limpiar los campos de texto y restablecer el DateTimePicker después de agregar un nuevo evento
+
                     CargarEventos();// Llamar al método CargarEventos para actualizar el DataGridView después de eliminar el evento
                 }
                 catch (Exception ex)
@@ -196,6 +199,8 @@ namespace gestión_semillero_6trimestre
 
                 MessageBox.Show("Evento actualizado correctamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);// Si el evento se actualiza correctamente, se muestra un mensaje de información al usuario indicando que el evento fue actualizado correctamente
                 conexion.cerrar();// Cerrar la conexión a la base de datos utilizando el método cerrar de la clase Conexion
+                LimpiarCampos();// Llamar al método LimpiarCampos para limpiar los campos de texto y restablecer el DateTimePicker después de agregar un nuevo evento
+
                 CargarEventos();// Llamar al método CargarEventos para actualizar el DataGridView después de modificar el evento
             }
             catch (Exception ex)
@@ -232,5 +237,8 @@ namespace gestión_semillero_6trimestre
             metodo.reunionesAdmin();// Llamar al método Gestion_Reuniones para mostrar el formulario de gestión de reuniones del administrador
             this.Hide();// Ocultar el formulario actual para mostrar el formulario de gestión de reuniones
         }
+
+
     }
+
 }
