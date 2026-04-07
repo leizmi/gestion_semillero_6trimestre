@@ -196,6 +196,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "Tecnologia",
@@ -226,6 +227,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Semillero Innovacion",
@@ -277,7 +279,7 @@
             // 
             // btnAgregarSemi
             // 
-            this.btnAgregarSemi.Location = new System.Drawing.Point(610, 90);
+            this.btnAgregarSemi.Location = new System.Drawing.Point(615, 90);
             this.btnAgregarSemi.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarSemi.Name = "btnAgregarSemi";
             this.btnAgregarSemi.Size = new System.Drawing.Size(199, 43);
@@ -288,7 +290,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(424, 34);
+            this.textBox2.Location = new System.Drawing.Point(439, 33);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(165, 27);
@@ -297,10 +299,11 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(155, 33);
+            this.textBox1.Location = new System.Drawing.Point(155, 34);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(77, 27);
+            this.textBox1.Size = new System.Drawing.Size(77, 26);
             this.textBox1.TabIndex = 12;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
@@ -324,7 +327,7 @@
             // 
             // btnEliminarSemi
             // 
-            this.btnEliminarSemi.Location = new System.Drawing.Point(610, 192);
+            this.btnEliminarSemi.Location = new System.Drawing.Point(615, 192);
             this.btnEliminarSemi.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarSemi.Name = "btnEliminarSemi";
             this.btnEliminarSemi.Size = new System.Drawing.Size(199, 41);
@@ -335,7 +338,7 @@
             // 
             // btnActualizarSemi
             // 
-            this.btnActualizarSemi.Location = new System.Drawing.Point(610, 141);
+            this.btnActualizarSemi.Location = new System.Drawing.Point(615, 141);
             this.btnActualizarSemi.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizarSemi.Name = "btnActualizarSemi";
             this.btnActualizarSemi.Size = new System.Drawing.Size(199, 43);
@@ -355,7 +358,7 @@
             // 
             // btnMostraSemiDataGridView
             // 
-            this.btnMostraSemiDataGridView.Location = new System.Drawing.Point(610, 39);
+            this.btnMostraSemiDataGridView.Location = new System.Drawing.Point(615, 39);
             this.btnMostraSemiDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostraSemiDataGridView.Name = "btnMostraSemiDataGridView";
             this.btnMostraSemiDataGridView.Size = new System.Drawing.Size(199, 43);
@@ -489,6 +492,7 @@
             // 
             // comboBoxSemillero
             // 
+            this.comboBoxSemillero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSemillero.FormattingEnabled = true;
             this.comboBoxSemillero.Location = new System.Drawing.Point(23, 38);
             this.comboBoxSemillero.Name = "comboBoxSemillero";

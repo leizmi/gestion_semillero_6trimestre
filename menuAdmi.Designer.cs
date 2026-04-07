@@ -30,6 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_Reunion = new System.Windows.Forms.Button();
             this.btnCerrar_sesión = new System.Windows.Forms.Button();
             this.btnGestionEventos = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
@@ -70,6 +71,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.btn_Reunion);
             this.groupBox1.Controls.Add(this.btnCerrar_sesión);
             this.groupBox1.Controls.Add(this.btnGestionEventos);
             this.groupBox1.Controls.Add(this.btnReportes);
@@ -85,12 +87,24 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             // 
+            // btn_Reunion
+            // 
+            this.btn_Reunion.Location = new System.Drawing.Point(955, 24);
+            this.btn_Reunion.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Reunion.Name = "btn_Reunion";
+            this.btn_Reunion.Size = new System.Drawing.Size(180, 60);
+            this.btn_Reunion.TabIndex = 8;
+            this.btn_Reunion.Text = "Reunión";
+            this.btn_Reunion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Reunion.UseVisualStyleBackColor = true;
+            this.btn_Reunion.Click += new System.EventHandler(this.btn_Reunion_Click);
+            // 
             // btnCerrar_sesión
             // 
-            this.btnCerrar_sesión.Location = new System.Drawing.Point(1222, 24);
+            this.btnCerrar_sesión.Location = new System.Drawing.Point(1272, 24);
             this.btnCerrar_sesión.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar_sesión.Name = "btnCerrar_sesión";
-            this.btnCerrar_sesión.Size = new System.Drawing.Size(225, 60);
+            this.btnCerrar_sesión.Size = new System.Drawing.Size(180, 60);
             this.btnCerrar_sesión.TabIndex = 7;
             this.btnCerrar_sesión.Text = "Cerrar sesión";
             this.btnCerrar_sesión.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -99,10 +113,10 @@
             // 
             // btnGestionEventos
             // 
-            this.btnGestionEventos.Location = new System.Drawing.Point(481, 24);
+            this.btnGestionEventos.Location = new System.Drawing.Point(391, 24);
             this.btnGestionEventos.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestionEventos.Name = "btnGestionEventos";
-            this.btnGestionEventos.Size = new System.Drawing.Size(225, 60);
+            this.btnGestionEventos.Size = new System.Drawing.Size(180, 60);
             this.btnGestionEventos.TabIndex = 6;
             this.btnGestionEventos.Text = "Eventos";
             this.btnGestionEventos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -112,10 +126,10 @@
             // btnReportes
             // 
             this.btnReportes.CausesValidation = false;
-            this.btnReportes.Location = new System.Drawing.Point(947, 24);
+            this.btnReportes.Location = new System.Drawing.Point(767, 24);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(4);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(225, 60);
+            this.btnReportes.Size = new System.Drawing.Size(180, 60);
             this.btnReportes.TabIndex = 3;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -124,10 +138,10 @@
             // 
             // btnGestion_de_Semilleros
             // 
-            this.btnGestion_de_Semilleros.Location = new System.Drawing.Point(714, 24);
+            this.btnGestion_de_Semilleros.Location = new System.Drawing.Point(579, 24);
             this.btnGestion_de_Semilleros.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestion_de_Semilleros.Name = "btnGestion_de_Semilleros";
-            this.btnGestion_de_Semilleros.Size = new System.Drawing.Size(225, 60);
+            this.btnGestion_de_Semilleros.Size = new System.Drawing.Size(180, 60);
             this.btnGestion_de_Semilleros.TabIndex = 2;
             this.btnGestion_de_Semilleros.Text = "Semilleros";
             this.btnGestion_de_Semilleros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -136,10 +150,10 @@
             // 
             // btnGestion_de_usuario
             // 
-            this.btnGestion_de_usuario.Location = new System.Drawing.Point(248, 24);
+            this.btnGestion_de_usuario.Location = new System.Drawing.Point(203, 24);
             this.btnGestion_de_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestion_de_usuario.Name = "btnGestion_de_usuario";
-            this.btnGestion_de_usuario.Size = new System.Drawing.Size(225, 60);
+            this.btnGestion_de_usuario.Size = new System.Drawing.Size(180, 60);
             this.btnGestion_de_usuario.TabIndex = 1;
             this.btnGestion_de_usuario.Text = "Usuario";
             this.btnGestion_de_usuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -152,7 +166,7 @@
             this.btnDashboard.Location = new System.Drawing.Point(15, 24);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(225, 60);
+            this.btnDashboard.Size = new System.Drawing.Size(180, 60);
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Menú principal";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -196,7 +210,7 @@
             this.groupBox3.Controls.Add(this.comboSemillero);
             this.groupBox3.Controls.Add(this.btnbuscarSemillero);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(1, 206);
+            this.groupBox3.Location = new System.Drawing.Point(13, 147);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
@@ -243,6 +257,7 @@
             // 
             // comboLinea
             // 
+            this.comboLinea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboLinea.FormattingEnabled = true;
             this.comboLinea.Items.AddRange(new object[] {
             "Tecnologia",
@@ -273,6 +288,7 @@
             // 
             // comboSemillero
             // 
+            this.comboSemillero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboSemillero.FormattingEnabled = true;
             this.comboSemillero.Items.AddRange(new object[] {
             "Semillero Innovacion",
@@ -341,5 +357,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboSemillero;
         private System.Windows.Forms.Button btnbuscarSemillero;
+        private System.Windows.Forms.Button btn_Reunion;
     }
 }

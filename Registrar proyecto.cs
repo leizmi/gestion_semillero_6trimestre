@@ -121,5 +121,20 @@ namespace gestión_semillero_6trimestre
             txtIdSemillero.Clear();// se limpia el campo de texto para el ID del semillero utilizando el método Clear del TextBox
             dateTimePicker1.Value = DateTime.Now;// se restablece el valor del DateTimePicker para la fecha de inicio del proyecto al valor predeterminado (la fecha actual) utilizando la propiedad Value del DateTimePicker
         }
+
+        private void txtIdProyecto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloNumeros(e);// se llama al método SoloNumeros de la clase Metodos para validar que solo se ingresen números en el campo de texto para el ID del proyecto, pasando el evento KeyPress como parámetro para validar cada tecla presionada por el usuario
+        }
+
+        private void txtNombreProyecto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloLetras(e);// se llama al método SoloLetras de la clase Metodos para validar que solo se ingresen letras en el campo de texto para el nombre del proyecto, pasando el evento KeyPress como parámetro para validar cada tecla presionada por el usuario
+        }
+
+        private void txtIdSemillero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloNumeros(e);// se llama al método SoloNumeros de la clase Metodos para validar que solo se ingresen números en el campo de texto para el ID del semillero, pasando el evento KeyPress como parámetro para validar cada tecla presionada por el usuario
+        }
     }
 }

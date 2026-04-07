@@ -36,10 +36,7 @@ namespace gestión_semillero_6trimestre
             this.Hide();
         }
         private void btnReportes_Click(object sender, EventArgs e)// se llama al método Admi_Reportes() para mostrar el formulario de reportes
-        {
-           metodos.Admi_Reportes();// se llama al método Admi_Reportes() para mostrar el formulario de reportes
-            this.Hide();
-        }
+        {}
 
         private void btnMostrarCantidadInvestigadores_Click(object sender, EventArgs e)// se ejecuta el método ContarInvestigadores() para obtener la cantidad de investigadores registrados en la base de datos y se muestra el resultado en el label lblCantidadInvestigadores
         {
@@ -73,6 +70,12 @@ namespace gestión_semillero_6trimestre
         private void button1_Click(object sender, EventArgs e) // se llama al método admi_GestionEventos() para mostrar el formulario de gestión de eventos
         {
             metodos.admi_GestionEventos();// se llama al método admi_GestionEventos() para mostrar el formulario de gestión de eventos
+            this.Hide();
+        }
+
+        private void btn_Reunion_Click(object sender, EventArgs e)
+        {
+            metodos.reunionesAdmin();// se llama al método reunionesAdmin() para mostrar el formulario de reuniones
             this.Hide();
         }
     }

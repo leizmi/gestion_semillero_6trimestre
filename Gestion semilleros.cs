@@ -33,10 +33,7 @@ namespace gestión_semillero_6trimestre
         }
 
         private void btnGestion_de_Semilleros_Click(object sender, EventArgs e)
-        {
-            metodo.Admi_GestionSemillero(); // Llamamos al método Admi_GestionSemillero de la clase Metodos para mostrar el formulario de gestión de semilleros
-            this.Hide();
-        }
+        { }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
@@ -250,6 +247,31 @@ namespace gestión_semillero_6trimestre
             MessageBox.Show("Semillero activado correctamente", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);// Mostramos un mensaje de información al usuario indicando que el semillero ha sido activado correctamente
             CargarDatos();// Recargamos los datos para mostrar los cambios realizados en el DataGridView
             LimpiarCampos();// Limpiamos los campos después de activar el semillero y recargamos los datos para mostrar los cambios realizados en el DataGridView
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloLetras(e); // Llamamos al método SoloLetras de la clase Metodos para validar que solo se ingresen letras en el campo de texto textBox1, que corresponde al nombre del semillero, para mantener la integridad de los datos y evitar errores al ingresar caracteres no permitidos
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloLetras(e); // Llamamos al método SoloLetras de la clase Metodos para validar que solo se ingresen letras en el campo de texto textBox2, que corresponde a la línea de investigación del semillero, para mantener la integridad de los datos y evitar errores al ingresar caracteres no permitidos
+        }
+
+        private void txtLider_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloLetras(e); // Llamamos al método SoloLetras de la clase Metodos para validar que solo se ingresen letras en el campo de texto txtLider, que corresponde al nombre del líder del semillero, aunque este campo no se utiliza para las operaciones de actualización o eliminación, ya que el líder se asigna a través de la gestión de investigadores y no se actualiza directamente desde este formulario, pero se valida para mantener la integridad de los datos y evitar errores al ingresar caracteres no permitidos
+        }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloNumeros(e); // Llamamos al método SoloNumeros de la clase Metodos para validar que solo se ingresen números en el campo de texto txtID, que corresponde al ID del semillero, para mantener la integridad de los datos y evitar errores al ingresar caracteres no permitidos
+        }
+
+        private void btn_Reunion_Click(object sender, EventArgs e)
+        {
+            metodo.reunionesAdmin(); // Llamamos al método reunionesAdmin de la clase Metodos para mostrar el formulario de reuniones, que permite gestionar las reuniones relacionadas con los semilleros, para facilitar la organización y seguimiento de las actividades de los semilleros
         }
     } 
 }

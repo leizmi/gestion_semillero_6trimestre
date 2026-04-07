@@ -40,10 +40,10 @@
             this.textBoxFiltro = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBoxActualizarEliminar = new System.Windows.Forms.GroupBox();
+            this.comboBox_TipoDocumento = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxSemillero = new System.Windows.Forms.ComboBox();
             this.btnAgregarCuenta = new System.Windows.Forms.Button();
-            this.txtdocumento = new System.Windows.Forms.TextBox();
             this.btn_ver_Inactivos = new System.Windows.Forms.Button();
             this.Btn_habilitar_cuenta = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
@@ -66,6 +66,7 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_Reunion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxFiltroBusqueda.SuspendLayout();
             this.groupBoxActualizarEliminar.SuspendLayout();
@@ -74,10 +75,10 @@
             // 
             // btnGestionEventos
             // 
-            this.btnGestionEventos.Location = new System.Drawing.Point(481, 24);
+            this.btnGestionEventos.Location = new System.Drawing.Point(391, 24);
             this.btnGestionEventos.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestionEventos.Name = "btnGestionEventos";
-            this.btnGestionEventos.Size = new System.Drawing.Size(225, 60);
+            this.btnGestionEventos.Size = new System.Drawing.Size(180, 60);
             this.btnGestionEventos.TabIndex = 7;
             this.btnGestionEventos.Text = "Eventos";
             this.btnGestionEventos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -86,10 +87,10 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(1222, 24);
+            this.btnSalir.Location = new System.Drawing.Point(1272, 24);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(225, 60);
+            this.btnSalir.Size = new System.Drawing.Size(180, 60);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Cerrar sesión";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -98,10 +99,10 @@
             // 
             // btnReportes
             // 
-            this.btnReportes.Location = new System.Drawing.Point(947, 24);
+            this.btnReportes.Location = new System.Drawing.Point(767, 24);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(4);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(225, 60);
+            this.btnReportes.Size = new System.Drawing.Size(180, 60);
             this.btnReportes.TabIndex = 3;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -110,10 +111,10 @@
             // 
             // btnGestion_de_Semilleros
             // 
-            this.btnGestion_de_Semilleros.Location = new System.Drawing.Point(714, 24);
+            this.btnGestion_de_Semilleros.Location = new System.Drawing.Point(579, 24);
             this.btnGestion_de_Semilleros.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestion_de_Semilleros.Name = "btnGestion_de_Semilleros";
-            this.btnGestion_de_Semilleros.Size = new System.Drawing.Size(225, 60);
+            this.btnGestion_de_Semilleros.Size = new System.Drawing.Size(180, 60);
             this.btnGestion_de_Semilleros.TabIndex = 2;
             this.btnGestion_de_Semilleros.Text = "Semilleros";
             this.btnGestion_de_Semilleros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -122,10 +123,10 @@
             // 
             // btnGestion_de_usuario
             // 
-            this.btnGestion_de_usuario.Location = new System.Drawing.Point(248, 24);
+            this.btnGestion_de_usuario.Location = new System.Drawing.Point(203, 24);
             this.btnGestion_de_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestion_de_usuario.Name = "btnGestion_de_usuario";
-            this.btnGestion_de_usuario.Size = new System.Drawing.Size(225, 60);
+            this.btnGestion_de_usuario.Size = new System.Drawing.Size(180, 60);
             this.btnGestion_de_usuario.TabIndex = 1;
             this.btnGestion_de_usuario.Text = "Usuario";
             this.btnGestion_de_usuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -138,7 +139,7 @@
             this.btnDashboard.Location = new System.Drawing.Point(15, 24);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(225, 60);
+            this.btnDashboard.Size = new System.Drawing.Size(180, 60);
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Menú principal";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -186,15 +187,16 @@
             // 
             // textBoxFiltro
             // 
-            this.textBoxFiltro.Location = new System.Drawing.Point(215, 38);
+            this.textBoxFiltro.Location = new System.Drawing.Point(215, 42);
             this.textBoxFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxFiltro.Multiline = true;
             this.textBoxFiltro.Name = "textBoxFiltro";
-            this.textBoxFiltro.Size = new System.Drawing.Size(199, 43);
+            this.textBoxFiltro.Size = new System.Drawing.Size(199, 35);
             this.textBoxFiltro.TabIndex = 1;
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "ID investigador",
@@ -211,10 +213,10 @@
             // groupBoxActualizarEliminar
             // 
             this.groupBoxActualizarEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.groupBoxActualizarEliminar.Controls.Add(this.comboBox_TipoDocumento);
             this.groupBoxActualizarEliminar.Controls.Add(this.label1);
             this.groupBoxActualizarEliminar.Controls.Add(this.comboBoxSemillero);
             this.groupBoxActualizarEliminar.Controls.Add(this.btnAgregarCuenta);
-            this.groupBoxActualizarEliminar.Controls.Add(this.txtdocumento);
             this.groupBoxActualizarEliminar.Controls.Add(this.btn_ver_Inactivos);
             this.groupBoxActualizarEliminar.Controls.Add(this.Btn_habilitar_cuenta);
             this.groupBoxActualizarEliminar.Controls.Add(this.comboBox4);
@@ -246,10 +248,23 @@
             this.groupBoxActualizarEliminar.TabStop = false;
             this.groupBoxActualizarEliminar.Text = "Gestionar cuentas de usuarios";
             // 
+            // comboBox_TipoDocumento
+            // 
+            this.comboBox_TipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_TipoDocumento.FormattingEnabled = true;
+            this.comboBox_TipoDocumento.Items.AddRange(new object[] {
+            "CC",
+            "TI"});
+            this.comboBox_TipoDocumento.Location = new System.Drawing.Point(190, 127);
+            this.comboBox_TipoDocumento.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_TipoDocumento.Name = "comboBox_TipoDocumento";
+            this.comboBox_TipoDocumento.Size = new System.Drawing.Size(76, 28);
+            this.comboBox_TipoDocumento.TabIndex = 28;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 221);
+            this.label1.Location = new System.Drawing.Point(11, 219);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 27;
@@ -257,10 +272,11 @@
             // 
             // comboBoxSemillero
             // 
+            this.comboBoxSemillero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSemillero.FormattingEnabled = true;
-            this.comboBoxSemillero.Location = new System.Drawing.Point(104, 216);
+            this.comboBoxSemillero.Location = new System.Drawing.Point(105, 216);
             this.comboBoxSemillero.Name = "comboBoxSemillero";
-            this.comboBoxSemillero.Size = new System.Drawing.Size(134, 28);
+            this.comboBoxSemillero.Size = new System.Drawing.Size(163, 28);
             this.comboBoxSemillero.TabIndex = 26;
             // 
             // btnAgregarCuenta
@@ -272,13 +288,6 @@
             this.btnAgregarCuenta.Text = "Agregar cuenta";
             this.btnAgregarCuenta.UseVisualStyleBackColor = true;
             this.btnAgregarCuenta.Click += new System.EventHandler(this.btnAgregarCuenta_Click);
-            // 
-            // txtdocumento
-            // 
-            this.txtdocumento.Location = new System.Drawing.Point(183, 125);
-            this.txtdocumento.Name = "txtdocumento";
-            this.txtdocumento.Size = new System.Drawing.Size(96, 27);
-            this.txtdocumento.TabIndex = 24;
             // 
             // btn_ver_Inactivos
             // 
@@ -302,6 +311,7 @@
             // 
             // comboBox4
             // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "Administrador",
@@ -314,6 +324,7 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "activo",
@@ -369,6 +380,7 @@
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(145, 27);
             this.txttelefono.TabIndex = 13;
+            this.txttelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttelefono_KeyPress);
             // 
             // txtedad
             // 
@@ -377,6 +389,7 @@
             this.txtedad.Name = "txtedad";
             this.txtedad.Size = new System.Drawing.Size(105, 27);
             this.txtedad.TabIndex = 11;
+            this.txtedad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtedad_KeyPress);
             // 
             // txtapellido
             // 
@@ -385,6 +398,7 @@
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(203, 27);
             this.txtapellido.TabIndex = 10;
+            this.txtapellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapellido_KeyPress);
             // 
             // txtnombre
             // 
@@ -393,6 +407,7 @@
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(181, 27);
             this.txtnombre.TabIndex = 9;
+            this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress);
             // 
             // lblEstado
             // 
@@ -487,6 +502,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.btn_Reunion);
             this.groupBox2.Controls.Add(this.btnSalir);
             this.groupBox2.Controls.Add(this.btnGestionEventos);
             this.groupBox2.Controls.Add(this.btnReportes);
@@ -501,6 +517,18 @@
             this.groupBox2.Size = new System.Drawing.Size(1460, 100);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
+            // 
+            // btn_Reunion
+            // 
+            this.btn_Reunion.Location = new System.Drawing.Point(955, 24);
+            this.btn_Reunion.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Reunion.Name = "btn_Reunion";
+            this.btn_Reunion.Size = new System.Drawing.Size(180, 60);
+            this.btn_Reunion.TabIndex = 8;
+            this.btn_Reunion.Text = "Reunión";
+            this.btn_Reunion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Reunion.UseVisualStyleBackColor = true;
+            this.btn_Reunion.Click += new System.EventHandler(this.btn_Reunion_Click);
             // 
             // Form3
             // 
@@ -563,9 +591,10 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Button btn_ver_Inactivos;
         private System.Windows.Forms.Button Btn_habilitar_cuenta;
-        private System.Windows.Forms.TextBox txtdocumento;
         private System.Windows.Forms.Button btnAgregarCuenta;
         private System.Windows.Forms.ComboBox comboBoxSemillero;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox_TipoDocumento;
+        private System.Windows.Forms.Button btn_Reunion;
     }
 }

@@ -69,11 +69,9 @@ namespace gestión_semillero_6trimestre
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)/// este evento se ejecuta cada vez que el usuario presiona una tecla en el campo de texto textBox1
         {
-            if (char.IsDigit(e.KeyChar)) // si la tecla presionada es un dígito, se marca el evento como manejado para evitar que se ingrese el carácter no permitido
-            {
-                e.Handled = true;
-                MessageBox.Show("Solo se aceptan letras.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);// se muestra un mensaje de advertencia al usuario indicando que solo se aceptan letras en el campo de texto
-            }
+            Metodos.SoloLetras(e); // se llama al método SoloLetras de la clase Metodos para validar que solo se ingresen letras en el campo de texto textBox1, que corresponde al nombre del semillero, mostrando un mensaje de advertencia si se intenta ingresar un carácter no permitido.
+            MessageBox.Show("Solo se aceptan letras.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);// se muestra un mensaje de advertencia al usuario indicando que solo se aceptan letras en el campo de texto
+            
         }
 
         private void btnAgregarSemi_Click(object sender, EventArgs e)
@@ -192,11 +190,8 @@ namespace gestión_semillero_6trimestre
         }
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar))// si la tecla presionada es una letra, se marca el evento como manejado para evitar que se ingrese el carácter no permitido
-            {
-                e.Handled = true;// si la tecla presionada es una letra, se marca el evento como manejado para evitar que se ingrese el carácter no permitido
-                MessageBox.Show("Solo se aceptan números.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);// se muestra un mensaje de advertencia al usuario indicando que solo se aceptan números en el campo de texto
-            }
+           Metodos.SoloNumeros(e); // se llama al método SoloNumeros de la clase Metodos para validar que solo se ingresen números en el campo de texto textBox5, que corresponde a la línea de investigación, mostrando un mensaje de advertencia si se intenta ingresar un carácter no permitido.
+            MessageBox.Show("Solo se aceptan números.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void limpiarCampos() //Metodo para limpiar las cajas de texto y el dateTimePicker.
         {
@@ -480,5 +475,7 @@ namespace gestión_semillero_6trimestre
             metodo.registrarProyecto(); // se llama al método registrarProyecto de la clase Metodos para mostrar el formulario de registro de proyectos, permitiendo al líder registrar un nuevo proyecto asociado a un semillero.
             this.Hide(); // se oculta el formulario actual para mostrar solo el formulario de registro de proyectos.
         }
+
+        
     } 
 }

@@ -50,6 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_Reunion = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -58,6 +59,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.btn_Reunion);
             this.groupBox1.Controls.Add(this.btnCerrar_sesión);
             this.groupBox1.Controls.Add(this.btnGestionEventos);
             this.groupBox1.Controls.Add(this.btnReportes);
@@ -75,10 +77,10 @@
             // 
             // btnCerrar_sesión
             // 
-            this.btnCerrar_sesión.Location = new System.Drawing.Point(1222, 24);
+            this.btnCerrar_sesión.Location = new System.Drawing.Point(1272, 24);
             this.btnCerrar_sesión.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar_sesión.Name = "btnCerrar_sesión";
-            this.btnCerrar_sesión.Size = new System.Drawing.Size(225, 60);
+            this.btnCerrar_sesión.Size = new System.Drawing.Size(180, 60);
             this.btnCerrar_sesión.TabIndex = 7;
             this.btnCerrar_sesión.Text = "Cerrar sesión";
             this.btnCerrar_sesión.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -87,10 +89,10 @@
             // 
             // btnGestionEventos
             // 
-            this.btnGestionEventos.Location = new System.Drawing.Point(481, 24);
+            this.btnGestionEventos.Location = new System.Drawing.Point(391, 24);
             this.btnGestionEventos.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestionEventos.Name = "btnGestionEventos";
-            this.btnGestionEventos.Size = new System.Drawing.Size(225, 60);
+            this.btnGestionEventos.Size = new System.Drawing.Size(180, 60);
             this.btnGestionEventos.TabIndex = 6;
             this.btnGestionEventos.Text = "Eventos";
             this.btnGestionEventos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -100,10 +102,10 @@
             // btnReportes
             // 
             this.btnReportes.CausesValidation = false;
-            this.btnReportes.Location = new System.Drawing.Point(947, 24);
+            this.btnReportes.Location = new System.Drawing.Point(767, 24);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(4);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(225, 60);
+            this.btnReportes.Size = new System.Drawing.Size(180, 60);
             this.btnReportes.TabIndex = 3;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -112,10 +114,10 @@
             // 
             // btnGestion_de_Semilleros
             // 
-            this.btnGestion_de_Semilleros.Location = new System.Drawing.Point(714, 24);
+            this.btnGestion_de_Semilleros.Location = new System.Drawing.Point(579, 24);
             this.btnGestion_de_Semilleros.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestion_de_Semilleros.Name = "btnGestion_de_Semilleros";
-            this.btnGestion_de_Semilleros.Size = new System.Drawing.Size(225, 60);
+            this.btnGestion_de_Semilleros.Size = new System.Drawing.Size(180, 60);
             this.btnGestion_de_Semilleros.TabIndex = 2;
             this.btnGestion_de_Semilleros.Text = "Semilleros";
             this.btnGestion_de_Semilleros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -124,10 +126,10 @@
             // 
             // btnGestion_de_usuario
             // 
-            this.btnGestion_de_usuario.Location = new System.Drawing.Point(248, 24);
+            this.btnGestion_de_usuario.Location = new System.Drawing.Point(203, 24);
             this.btnGestion_de_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestion_de_usuario.Name = "btnGestion_de_usuario";
-            this.btnGestion_de_usuario.Size = new System.Drawing.Size(225, 60);
+            this.btnGestion_de_usuario.Size = new System.Drawing.Size(180, 60);
             this.btnGestion_de_usuario.TabIndex = 1;
             this.btnGestion_de_usuario.Text = "Usuario";
             this.btnGestion_de_usuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -140,7 +142,7 @@
             this.btnDashboard.Location = new System.Drawing.Point(15, 24);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(225, 60);
+            this.btnDashboard.Size = new System.Drawing.Size(180, 60);
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Menú principal";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -217,6 +219,7 @@
             this.txtIdSemillero.Name = "txtIdSemillero";
             this.txtIdSemillero.Size = new System.Drawing.Size(152, 27);
             this.txtIdSemillero.TabIndex = 9;
+            this.txtIdSemillero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdSemillero_KeyPress);
             // 
             // txtDescripcion
             // 
@@ -232,6 +235,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(246, 27);
             this.txtNombre.TabIndex = 7;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtIdEvento
             // 
@@ -239,6 +243,7 @@
             this.txtIdEvento.Name = "txtIdEvento";
             this.txtIdEvento.Size = new System.Drawing.Size(153, 27);
             this.txtIdEvento.TabIndex = 6;
+            this.txtIdEvento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdEvento_KeyPress);
             // 
             // label5
             // 
@@ -292,6 +297,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID del evento";
             // 
+            // btn_Reunion
+            // 
+            this.btn_Reunion.Location = new System.Drawing.Point(955, 24);
+            this.btn_Reunion.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Reunion.Name = "btn_Reunion";
+            this.btn_Reunion.Size = new System.Drawing.Size(180, 60);
+            this.btn_Reunion.TabIndex = 8;
+            this.btn_Reunion.Text = "Reunión";
+            this.btn_Reunion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Reunion.UseVisualStyleBackColor = true;
+            this.btn_Reunion.Click += new System.EventHandler(this.btn_Reunion_Click);
+            // 
             // Consultar_eventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -339,5 +356,6 @@
         private System.Windows.Forms.Button btnModificarEvento;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btn_Reunion;
     }
 }

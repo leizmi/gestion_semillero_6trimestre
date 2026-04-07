@@ -29,10 +29,7 @@ namespace gestión_semillero_6trimestre
         }
 
         private void btnGestion_de_usuario_Click(object sender, EventArgs e)
-        {
-            metodo.Admi_GestionUsuario();// Se llama al método Admi_GestionUsuario() de la clase Metodos para mostrar el formulario de gestión de usuarios del administrador.
-            this.Hide();// Se oculta el formulario actual para mostrar el formulario de gestión de usuarios del administrador.
-        }
+        { }
 
         private void btnGestion_de_Semilleros_Click(object sender, EventArgs e)
         {
@@ -185,14 +182,14 @@ namespace gestión_semillero_6trimestre
             // 🔴 VALIDAR CAMPOS
             if (string.IsNullOrWhiteSpace(txtnombre.Text) ||
                 string.IsNullOrWhiteSpace(txtapellido.Text) ||
-                string.IsNullOrWhiteSpace(txtdocumento.Text) ||
                 string.IsNullOrWhiteSpace(txtedad.Text) ||
                 string.IsNullOrWhiteSpace(txttelefono.Text) ||
                 string.IsNullOrWhiteSpace(txtcorreo.Text) ||
                 string.IsNullOrWhiteSpace(txtcontraseña.Text) ||
                 comboBox4.SelectedIndex == -1 || // rol
                 comboBox3.SelectedIndex == -1 || // estado
-                comboBoxSemillero.SelectedIndex == -1)
+                comboBoxSemillero.SelectedIndex == -1 ||
+                comboBox_TipoDocumento.SelectedIndex == -1) // tipo documento
             {
                 MessageBox.Show("Debe completar todos los campos", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -228,11 +225,11 @@ namespace gestión_semillero_6trimestre
                 SqlCommand cmdInv = new SqlCommand(updateInv, con);
                 cmdInv.Parameters.AddWithValue("@nombre", txtnombre.Text);
                 cmdInv.Parameters.AddWithValue("@apellido", txtapellido.Text);
-                cmdInv.Parameters.AddWithValue("@doc", txtdocumento.Text);
                 cmdInv.Parameters.AddWithValue("@edad", edad);
                 cmdInv.Parameters.AddWithValue("@telefono", txttelefono.Text);
                 cmdInv.Parameters.AddWithValue("@semillero", comboBoxSemillero.SelectedValue);
                 cmdInv.Parameters.AddWithValue("@id", idInv);
+                cmdInv.Parameters.AddWithValue("@doc", comboBox_TipoDocumento.Text);
                 cmdInv.ExecuteNonQuery();
 
                 // 🔄 ACTUALIZAR USUARIO
@@ -273,24 +270,23 @@ namespace gestión_semillero_6trimestre
 
                 txtnombre.Text = fila.Cells["nombre_investigador"].Value.ToString();// Se asigna el valor del campo nombre_investigador de la fila seleccionada en el DataGridView al campo de texto txtnombre para mostrarlo en el formulario y permitir su edición.
                 txtapellido.Text = fila.Cells["apellido_investigador"].Value.ToString();
-                txtdocumento.Text = fila.Cells["tipo_documento"].Value.ToString();
 
                 txtedad.Text = fila.Cells["edad_investigador"].Value.ToString();
                 txttelefono.Text = fila.Cells["telefono_investigador"].Value.ToString();
                 txtcorreo.Text = fila.Cells["correo_usuario"].Value.ToString();
                 txtcontraseña.Text = fila.Cells["contraseña_usuario"].Value.ToString();
 
-                comboBox4.Text = fila.Cells["tipo_usuario"].Value.ToString();
-                comboBox3.Text = fila.Cells["estado_usuario"].Value.ToString();
+                             comboBox4.Text = fila.Cells["tipo_usuario"].Value.ToString();
+                             comboBox3.Text = fila.Cells["estado_usuario"].Value.ToString();
+                comboBox_TipoDocumento.Text = fila.Cells["tipo_documento"].Value.ToString();
             }
         }
 
         void LimpiarCampos()// Método para limpiar los campos de texto y restablecer los ComboBox después de realizar una acción como agregar o actualizar un usuario, se borra el contenido de los campos de texto y se restablecen los ComboBox a su estado inicial, además de quitar la selección del DataGridView para mostrar que no hay ningún registro seleccionado.
         {
             // TextBox
-            txtnombre.Clear(); 
+            txtnombre.Clear();
             txtapellido.Clear();
-            txtdocumento.Clear();
             txtedad.Clear();
             txttelefono.Clear();
             txtcorreo.Clear();
@@ -299,6 +295,7 @@ namespace gestión_semillero_6trimestre
             // ComboBox
             comboBox4.SelectedIndex = -1; // tipo usuario
             comboBox3.SelectedIndex = -1; // estado
+            comboBox_TipoDocumento.SelectedIndex = -1; // tipo documento
 
             // Quitar selección del DataGridView
             dataGridView1.ClearSelection();
@@ -307,7 +304,7 @@ namespace gestión_semillero_6trimestre
         private void btnAgregarCuenta_Click(object sender, EventArgs e)
         {
             // Validación de campos obligatorios, se verifica que todos los campos necesarios para crear una nueva cuenta de investigador estén completos, si alguno de los campos está vacío o no se ha seleccionado un valor en los ComboBox, se muestra un mensaje de error y se detiene la ejecución del método.
-            if (string.IsNullOrWhiteSpace(txtnombre.Text) || string.IsNullOrWhiteSpace(txtapellido.Text) || string.IsNullOrWhiteSpace(txtdocumento.Text) ||
+            if (string.IsNullOrWhiteSpace(txtnombre.Text) || string.IsNullOrWhiteSpace(txtapellido.Text) || comboBox_TipoDocumento.SelectedIndex == -1  ||
                 string.IsNullOrWhiteSpace(txtedad.Text) || string.IsNullOrWhiteSpace(txttelefono.Text) || string.IsNullOrWhiteSpace(txtcorreo.Text) ||
                 string.IsNullOrWhiteSpace(txtcontraseña.Text) || comboBox4.SelectedIndex == -1 || comboBox3.SelectedIndex == -1)
             {
@@ -350,7 +347,7 @@ namespace gestión_semillero_6trimestre
                 cmdInv.Parameters.AddWithValue("@idInv", nuevoIdInv);
                 cmdInv.Parameters.AddWithValue("@nombre", txtnombre.Text);
                 cmdInv.Parameters.AddWithValue("@apellido", txtapellido.Text);
-                cmdInv.Parameters.AddWithValue("@doc", txtdocumento.Text);
+                cmdInv.Parameters.AddWithValue("@doc", comboBox_TipoDocumento.Text);
                 cmdInv.Parameters.AddWithValue("@edad", Convert.ToInt32(txtedad.Text));
                 cmdInv.Parameters.AddWithValue("@telefono", txttelefono.Text);
                 cmdInv.Parameters.AddWithValue("@idUsuario", nuevoIdUsuario);
@@ -483,7 +480,7 @@ namespace gestión_semillero_6trimestre
             int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID_investigador"].Value);
 
             SqlConnection con = Conexion.Conectar();// Se establece la conexión a la base de datos utilizando el método Conectar() de la clase Conexion.
-            
+
 
             string query = @"UPDATE usuario 
                      SET estado_usuario = 'Inactivo'
@@ -498,6 +495,32 @@ namespace gestión_semillero_6trimestre
 
             MessageBox.Show("Cuenta deshabilitada correctamente");
             CargarUsuarios();
+        }
+
+        private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloLetras(e);// Se llama al método SoloLetras() de la clase Metodos para validar que solo se ingresen letras en el campo de texto txtnombre, evitando que se ingresen números u otros caracteres no permitidos.
+        }
+
+        private void txtapellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloLetras(e);// Se llama al método SoloLetras() de la clase Metodos para validar que solo se ingresen letras en el campo de texto txtapellido, evitando que se ingresen números u otros caracteres no permitidos.
+        }
+
+        private void txtedad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloNumeros(e);// Se llama al método SoloNumeros() de la clase Metodos para validar que solo se ingresen números en el campo de texto txtedad, evitando que se ingresen letras u otros caracteres no permitidos.
+        }
+
+        private void txttelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloNumeros(e);// Se llama al método SoloNumeros() de la clase Metodos para validar que solo se ingresen números en el campo de texto txttelefono, evitando que se ingresen letras u otros caracteres no permitidos.
+        }
+
+        private void btn_Reunion_Click(object sender, EventArgs e)
+        {
+            metodo.reunionesAdmin(); // se llama al método Reuniones() para mostrar el formulario de reuniones
+            this.Hide();
         }
     }
 }

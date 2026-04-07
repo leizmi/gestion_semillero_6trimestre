@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button1 = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
@@ -49,6 +49,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_Reunion = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -56,10 +57,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(481, 24);
+            this.button1.Location = new System.Drawing.Point(391, 24);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 60);
+            this.button1.Size = new System.Drawing.Size(180, 60);
             this.button1.TabIndex = 5;
             this.button1.Text = "Eventos";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -80,10 +81,10 @@
             // 
             // btnReportes
             // 
-            this.btnReportes.Location = new System.Drawing.Point(947, 24);
+            this.btnReportes.Location = new System.Drawing.Point(767, 24);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(4);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(225, 60);
+            this.btnReportes.Size = new System.Drawing.Size(180, 60);
             this.btnReportes.TabIndex = 3;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -92,10 +93,10 @@
             // 
             // btnGestion_de_Semilleros
             // 
-            this.btnGestion_de_Semilleros.Location = new System.Drawing.Point(714, 24);
+            this.btnGestion_de_Semilleros.Location = new System.Drawing.Point(579, 24);
             this.btnGestion_de_Semilleros.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestion_de_Semilleros.Name = "btnGestion_de_Semilleros";
-            this.btnGestion_de_Semilleros.Size = new System.Drawing.Size(225, 60);
+            this.btnGestion_de_Semilleros.Size = new System.Drawing.Size(180, 60);
             this.btnGestion_de_Semilleros.TabIndex = 2;
             this.btnGestion_de_Semilleros.Text = "Semilleros";
             this.btnGestion_de_Semilleros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -104,10 +105,10 @@
             // 
             // btnGestion_de_usuario
             // 
-            this.btnGestion_de_usuario.Location = new System.Drawing.Point(248, 24);
+            this.btnGestion_de_usuario.Location = new System.Drawing.Point(203, 24);
             this.btnGestion_de_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.btnGestion_de_usuario.Name = "btnGestion_de_usuario";
-            this.btnGestion_de_usuario.Size = new System.Drawing.Size(225, 60);
+            this.btnGestion_de_usuario.Size = new System.Drawing.Size(180, 60);
             this.btnGestion_de_usuario.TabIndex = 1;
             this.btnGestion_de_usuario.Text = "Usuario";
             this.btnGestion_de_usuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -120,7 +121,7 @@
             this.btnDashboard.Location = new System.Drawing.Point(15, 24);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(225, 60);
+            this.btnDashboard.Size = new System.Drawing.Size(180, 60);
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Menú principal";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -161,7 +162,7 @@
             // 
             // btnMostrarCantidadSemileros
             // 
-            this.btnMostrarCantidadSemileros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarCantidadSemileros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrarCantidadSemileros.Location = new System.Drawing.Point(21, 59);
             this.btnMostrarCantidadSemileros.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrarCantidadSemileros.Name = "btnMostrarCantidadSemileros";
@@ -253,18 +254,18 @@
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(509, 157);
             this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Semilleros por nombre";
-            this.chart1.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Semilleros por nombre";
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(931, 500);
             this.chart1.TabIndex = 32;
             this.chart1.Text = "chart1";
@@ -272,6 +273,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.btn_Reunion);
             this.groupBox3.Controls.Add(this.btnSalir);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.btnReportes);
@@ -286,6 +288,18 @@
             this.groupBox3.Size = new System.Drawing.Size(1460, 100);
             this.groupBox3.TabIndex = 33;
             this.groupBox3.TabStop = false;
+            // 
+            // btn_Reunion
+            // 
+            this.btn_Reunion.Location = new System.Drawing.Point(955, 24);
+            this.btn_Reunion.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Reunion.Name = "btn_Reunion";
+            this.btn_Reunion.Size = new System.Drawing.Size(180, 60);
+            this.btn_Reunion.TabIndex = 7;
+            this.btn_Reunion.Text = "Reunión";
+            this.btn_Reunion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Reunion.UseVisualStyleBackColor = true;
+            this.btn_Reunion.Click += new System.EventHandler(this.btn_Reunion_Click);
             // 
             // Reportes
             // 
@@ -328,5 +342,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btn_Reunion;
     }
 }

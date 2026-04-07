@@ -16,6 +16,11 @@ namespace gestión_semillero_6trimestre
             Form2 menu = new Form2(); // Se instancia la clase Form2 y se guarda en la variable menu para poder acceder a sus propiedades y métodos
             menu.Show(); // Muestra el formulario
         }
+        public void reunionesAdmin() //Metodos publico para poder acceder a el desde cualquier formulario, sin retornar ninguno valor.
+        {
+            Reuniones reuniones = new Reuniones(); // Se instancia la clase Reuniones y se guarda en la variable reuniones para poder acceder a sus propiedades y métodos
+            reuniones.Show(); // Muestra el formulario
+        }
         public void Admi_Reportes() //Metodos publico para poder acceder a el desde cualquier formulario, sin retornar ninguno valor.
         {
             Reportes reportes = new Reportes();// Se instancia la clase Reportes y se guarda en la variable reportes para poder acceder a sus propiedades y métodos
@@ -76,5 +81,32 @@ namespace gestión_semillero_6trimestre
             Registrar_proyecto regisProyecto = new Registrar_proyecto();// Se instancia la clase Registrar_proyecto y se guarda en la variable regisProyecto para poder acceder a sus propiedades y métodos
             regisProyecto.Show();
         }
+
+        /////validaciones para los campos de texto, se pueden usar en cualquier formulario para validar los campos de texto antes de realizar alguna acción, como guardar o actualizar datos.
+        ///
+        public static void SoloNumeros(KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        public static void SoloLetras(KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) &&
+                !char.IsWhiteSpace(e.KeyChar) &&
+                !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+
+
+
     }
+
+
+
 }

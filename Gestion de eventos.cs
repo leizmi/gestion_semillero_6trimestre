@@ -33,10 +33,7 @@ namespace gestión_semillero_6trimestre
         }
 
         private void btnGestionEventos_Click(object sender, EventArgs e)
-        {
-            metodo.admi_GestionEventos();// Se llama al método admi_GestionEventos para mostrar el formulario de gestión de eventos del administrador
-            this.Hide();
-        }
+        { }
 
         private void btnGestion_de_Semilleros_Click(object sender, EventArgs e)
         {
@@ -211,6 +208,27 @@ namespace gestión_semillero_6trimestre
             txtDescripcion.Clear();// Limpiar el campo de texto txtDescripcion
             txtIdSemillero.Clear();// Limpiar el campo de texto txtIdSemillero
             dateTimePicker1.Value = DateTime.Now;// Restablecer el DateTimePicker dateTimePicker1 al valor actual (fecha y hora actual)
+        }
+
+        private void txtIdEvento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloNumeros(e);// Llamar al método SoloNumeros para validar que solo se ingresen números en el campo de texto txtIdEvento, pasando el evento KeyPressEventArgs como argumento para validar la tecla presionada
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloLetras(e);// Llamar al método SoloLetras para validar que solo se ingresen letras en el campo de texto txtNombre, pasando el evento KeyPressEventArgs como argumento para validar la tecla presionada
+        }
+
+        private void txtIdSemillero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloNumeros(e);// Llamar al método SoloNumeros para validar que solo se ingresen números en el campo de texto txtIdSemillero, pasando el evento KeyPressEventArgs como argumento para validar la tecla presionada
+        }
+
+        private void btn_Reunion_Click(object sender, EventArgs e)
+        {
+            metodo.reunionesAdmin();// Llamar al método Gestion_Reuniones para mostrar el formulario de gestión de reuniones del administrador
+            this.Hide();// Ocultar el formulario actual para mostrar el formulario de gestión de reuniones
         }
     }
 }

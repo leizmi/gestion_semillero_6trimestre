@@ -85,6 +85,7 @@
             this.txtIdSemillero.Name = "txtIdSemillero";
             this.txtIdSemillero.Size = new System.Drawing.Size(202, 27);
             this.txtIdSemillero.TabIndex = 14;
+            this.txtIdSemillero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdSemillero_KeyPress);
             // 
             // dateTimePicker2
             // 
@@ -128,6 +129,7 @@
             this.txtNombreProyecto.Name = "txtNombreProyecto";
             this.txtNombreProyecto.Size = new System.Drawing.Size(236, 27);
             this.txtNombreProyecto.TabIndex = 7;
+            this.txtNombreProyecto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreProyecto_KeyPress);
             // 
             // txtIdProyecto
             // 
@@ -136,6 +138,7 @@
             this.txtIdProyecto.Name = "txtIdProyecto";
             this.txtIdProyecto.Size = new System.Drawing.Size(236, 27);
             this.txtIdProyecto.TabIndex = 6;
+            this.txtIdProyecto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdProyecto_KeyPress);
             // 
             // label4
             // 

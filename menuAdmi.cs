@@ -43,10 +43,7 @@ namespace gestión_semillero_6trimestre
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
-        {
-           metodo.menuAdmin();// se llama al método menuAdmin de la clase Metodos para mostrar el formulario del menú principal del administrador
-            this.Hide();
-        }
+        { }
 
         private void Form2_Load(object sender, EventArgs e) // Evento que se ejecuta al cargar el formulario, se encarga de cargar los datos de los semilleros y las líneas de investigación en los combobox correspondientes.
         {
@@ -150,6 +147,12 @@ namespace gestión_semillero_6trimestre
 
             dataGridView1.DataSource = dt; // se asigna el DataTable como origen de datos del DataGridView para mostrar los resultados de la consulta
             Conexion.cerrar();// se cierra la conexion a la base de datos
+        }
+
+        private void btn_Reunion_Click(object sender, EventArgs e)
+        {
+            metodo.reunionesAdmin(); // se llama al método reunionesAdmin de la clase Metodos para mostrar el formulario de reuniones del administrador
+            this.Hide();
         }
     }
    
